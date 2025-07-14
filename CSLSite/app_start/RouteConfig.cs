@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Routing;
+using System.Web.Http;
 
 namespace CSLSite
 {
@@ -16,6 +17,13 @@ namespace CSLSite
             routes.Ignore("{resource}.config/{*pathInfo}");
             //no enviar las master
             routes.Ignore("{resource}.master/{*pathInfo}");
+
+            // Web API route
+            GlobalConfiguration.Configuration.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
             //sitio
             routes.MapPageRoute("login_form", "csl/login", "../login.aspx");
             routes.MapPageRoute("form_menu", "csl/menu", "~/cuenta/zones.aspx");
