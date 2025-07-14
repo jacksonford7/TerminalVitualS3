@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50300D8F-5D66-49E1-AB83-322809F9226B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BillionEntidades</RootNamespace>
+    <AssemblyName>BillionEntidades</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AccesoDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CSLSite\Bin\AccesoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AISV\Cls_AISV_ValidaBooking.cs" />
+    <Compile Include="BTS\BTS_Transmitir_BL.cs" />
+    <Compile Include="BTS\BTS_Exportador.cs" />
+    <Compile Include="BTS\BTS_Factura_Impresion.cs" />
+    <Compile Include="BTS_ADICIONALES\BTS_Cabecera_Eventos.cs" />
+    <Compile Include="BTS_ADICIONALES\BTS_Tarifas.cs" />
+    <Compile Include="BTS_ADICIONALES\BTS_Referencias.cs" />
+    <Compile Include="BTS_ADICIONALES\BTS_Detalle_Eventos.cs" />
+    <Compile Include="BTS_OTROS\BTS_Listado_Facturas_Exportador.cs" />
+    <Compile Include="BTS\BTS_Listado_Facturas.cs" />
+    <Compile Include="BTS\BTS_Horarios_Aisv.cs" />
+    <Compile Include="BTS\BTS_Procesa_Draf.cs" />
+    <Compile Include="BTS\BTS_Rubros.cs" />
+    <Compile Include="BTS\BTS_Detalle_Muelle.cs" />
+    <Compile Include="BTS\BTS_Detalle_Bodegas.cs" />
+    <Compile Include="BTS\BTS_Lineas.cs" />
+    <Compile Include="BTS\BTS_Prev_Cabecera_.cs" />
+    <Compile Include="BTS\BTS_Draf_Impresion.cs" />
+    <Compile Include="BTS\Cls_Prev_Detalle_Servicios.cs" />
+    <Compile Include="BTS\Cls_Prev_Detalle_Muelle.cs" />
+    <Compile Include="BTS\Cls_Prev_Detalle_Bodega.cs" />
+    <Compile Include="BTS_OTROS\BTS_Factura_Exportador_Impresion.cs" />
+    <Compile Include="BTS_OTROS\BTS_OTROS_Procesa_Factura.cs" />
+    <Compile Include="BTS_OTROS\BTS_OTROS_Cabecera_Exportadores.cs" />
+    <Compile Include="BTS_OTROS\BTS_OTROS_Detalle_ExportadoresUnico.cs" />
+    <Compile Include="BTS_OTROS\BTS_OTROS_Detalle_Rubros_Factura.cs" />
+    <Compile Include="BTS_OTROS\BTS_OTROS_Detalle_Rubros.cs" />
+    <Compile Include="BTS_OTROS\BTS_OTROS_Detalle_Exportadores.cs" />
+    <Compile Include="CARBONO\Cls_ImpoContenedor.cs" />
+    <Compile Include="CertificadoEIR.cs" />
+    <Compile Include="CHECKLIST\Cls_CheckList_Det_Tarea.cs" />
+    <Compile Include="CHECKLIST\Cls_TurnosVBS.cs" />
+    <Compile Include="Cls_Bil_PasePuertaCFS_Detalle.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_Detalle_Contenedor.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_Existe_Contenedor.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_Resumen_Contenedor.cs" />
+    <Compile Include="Factura\CampoAdicional.cs" />
+    <Compile Include="Factura\Detalle.cs" />
+    <Compile Include="Factura\Detalles.cs" />
+    <Compile Include="Factura\Impuesto.cs" />
+    <Compile Include="Factura\Impuestos.cs" />
+    <Compile Include="Factura\InfoAdicional.cs" />
+    <Compile Include="Factura\InfoFactura.cs" />
+    <Compile Include="Factura\InfoTributaria.cs" />
+    <Compile Include="Factura\Factura.cs" />
+    <Compile Include="Factura\Pago.cs" />
+    <Compile Include="Factura\Pagos.cs" />
+    <Compile Include="Factura\TotalConImpuestos.cs" />
+    <Compile Include="Factura\TotalImpuesto.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_Consulta_Contenedor.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_Contenedor_Cliente.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_Descuentos_Det.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_Descuentos_Cab.cs" />
+    <Compile Include="DAMAGECONTROL\Damage_ListaLineas.cs" />
+    <Compile Include="INSPECCION\Cls_Valida_Servicio_Naves.cs" />
+    <Compile Include="MSC\Cls_Bil_CabeceraMsc.cs" />
+    <Compile Include="MSC\Cls_Bil_DetalleMsc.cs" />
+    <Compile Include="MSC\Cls_Bil_Sav_Lineas.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_agente_transportista.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_buscar_tarifas.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_cargas_pendientes_detalle.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_cargas_pendientes.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_detalle_pase_multidespacho.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_facturas_emitirpase.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_ver_certificado.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_imprimir_pase_multidespacho.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_imprimir_multidespacho.cs" />
+    <Compile Include="MULTIDESPACHO\cfs_procesa_subsecuencias.cs" />
+    <Compile Include="P2D\P2D_MULTI_cfs_imprimir_pase.cs" />
+    <Compile Include="P2D\P2D_MULTI_Pendiente.cs" />
+    <Compile Include="P2D\P2D_MULTI_Imprimir.cs" />
+    <Compile Include="P2D\P2D_MULTI_buscar_tarifas.cs" />
+    <Compile Include="P2D\P2D_MULTI_Facturacion.cs" />
+    <Compile Include="POLITICAS\Cls_Politicas_Datos.cs" />
+    <Compile Include="SAV\SAV_GenerarPase.cs" />
+    <Compile Include="SAV\SAV_Asigna_Factura.cs" />
+    <Compile Include="SAV\SAV_Clientes.cs" />
+    <Compile Include="SAV\SAV_Detalle_Ok.cs" />
+    <Compile Include="SAV\SAV_Detalle_Servicios.cs" />
+    <Compile Include="SAV\SAV_Detalle_Error.cs" />
+    <Compile Include="SAV\SAV_Detalle_Pases.cs" />
+    <Compile Include="SAV\SAV_Detalle_Factura.cs" />
+    <Compile Include="SAV\SAV_Cabecera_Factura.cs" />
+    <Compile Include="SAV\SAV_Imprimir_Factura.cs" />
+    <Compile Include="SAV\SAV_Servicios_Repcontver.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_Cab_Documentos.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_Colaborador_Only.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_Doc_Colaborador.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_Doc_Vehiculo.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_PasePuertaExpo_Detalle.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_PasePuertaImpo_Detalle.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_PasePuertaImpo.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_Validaciones.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_Vehiculo.cs" />
+    <Compile Include="TRANSPORTISTAS\Cls_TRANSP_Colaborador.cs" />
+    <Compile Include="TURNOSCFS\Cls_CFS_Turnos_Banano.cs" />
+    <Compile Include="TURNOS\brbk_rpt_planificacion_despachos.cs" />
+    <Compile Include="TURNOS\brbk_tipo_turnos.cs" />
+    <Compile Include="TURNOS\brbk_excluir_numero_carga.cs" />
+    <Compile Include="TURNOS\brbk_solicitud_pendiente.cs" />
+    <Compile Include="CHECKLIST\Cls_CheckList_Det.cs" />
+    <Compile Include="CHECKLIST\Cls_CheckList_Cab.cs" />
+    <Compile Include="CHECKLIST\Cls_Novedades.cs" />
+    <Compile Include="CHECKLIST\Cls_Equipos.cs" />
+    <Compile Include="CHECKLIST\Cls_CheckList_Reporte.cs" />
+    <Compile Include="CHECKLIST\Cls_Turnos.cs" />
+    <Compile Include="CHECKLIST\Cls_TipoEquipos.cs" />
+    <Compile Include="Cls_Actualiza_Referencias.cs" />
+    <Compile Include="Cls_Bill_Container_Expo.cs" />
+    <Compile Include="Cls_Bil_AsumeFactura.cs" />
+    <Compile Include="Cls_Bil_CargaSuelta_Gkey.cs" />
+    <Compile Include="Cls_Bil_CasManual.cs" />
+    <Compile Include="Cls_Bil_Cas_Manual.cs" />
+    <Compile Include="Cls_Bil_Configuraciones.cs" />
+    <Compile Include="Cls_Bil_Consulta_Casos.cs" />
+    <Compile Include="Cls_Bil_Container_Gkey.cs" />
+    <Compile Include="Cls_Bil_Invoice_Actualiza_Pase.cs" />
+    <Compile Include="Cls_Bil_Invoice_Duplicados.cs" />
+    <Compile Include="Cls_Bil_Invoice_Pase_Puerta.cs" />
+    <Compile Include="Cls_Bil_Invoice_Usuarios.cs" />
+    <Compile Include="Cls_Bil_Invoice_Procesar.cs" />
+    <Compile Include="Cls_Bil_Invoice_Type.cs" />
+    <Compile Include="Cls_Bil_Libera_Pases_Zal.cs" />
+    <Compile Include="Cls_Bil_Log_Carbono_Expo.cs" />
+    <Compile Include="Cls_Bil_PasePuertaBRBK_Cabecera.cs" />
+    <Compile Include="Cls_Bil_PasePuertaBRBK_Detalle.cs" />
+    <Compile Include="Cls_Bil_PasePuertaBRBK_SubItems.cs" />
+    <Compile Include="Cls_Bil_PasePuertaBRBK_Temporal.cs" />
+    <Compile Include="Cls_Bil_PasePuertaBRBK_InOut.cs" />
+    <Compile Include="Cls_Bil_PasePuertaBRBK_Validacion.cs" />
+    <Compile Include="Cls_Bil_Registra_Salida_BRBK.cs" />
+    <Compile Include="Cls_Bil_Valida_ServicioAppcgsa.cs" />
+    <Compile Include="Cls_Bil_Valida_Certificado.cs" />
+    <Compile Include="Cls_Bil_IP.cs" />
+    <Compile Include="Cls_Bil_Listado_Ridt_Manual.cs" />
+    <Compile Include="Cls_Bil_Lista_PagoTerceros.cs" />
+    <Compile Include="Cls_Bil_PasePuertaCFS_Cabecera.cs" />
+    <Compile Include="Cls_Bil_PasePuertaCFS_Carga.cs" />
+    <Compile Include="Cls_Bil_PasePuertaCFS_InOut.cs" />
+    <Compile Include="Cls_Bil_PasePuertaCFS_SubItems.cs" />
+    <Compile Include="Cls_Bil_PasePuertaCFS_Validacion.cs" />
+    <Compile Include="Cls_Bil_PasePuertaContenedor_InOut.cs" />
+    <Compile Include="Cls_Bil_Stock_Pases_CFS.cs" />
+    <Compile Include="Cls_Bil_Turnos.cs" />
+    <Compile Include="Cls_Bil_Base.cs" />
+    <Compile Include="Cls_Bil_Cabecera.cs" />
+    <Compile Include="Cls_Bil_Contenedor_DiasLibres.cs" />
+    <Compile Include="Cls_Bil_Detalle.cs" />
+    <Compile Include="Cls_Bil_Invoice_Cabecera.cs" />
+    <Compile Include="Cls_Bil_Invoice_Detalle.cs" />
+    <Compile Include="Cls_Bil_Invoice_Grafico.cs" />
+    <Compile Include="Cls_Bil_Invoice_Impresion.cs" />
+    <Compile Include="Cls_Bil_Invoice_Listado.cs" />
+    <Compile Include="Cls_Bil_Invoice_Servicios.cs" />
+    <Compile Include="Cls_Bil_Invoice_Ultima_Factura.cs" />
+    <Compile Include="Cls_Bil_Invoice_Validaciones.cs" />
+    <Compile Include="Cls_Bil_Parametros_Sap.cs" />
+    <Compile Include="Cls_Bil_PasePuertaContenedor_Cabecera.cs" />
+    <Compile Include="Cls_Bil_PasePuertaContenedor_Detalle.cs" />
+    <Compile Include="Cls_Bil_Proforma_Cabecera.cs" />
+    <Compile Include="Cls_Bil_Proforma_Consulta.cs" />
+    <Compile Include="Cls_Bil_Proforma_Detalle.cs" />
+    <Compile Include="Cls_Bil_Proforma_Impresion.cs" />
+    <Compile Include="Cls_Bil_Proforma_Listado.cs" />
+    <Compile Include="Cls_Bil_Proforma_Servicios.cs" />
+    <Compile Include="Cls_Bil_Sesion.cs" />
+    <Compile Include="Cls_EnviarEmail.cs" />
+    <Compile Include="Cls_EnviarMailAppCgsa.cs" />
+    <Compile Include="Cls_Factura_Credenciales.cs" />
+    <Compile Include="Cls_Holds_Container.cs" />
+    <Compile Include="Cls_Bil_DetalleClientes.cs" />
+    <Compile Include="Cls_Horas_Reefer.cs" />
+    <Compile Include="Cls_Bil_Listado_Agentes.cs" />
+    <Compile Include="Cls_Opcion_AppCgsa.cs" />
+    <Compile Include="Cls_Pan_Contenedores.cs" />
+    <Compile Include="Cls_Reporte_Daily.cs" />
+    <Compile Include="Cls_STC_cab_proforma.cs" />
+    <Compile Include="Cls_STC_det_proforma.cs" />
+    <Compile Include="Cls_STC_Imagenes.cs" />
+    <Compile Include="Cls_STC_Informacion_Carga.cs" />
+    <Compile Include="Cls_STC_LeerRuc.cs" />
+    <Compile Include="Cls_Stc_ListaNotificaciones.cs" />
+    <Compile Include="Cls_Bil_Log_Appcgsa.cs" />
+    <Compile Include="Cls_STC_Servicios.cs" />
+    <Compile Include="Cls_Registra_Dae.cs" />
+    <Compile Include="INSPECCION\Cls_Inspeccion_Buques.cs" />
+    <Compile Include="P2D\P2D_Actualiza_PasePuerta.cs" />
+    <Compile Include="P2D\P2D_Lista_Pases.cs" />
+    <Compile Include="P2D\P2D_Precios.cs" />
+    <Compile Include="P2D\P2D_Ciudad.cs" />
+    <Compile Include="P2D\P2D_Imprimir_Proforma.cs" />
+    <Compile Include="P2D\P2D_Lista_Proforma.cs" />
+    <Compile Include="P2D\P2D_Proforma_Detalle.cs" />
+    <Compile Include="P2D\P2D_Proforma_Cabecera.cs" />
+    <Compile Include="P2D\P2D_Tiene_Factura.cs" />
+    <Compile Include="P2D\P2D_Traza_Liftif.cs" />
+    <Compile Include="P2D\P2D_Valida_Proforma.cs" />
+    <Compile Include="P2D\P2D_Tarja_Cfs.cs" />
+    <Compile Include="P2D\P2D_Tarifario.cs" />
+    <Compile Include="P2D\P2D_Zona.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TURNOS\brbk_tipoproducto.cs" />
+    <Compile Include="TURNOS\brbk_depositos.cs" />
+    <Compile Include="TURNOS\brbk_turnos_cab.cs" />
+    <Compile Include="TURNOS\brbk_solicitud_pendiente_det.cs" />
+    <Compile Include="TURNOS\brbk_turnos_det.cs" />
+    <Compile Include="TURNOS\brbk_excluir_productos.cs" />
+    <Compile Include="TURNOS\brbk_imprime_solicitud.cs" />
+    <Compile Include="TURNOS\brbk_valida_solicitud.cs" />
+    <Compile Include="TURNOS\brbk_rpt_lista_solicitudes.cs" />
+    <Compile Include="VESSEL_VISIT\Cls_Sol_Atraque.cs" />
+    <Compile Include="VESSEL_VISIT\Cls_Sol_Estado.cs" />
+    <Compile Include="ZAL\ZAL_Imprimir_Factura.cs" />
+    <Compile Include="ZAL\ZAL_Servicios_Repcontver.cs" />
+    <Compile Include="ZAL\ZAL_Detalle_Servicios.cs" />
+    <Compile Include="ZAL\ZAL_Detalle_Pases.cs" />
+    <Compile Include="ZAL\ZAL_Detalle_Ok.cs" />
+    <Compile Include="ZAL\ZAL_Detalle_Factura.cs" />
+    <Compile Include="ZAL\ZAL_Detalle_Error.cs" />
+    <Compile Include="ZAL\ZAL_Cabecera_Factura.cs" />
+    <Compile Include="ZAL\ZAL_Asigna_Factura.cs" />
+    <Compile Include="ZAL\ZAL_Clientes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{69b1835f-3af8-4063-a784-80c69670307a}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuraciones\Configuraciones.csproj">
+      <Project>{4d0a2b47-a4cd-4cde-bf7b-767fef8339e3}</Project>
+      <Name>Configuraciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\N4\N4.csproj">
+      <Project>{fefd21dd-ef14-45a6-be48-eaa338efcb07}</Project>
+      <Name>N4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PasePuerta\PasePuerta.csproj">
+      <Project>{9c09c189-61e0-46ee-9d41-be0cbc61d036}</Project>
+      <Name>PasePuerta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServicesEntities\ServicesEntities.csproj">
+      <Project>{0c3ca59d-99c7-4a83-8224-fb52d93e4cbe}</Project>
+      <Name>ServicesEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlConexion\SqlConexion.csproj">
+      <Project>{72e7c9d6-11e9-4bca-a214-5d06b1b880fd}</Project>
+      <Name>SqlConexion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

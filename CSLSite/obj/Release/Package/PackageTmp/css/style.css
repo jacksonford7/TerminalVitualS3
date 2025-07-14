@@ -1,0 +1,295 @@
+/* ------------------- General ------------------- */
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+   color: #000000;
+}
+.bg-primary {
+  background: #E23B1B;
+}
+.h1, .h2, .h4, .h5, .h6, h1, h2, h4, h5, h6 {
+  font-weight: 400;
+}
+h3 {
+  font-weight: 300;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+	color: #000000;
+}
+::selection {
+
+   /* background: #4ECDC4;*/
+    background: #2f323a;
+    color: #fff;
+}
+::-moz-selection {
+/* background: #4ECDC4;*/
+    background: #2f323a;
+    color: #fff;
+}
+
+/* ------------------- CheckBoxes ------------------- */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox-container  input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: #eee;
+  border: 1px solid #B4B4B4;
+}
+.checkbox-container :hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #E23B1B;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* ------------------- radiobutton ------------------- */
+.radiobutton-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radiobutton-container  input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.radiobutton-container :hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.radiobutton-container input:checked ~ .checkmark {
+  background-color: #E23B1B;
+}
+.radiobutton-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.radiobutton-container .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nover {
+    display: none;
+    visibility: hidden;
+}
+
+
+.ver {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.xver {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+.loading {
+    font-size: 10pt;
+    border: 5px solid #67CFF5;
+    width: 200px;
+    height: 100px;
+    display: none;
+    position: fixed;
+    background-color: White;
+    z-index: 999;
+    padding: 0;
+}
+
+/* ------------------- Buttons ------------------- */
+.custom-control-input:checked~.custom-control-label::before {
+  border-color: #E23B1B;
+  background-color: #E23B1B;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  border-color: #E23B1B;
+  background-color: #E23B1B;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #E23B1B;
+  border-color: #E23B1B;
+}
+.btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:focus {
+  color: #fff;
+  background-color: #c7361a;
+  border-color: #c7361a;
+}
+.btn-primary:focus {
+  box-shadow: none !important;
+}
+.btn-outline-primary {
+  color: #E23B1B;
+  border: 2px solid #E23B1B;
+  font-weight: 600;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #c7361a;
+  border-color: #c7361a;
+}
+
+.btn-outline-primary2 {
+  color: #E23B1B;
+  border: 2px solid #E23B1B;
+  font-weight: 300;
+}
+.btn-outline-primary2:hover {
+  color: #fff;
+  background-color: #c7361a;
+  border-color: #c7361a;
+}
+
+/* ------------------- Cards Sections ------------------- */
+.card {
+  border-radius: 8px;
+  border: 0.5 solid #c4c4c4;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 10%);
+}
+.card-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* ------------------- Input width button ------------------- */
+.input-group-append button {
+  background: #F5F5F5;
+  border: none;
+  border-radius: 0 4px 4px 0;
+}
+.plus-btn {
+  background: #0A9305;
+  border-radius: 50%;
+  padding: 1px 5px;
+  color: #fff;
+}
+.minus-btn {
+  background: #FF0000;
+  border-radius: 50%;
+  padding: 0px 8px;
+  color: #fff;
+}
+.form-control:disabled, .form-control[readonly] {
+  background: #F5F5F5;
+}
+
+
+
+/* ------------------- Invoices ------------------- */
+.invoice {
+  border: none;
+  margin-top: 8px;
+}
+.invoice thead tr {
+  background: #B4B4B4;
+  color: #fff
+}
+.invoice .yellow-container {
+  border-radius: 12px;
+  background: #FFF1A5;
+  padding: 15px;
+  margin: 20px 30px;
+}
+.border-none {
+  border: none !important;
+}
+
+.room-box {
+    border: 1px solid #e7e7e7;
+    background: #f7f8fa;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+    .room-box:hover {
+        background: #f0f0f0
+    }
+
+    .room-box h5 {
+        margin: 0 0 5px 0;
+        font-weight: 300;
+        font-size: 16px;
+        color: #FF3720;
+    }
+
+        .room-box h5 a {
+            color: #4ECDC4;
+        }
+
+
+/* ------------------- Invoices ------------------- */
+.cuerpo {
+  border: none;
+  margin-top: 8px;
+}
+.cuerpo .cafe-container {
+  border-radius: 12px;
+  background: #F4F4F4;
+  padding: 15px;
+  margin: 20px 30px;
+}

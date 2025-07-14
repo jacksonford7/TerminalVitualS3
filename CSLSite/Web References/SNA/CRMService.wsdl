@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CRMService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cgdes19:5152/WSS/CRMService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cgdes19:5152/WSS/CRMService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IComunicacion_Invocar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Invocar" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_Invocar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvocarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_InvocarSW_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvocarSW" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_InvocarSW_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvocarSWResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_InvocarSwCasCFS_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvocarSwCasCFS" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_InvocarSwCasCFS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvocarSwCasCFSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_TestConn_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConn" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_TestConn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_TestSer_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestSer" />
+  </wsdl:message>
+  <wsdl:message name="IComunicacion_TestSer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestSerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IComunicacion">
+    <wsdl:operation name="Invocar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunicacion/Invocar" message="tns:IComunicacion_Invocar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunicacion/InvocarResponse" message="tns:IComunicacion_Invocar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvocarSW">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunicacion/InvocarSW" message="tns:IComunicacion_InvocarSW_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunicacion/InvocarSWResponse" message="tns:IComunicacion_InvocarSW_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvocarSwCasCFS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunicacion/InvocarSwCasCFS" message="tns:IComunicacion_InvocarSwCasCFS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunicacion/InvocarSwCasCFSResponse" message="tns:IComunicacion_InvocarSwCasCFS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunicacion/TestConn" message="tns:IComunicacion_TestConn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunicacion/TestConnResponse" message="tns:IComunicacion_TestConn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestSer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunicacion/TestSer" message="tns:IComunicacion_TestSer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunicacion/TestSerResponse" message="tns:IComunicacion_TestSer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IComunicacion" type="tns:IComunicacion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Invocar">
+      <soap:operation soapAction="http://tempuri.org/IComunicacion/Invocar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvocarSW">
+      <soap:operation soapAction="http://tempuri.org/IComunicacion/InvocarSW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvocarSwCasCFS">
+      <soap:operation soapAction="http://tempuri.org/IComunicacion/InvocarSwCasCFS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConn">
+      <soap:operation soapAction="http://tempuri.org/IComunicacion/TestConn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestSer">
+      <soap:operation soapAction="http://tempuri.org/IComunicacion/TestSer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CRMService">
+    <wsdl:port name="BasicHttpBinding_IComunicacion" binding="tns:BasicHttpBinding_IComunicacion">
+      <soap:address location="http://cgdes19:5152/WSS/CRMService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

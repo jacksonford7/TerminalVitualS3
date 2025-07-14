@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="613BE1B1-A54D-4955-866B-05DB3B644E81" ModuleId="CSLSite" />
+  <Module PersistentId="D9CB22CB-ECB2-4400-B538-761B7A7CB5C7" ModuleId="csl_log" />
+  <Module PersistentId="3E7C3D33-290D-4320-B286-98D8FB4ACD49" ModuleId="ServicioEcuapass" />
+  <Module PersistentId="6D91AC95-5E57-411F-9695-BD367EF4DD46" ModuleId="HttpConector" />
+  <Module PersistentId="40BA1FD9-73E8-4FA0-96BE-9B238BD8A536" ModuleId="ProcesaUnits" />
+</Modules>

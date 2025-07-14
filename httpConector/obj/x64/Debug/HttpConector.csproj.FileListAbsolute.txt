@@ -1,0 +1,6 @@
+D:\Proyect\PortalS3\httpConector\bin\x64\Debug\HttpConector.dll
+D:\Proyect\PortalS3\httpConector\bin\x64\Debug\HttpConector.pdb
+D:\Proyect\PortalS3\httpConector\obj\x64\Debug\HttpConector.csprojAssemblyReference.cache
+D:\Proyect\PortalS3\httpConector\obj\x64\Debug\HttpConector.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3\httpConector\obj\x64\Debug\HttpConector.dll
+D:\Proyect\PortalS3\httpConector\obj\x64\Debug\HttpConector.pdb

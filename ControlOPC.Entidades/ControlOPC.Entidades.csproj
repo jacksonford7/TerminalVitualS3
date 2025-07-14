@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B94540D9-26D1-4D5A-9C45-C8DC76497F5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlOPC.Entidades</RootNamespace>
+    <AssemblyName>ControlOPC.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app_configuration.cs" />
+    <Compile Include="app_configurations.cs" />
+    <Compile Include="App_Extension.cs" />
+    <Compile Include="app_message.cs" />
+    <Compile Include="app_messages.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="Concepto.cs" />
+    <Compile Include="Crane.cs" />
+    <Compile Include="Crane_Turn.cs" />
+    <Compile Include="Extensor.cs" />
+    <Compile Include="OPCGrupo.cs" />
+    <Compile Include="OPCOperador.cs" />
+    <Compile Include="Opc.cs" />
+    <Compile Include="Operator.cs" />
+    <Compile Include="ProformaCab.cs" />
+    <Compile Include="ProformaDet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ride.cs" />
+    <Compile Include="Vessel.cs" />
+    <Compile Include="Vessel_Crane.cs" />
+    <Compile Include="Vessel_Operator.cs" />
+    <Compile Include="Vessel_Visit.cs" />
+    <Compile Include="Vessel_Visit_Crane.cs" />
+    <Compile Include="Vessel_Visit_Cuadrilla.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQlHandler\SQLHandler.csproj">
+      <Project>{0e47ad71-6287-4dfe-9ba3-db555319ee4c}</Project>
+      <Name>SQLHandler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

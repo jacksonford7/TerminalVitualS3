@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://172.16.2.30/OnlyService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://172.16.2.30/OnlyService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://172.16.2.30/OnlyService">
+      <s:element name="Verificar_Conexion">
+        <s:complexType />
+      </s:element>
+      <s:element name="Verificar_ConexionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Verificar_ConexionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_Cedula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_CedulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_CedulaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_Logon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consulta_LogonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta_LogonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar_Huella">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Huella" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dedo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Empleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar_HuellaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Guardar_HuellaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_EMPRESA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion_busqueda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_busqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_EMPRESAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_EMPRESAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_EMPRESA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_EMPRESAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_EMPRESAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_AREA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion_busqueda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_busqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_AREAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_AREAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_AREA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_proceso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_AREAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_AREAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_DEPTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion_busqueda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_busqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_DEPTOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_DEPTOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_DEPTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_proceso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_DEPTOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_DEPTOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_CARGO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion_busqueda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_busqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_CARGOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_CARGOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_CARGO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_proceso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_CARGOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_CARGOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_ACTIVIDAD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion_busqueda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_ACTIVIDADResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_ACTIVIDADResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_TIPO_ACCESO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_TIPO_ACCESOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_TIPO_ACCESOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_PERSONA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empresa_busqueda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cargo_busqueda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_busqueda_empresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_PERSONAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_PERSONAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERSONA_PEATON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERSONA_PEATONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_PERSONA_PEATONResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERSONA_NOMINA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERSONA_NOMINAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_PERSONA_NOMINAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERMISO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERMISOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_PERMISOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_VEHICULOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion_busqueda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_busqueda" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_C_VEHICULOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_C_VEHICULOSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_VEHICULOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_VEHICULOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_VEHICULOSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERMISO_TEMPORAL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_PERMISO_TEMPORALResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_PERMISO_TEMPORALResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_ASIGNA_PERSONA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data_entrada">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AC_R_ASIGNA_PERSONAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AC_R_ASIGNA_PERSONAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_correcto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registros_actualizados_incorrecto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error_consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPersonaPeatonProvisional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idAcNomina" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPersonaPeatonProvisionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPersonaPeatonProvisionalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdAc_NominaPeaton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdAc_NominaPeatonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIdAc_NominaPeatonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Verificar_ConexionSoapIn">
+    <wsdl:part name="parameters" element="tns:Verificar_Conexion" />
+  </wsdl:message>
+  <wsdl:message name="Verificar_ConexionSoapOut">
+    <wsdl:part name="parameters" element="tns:Verificar_ConexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_CedulaSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_Cedula" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_CedulaSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_CedulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_LogonSoapIn">
+    <wsdl:part name="parameters" element="tns:Consulta_Logon" />
+  </wsdl:message>
+  <wsdl:message name="Consulta_LogonSoapOut">
+    <wsdl:part name="parameters" element="tns:Consulta_LogonResponse" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_HuellaSoapIn">
+    <wsdl:part name="parameters" element="tns:Guardar_Huella" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_HuellaSoapOut">
+    <wsdl:part name="parameters" element="tns:Guardar_HuellaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_EMPRESASoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_EMPRESA" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_EMPRESASoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_EMPRESAResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_EMPRESASoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_EMPRESA" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_EMPRESASoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_EMPRESAResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_AREASoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_AREA" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_AREASoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_AREAResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_AREASoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_AREA" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_AREASoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_AREAResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_DEPTOSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_DEPTO" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_DEPTOSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_DEPTOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_DEPTOSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_DEPTO" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_DEPTOSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_DEPTOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_CARGOSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_CARGO" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_CARGOSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_CARGOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_CARGOSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_CARGO" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_CARGOSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_CARGOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_ACTIVIDADSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_ACTIVIDAD" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_ACTIVIDADSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_ACTIVIDADResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_TIPO_ACCESOSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_TIPO_ACCESO" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_TIPO_ACCESOSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_TIPO_ACCESOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_PERSONASoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_PERSONA" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_PERSONASoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_PERSONAResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERSONA_PEATONSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_PERSONA_PEATON" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERSONA_PEATONSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_PERSONA_PEATONResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERSONA_NOMINASoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_PERSONA_NOMINA" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERSONA_NOMINASoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_PERSONA_NOMINAResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERMISOSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_PERMISO" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERMISOSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_PERMISOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_VEHICULOSSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_C_VEHICULOS" />
+  </wsdl:message>
+  <wsdl:message name="AC_C_VEHICULOSSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_C_VEHICULOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_VEHICULOSSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_VEHICULOS" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_VEHICULOSSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_VEHICULOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERMISO_TEMPORALSoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_PERMISO_TEMPORAL" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_PERMISO_TEMPORALSoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_PERMISO_TEMPORALResponse" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_ASIGNA_PERSONASoapIn">
+    <wsdl:part name="parameters" element="tns:AC_R_ASIGNA_PERSONA" />
+  </wsdl:message>
+  <wsdl:message name="AC_R_ASIGNA_PERSONASoapOut">
+    <wsdl:part name="parameters" element="tns:AC_R_ASIGNA_PERSONAResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPersonaPeatonProvisionalSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPersonaPeatonProvisional" />
+  </wsdl:message>
+  <wsdl:message name="SetPersonaPeatonProvisionalSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPersonaPeatonProvisionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIdAc_NominaPeatonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIdAc_NominaPeaton" />
+  </wsdl:message>
+  <wsdl:message name="GetIdAc_NominaPeatonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIdAc_NominaPeatonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OnlyControlServiceSoap">
+    <wsdl:operation name="Verificar_Conexion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Verificar la conextividad con la Base de Datos</wsdl:documentation>
+      <wsdl:input message="tns:Verificar_ConexionSoapIn" />
+      <wsdl:output message="tns:Verificar_ConexionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Cedula">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Consultar el Registro del Empleado para poder proceder con el Registro de Huellas Digitales</wsdl:documentation>
+      <wsdl:input message="tns:Consultar_CedulaSoapIn" />
+      <wsdl:output message="tns:Consultar_CedulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Logon">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Logearme para Abrir la interfaz de Registro</wsdl:documentation>
+      <wsdl:input message="tns:Consulta_LogonSoapIn" />
+      <wsdl:output message="tns:Consulta_LogonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Guardar_Huella">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Guardar la Huella Digital</wsdl:documentation>
+      <wsdl:input message="tns:Guardar_HuellaSoapIn" />
+      <wsdl:output message="tns:Guardar_HuellaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_EMPRESA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Empresas</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_EMPRESASoapIn" />
+      <wsdl:output message="tns:AC_C_EMPRESASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_EMPRESA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Empresas, Solo Modificacion de RUC o Razon Social</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_EMPRESASoapIn" />
+      <wsdl:output message="tns:AC_R_EMPRESASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_AREA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Areas</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_AREASoapIn" />
+      <wsdl:output message="tns:AC_C_AREASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_AREA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Areas</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_AREASoapIn" />
+      <wsdl:output message="tns:AC_R_AREASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_DEPTO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Departamentos</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_DEPTOSoapIn" />
+      <wsdl:output message="tns:AC_C_DEPTOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_DEPTO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Departamentos</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_DEPTOSoapIn" />
+      <wsdl:output message="tns:AC_R_DEPTOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_CARGO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Cargos</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_CARGOSoapIn" />
+      <wsdl:output message="tns:AC_C_CARGOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_CARGO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Cargos</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_CARGOSoapIn" />
+      <wsdl:output message="tns:AC_R_CARGOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_ACTIVIDAD">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Actividad</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_ACTIVIDADSoapIn" />
+      <wsdl:output message="tns:AC_C_ACTIVIDADSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_TIPO_ACCESO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Tipos de Acceso</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_TIPO_ACCESOSoapIn" />
+      <wsdl:output message="tns:AC_C_TIPO_ACCESOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_PERSONA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Personas de una Empresa</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_PERSONASoapIn" />
+      <wsdl:output message="tns:AC_C_PERSONASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERSONA_PEATON">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Personas Nuevas</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_PERSONA_PEATONSoapIn" />
+      <wsdl:output message="tns:AC_R_PERSONA_PEATONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERSONA_NOMINA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Personas Nuevas</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_PERSONA_NOMINASoapIn" />
+      <wsdl:output message="tns:AC_R_PERSONA_NOMINASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERMISO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Permisos</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_PERMISOSoapIn" />
+      <wsdl:output message="tns:AC_R_PERMISOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_VEHICULOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Vehiculos</wsdl:documentation>
+      <wsdl:input message="tns:AC_C_VEHICULOSSoapIn" />
+      <wsdl:output message="tns:AC_C_VEHICULOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_VEHICULOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Vehiculos</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_VEHICULOSSoapIn" />
+      <wsdl:output message="tns:AC_R_VEHICULOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERMISO_TEMPORAL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Permiso Temporal</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_PERMISO_TEMPORALSoapIn" />
+      <wsdl:output message="tns:AC_R_PERMISO_TEMPORALSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_ASIGNA_PERSONA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Permiso Temporal</wsdl:documentation>
+      <wsdl:input message="tns:AC_R_ASIGNA_PERSONASoapIn" />
+      <wsdl:output message="tns:AC_R_ASIGNA_PERSONASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPersonaPeatonProvisional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Registro de Ac_Nomina a tabla Nomina</wsdl:documentation>
+      <wsdl:input message="tns:SetPersonaPeatonProvisionalSoapIn" />
+      <wsdl:output message="tns:SetPersonaPeatonProvisionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAc_NominaPeaton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método de Consulta de Id de Nómina de Ac_Nomina</wsdl:documentation>
+      <wsdl:input message="tns:GetIdAc_NominaPeatonSoapIn" />
+      <wsdl:output message="tns:GetIdAc_NominaPeatonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OnlyControlServiceSoap" type="tns:OnlyControlServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Verificar_Conexion">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/Verificar_Conexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Cedula">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/Consultar_Cedula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Logon">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/Consulta_Logon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar_Huella">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/Guardar_Huella" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_EMPRESA">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_EMPRESA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_EMPRESA">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_EMPRESA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_AREA">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_AREA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_AREA">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_AREA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_DEPTO">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_DEPTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_DEPTO">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_DEPTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_CARGO">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_CARGO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_CARGO">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_CARGO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_ACTIVIDAD">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_ACTIVIDAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_TIPO_ACCESO">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_TIPO_ACCESO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_PERSONA">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_PERSONA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERSONA_PEATON">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERSONA_PEATON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERSONA_NOMINA">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERSONA_NOMINA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERMISO">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERMISO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_VEHICULOS">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_C_VEHICULOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_VEHICULOS">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_VEHICULOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERMISO_TEMPORAL">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERMISO_TEMPORAL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_ASIGNA_PERSONA">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/AC_R_ASIGNA_PERSONA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPersonaPeatonProvisional">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/SetPersonaPeatonProvisional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAc_NominaPeaton">
+      <soap:operation soapAction="http://172.16.2.30/OnlyService/GetIdAc_NominaPeaton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OnlyControlServiceSoap12" type="tns:OnlyControlServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Verificar_Conexion">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/Verificar_Conexion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Cedula">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/Consultar_Cedula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consulta_Logon">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/Consulta_Logon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar_Huella">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/Guardar_Huella" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_EMPRESA">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_EMPRESA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_EMPRESA">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_EMPRESA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_AREA">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_AREA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_AREA">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_AREA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_DEPTO">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_DEPTO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_DEPTO">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_DEPTO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_CARGO">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_CARGO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_CARGO">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_CARGO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_ACTIVIDAD">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_ACTIVIDAD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_TIPO_ACCESO">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_TIPO_ACCESO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_PERSONA">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_PERSONA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERSONA_PEATON">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERSONA_PEATON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERSONA_NOMINA">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERSONA_NOMINA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERMISO">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERMISO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_C_VEHICULOS">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_C_VEHICULOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_VEHICULOS">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_VEHICULOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_PERMISO_TEMPORAL">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_PERMISO_TEMPORAL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AC_R_ASIGNA_PERSONA">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/AC_R_ASIGNA_PERSONA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPersonaPeatonProvisional">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/SetPersonaPeatonProvisional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAc_NominaPeaton">
+      <soap12:operation soapAction="http://172.16.2.30/OnlyService/GetIdAc_NominaPeaton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OnlyControlService">
+    <wsdl:port name="OnlyControlServiceSoap" binding="tns:OnlyControlServiceSoap">
+      <soap:address location="http://172.16.2.30:57575/OnlyControl/OnlyServiceWeb.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OnlyControlServiceSoap12" binding="tns:OnlyControlServiceSoap12">
+      <soap12:address location="http://172.16.2.30:57575/OnlyControl/OnlyServiceWeb.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

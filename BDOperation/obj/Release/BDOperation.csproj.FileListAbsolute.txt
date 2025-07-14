@@ -1,0 +1,15 @@
+D:\Proyect\PortalS3TV\BDOperation\bin\Release\BDOperation.dll
+D:\Proyect\PortalS3TV\BDOperation\bin\Release\BDOperation.pdb
+D:\Proyect\PortalS3TV\BDOperation\obj\Release\BDOperation.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3TV\BDOperation\obj\Release\BDOperation.dll
+D:\Proyect\PortalS3TV\BDOperation\obj\Release\BDOperation.pdb
+C:\Proyect\PortalS3TV\BDOperation\bin\Release\BDOperation.dll
+C:\Proyect\PortalS3TV\BDOperation\bin\Release\BDOperation.pdb
+C:\Proyect\PortalS3TV\BDOperation\obj\Release\BDOperation.csproj.CoreCompileInputs.cache
+C:\Proyect\PortalS3TV\BDOperation\obj\Release\BDOperation.dll
+C:\Proyect\PortalS3TV\BDOperation\obj\Release\BDOperation.pdb
+C:\PortalS3TV\BDOperation\bin\Release\BDOperation.dll
+C:\PortalS3TV\BDOperation\bin\Release\BDOperation.pdb
+C:\PortalS3TV\BDOperation\obj\Release\BDOperation.csproj.CoreCompileInputs.cache
+C:\PortalS3TV\BDOperation\obj\Release\BDOperation.dll
+C:\PortalS3TV\BDOperation\obj\Release\BDOperation.pdb

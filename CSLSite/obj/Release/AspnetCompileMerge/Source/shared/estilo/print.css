@@ -1,0 +1,233 @@
+﻿#blax{ background-color:White; text-align:right; font-weight:bold;}
+span.equis { display: inline-block; height:20px; font-weight:bold;}
+.xhoja{ display:none;}
+
+table.xcontroles{ width:100%; }   
+
+    .xprint  
+    {
+        position:relative;
+        
+        }
+    .xprint:before     
+    {
+         content: "\f15c"; 
+         font-family: FontAwesome;   
+         font-style: normal;    
+         font-weight: normal;    
+         color: #000;    
+         font-size: 30px;    
+         left: 0;
+    }
+    
+    .rplabel{ border:1px dotted black; color:Black; display:inline-block; margin:0; padding:1px; width:48%; text-align:left;  font-style:italic;}
+    .rptitulo { text-align:left;  margin:0; font-size:1.4em; font-weight:bold; text-decoration:underline;}
+
+.divtx{ margin:0; padding:0;}
+
+div.seccion  { font-size:x-small!important; text-align:justify; margin:0; padding:0;}
+ #anumber{ font-size:3em; text-align:center;}
+#generacion {  display:none;}
+
+table.poster{ width:99%;}
+ table.poster  tr  td:nth-child(2n+1) { background-color:#F0f0f0; text-align:center;width:150px; font-weight:bolder;}
+ table.poster td { text-align:center;}
+    
+    
+  span.service { font-size:3em; display:block; text-align:center; font-weight:bold; }  
+ .aright { text-align:right;}
+ .seccion .accion > table tr td:first-child 
+ {
+      background-color:#F0f0f0; 
+      text-align:left; padding:5px; 
+      width:150px;  
+      font-weight:bolder;
+      }   
+ .seccion .accion > table tr td:last-child  {border-right:1px solid #CCC; }
+ .seccion .accion > table.xcontroles  tr  td:nth-child(2n+1) 
+ {
+      background-color:#F0f0f0; width:220px;
+      border-left:1px solid #CCC;
+      border-right:1px solid #CCC;
+      padding:5px; 
+      font-weight:bolder;
+      width:160px;
+  }  
+
+.danio { width:300px; height:200px;}
+.tablix{ width:500px; vertical-align:top;}
+
+
+div.divtx table td table th:last-child  {border-right:1px solid #CCC; }
+div.divtx table td table th 
+{
+    vertical-align:middle; 
+    height:25px; 
+    padding: 0px 0px 0px 5px;  
+    margin:0; 
+    background-color:#F0f0f0; 
+    text-align:left;  
+    font-weight:bolder; 
+    text-transform:uppercase;
+    
+    }
+
+div.divtx table td  table  tr  td:nth-child(2n+1)  
+{
+      background-color:#F0f0f0; width:120px;
+      border-left:1px solid #CCC;
+      border-right:1px solid #CCC;
+      padding:5px; 
+      font-weight:bolder;
+    
+    }
+
+
+body 
+{
+    background-color: gray; margin:0; padding:10px;
+}
+
+body #hoja  
+{
+    background-color:White;
+    border: 1px solid #CCC;
+     margin:0 auto;
+     padding:2px;
+     width :800px;  
+     font-family:Arial;
+     font-size:small;
+  }
+
+ .labelprint 
+ {
+       color:Black;
+       margin:0; padding:5px;
+       overflow:hidden;
+       width:90%;
+     
+     }
+
+td.fondo{ background-color:#F0f0f0; width:150px; font-weight:bold;  border-left:1px solid #CCC;  border-right:1px solid #CCC;}
+#logoCGSA
+{
+    background-image:url('../imgs/logoContecon.png'); 
+    background-repeat:no-repeat;
+    background-position: center bottom;
+    width:164px;
+    height:57px;
+   
+    
+ }
+ .imagenes
+ {
+      width:100%;
+     
+     }
+ 
+.membrete
+{
+     padding:0;
+     margin:0px;
+     clear:both;
+
+    }
+.membrete table  { width:100%;}
+
+.membrete table  tr td:first-child 
+{
+    
+      background-color:#F0f0f0; width:220px;
+      border-left:1px solid #CCC;
+      border-right:1px solid #CCC;
+      padding:5px; 
+      font-weight:bolder;
+                  
+                  }
+#servicio{ font-size:2em!important; text-align:right; display:block;}
+/*reglas que se usan para imprimir */
+ @media print 
+ {
+   
+     div {  background-color:transparent!important;}
+     .booking{ height:auto!important;}
+     #generacion {page-break-after: always;}
+     
+     br{ display:none;}
+     #anumber{ font-size:3em; text-align:center;}
+  .level2{ color:Black!important;}   
+  .seccion .accion > table tr td:last-child {border-right:1px solid black!important; }
+  .seccion .accion > table.xcontroles  tr  td:nth-child(2n+1) 
+     {    border-left:1px solid black!important;
+      border-right:1px solid black!imortant;}
+ 
+#generacion {  display:block!important; margin:0; padding:0; border:1px solid black;}
+      
+body 
+{
+    background-color: transparent; margin:0; padding:1px; font-size:small;  
+   
+}
+div.seccion  { font-size:xx-small!important; text-align:justify; margin:0; padding:0;}
+body #hoja  
+{
+     background-color:White;
+     border: none;
+     margin:0 auto;
+     padding:1px;
+     width:98%;
+     font-family:Arial;
+     color:Black!important;
+  }
+.membrete table  tr td:first-child   
+{
+    border-left:1px solid black!important;
+      border-right:1px solid black!important;
+      }
+             
+  .botonera { visibility:hidden; display:none;}
+ .bt-bottom{ border-bottom:1px solid black!important;}
+ .bt-right  {border-right:1px solid black!important;}
+ .bt-left {border-left:1px solid black!important;}
+ .bt-top {border-top:1px solid black!important;}
+   
+   body .xhoja  
+{
+     background-color:White;
+     border: 1px solid #CCC;
+     margin:0 auto;
+     padding:2px;
+     width :790px;  
+     font-family:Arial;
+     font-size:small;
+     margin-top:10px;
+     display:block!important;
+  }
+  
+ .xhoja .detalle
+ {
+      width:100%;
+     }
+     
+     .xhoja hs { text-align:center; font-size:3em; margin:1;}
+     .xhoja p { margin:1px; padding:1px;}
+     
+ .detalle th { background-color:#CCC; font-weight:bold; text-align:center;}    
+ .detalle td { text-align:center; border:1px solid #CCC;}
+   
+     
+    }
+    /*Regla de pagina de impresión*/
+@page {
+    size: 21cm 29cm;
+    margin: 8mm 7mm 10mm 7mm; /* change the margins as you want them to be. */
+}
+
+
+.ancho { width:140px!important;}
+.xant { width:80px!important;}
+#xestado { text-align:center; font-weight:bold; text-transform:uppercase; font-size:1.5em!important; border-top:1px solid #CCC; border-left:1px solid #CCC; border-right:1px solid #CCC;}
+
+
+ 
+ 

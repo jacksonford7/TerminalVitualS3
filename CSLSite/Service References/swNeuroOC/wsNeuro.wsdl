@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="imageToIcao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="base64Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="imageToIcaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imageToIcaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="imageToTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="base64Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="imageToTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imageToTemplateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="base64Input1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="base64Input2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyImageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="base64Input1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="base64Input2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyTemplateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="licenseStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="licenseStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="licenseStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="imageToIcaoSoapIn">
+    <wsdl:part name="parameters" element="tns:imageToIcao" />
+  </wsdl:message>
+  <wsdl:message name="imageToIcaoSoapOut">
+    <wsdl:part name="parameters" element="tns:imageToIcaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="imageToTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:imageToTemplate" />
+  </wsdl:message>
+  <wsdl:message name="imageToTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:imageToTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyImageSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyImage" />
+  </wsdl:message>
+  <wsdl:message name="VerifyImageSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyTemplate" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="licenseStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:licenseStatus" />
+  </wsdl:message>
+  <wsdl:message name="licenseStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:licenseStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsNeuroSoap">
+    <wsdl:operation name="imageToIcao">
+      <wsdl:input message="tns:imageToIcaoSoapIn" />
+      <wsdl:output message="tns:imageToIcaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="imageToTemplate">
+      <wsdl:input message="tns:imageToTemplateSoapIn" />
+      <wsdl:output message="tns:imageToTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyImage">
+      <wsdl:input message="tns:VerifyImageSoapIn" />
+      <wsdl:output message="tns:VerifyImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTemplate">
+      <wsdl:input message="tns:VerifyTemplateSoapIn" />
+      <wsdl:output message="tns:VerifyTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="licenseStatus">
+      <wsdl:input message="tns:licenseStatusSoapIn" />
+      <wsdl:output message="tns:licenseStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsNeuroSoap" type="tns:wsNeuroSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="imageToIcao">
+      <soap:operation soapAction="http://tempuri.org/imageToIcao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="imageToTemplate">
+      <soap:operation soapAction="http://tempuri.org/imageToTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyImage">
+      <soap:operation soapAction="http://tempuri.org/VerifyImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTemplate">
+      <soap:operation soapAction="http://tempuri.org/VerifyTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="licenseStatus">
+      <soap:operation soapAction="http://tempuri.org/licenseStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsNeuroSoap12" type="tns:wsNeuroSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="imageToIcao">
+      <soap12:operation soapAction="http://tempuri.org/imageToIcao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="imageToTemplate">
+      <soap12:operation soapAction="http://tempuri.org/imageToTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyImage">
+      <soap12:operation soapAction="http://tempuri.org/VerifyImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTemplate">
+      <soap12:operation soapAction="http://tempuri.org/VerifyTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="licenseStatus">
+      <soap12:operation soapAction="http://tempuri.org/licenseStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsNeuro">
+    <wsdl:port name="wsNeuroSoap" binding="tns:wsNeuroSoap">
+      <soap:address location="http://cgdes19:89/wsNeuro.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsNeuroSoap12" binding="tns:wsNeuroSoap12">
+      <soap12:address location="http://cgdes19:89/wsNeuro.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

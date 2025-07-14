@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://cgdes19:5152/SAV/web_service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WS_Preadvise" />
+  <xs:element name="nuevo_turno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="horario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="unidad_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamano" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="linea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="placa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nuevo_turnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="nuevo_turnoResult" nillable="true" type="q1:turno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nuevo_turno_sin_unidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="horario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nuevo_turno_sin_unidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="nuevo_turno_sin_unidadResult" nillable="true" type="q2:turno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nuevo_chofer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nuevo_choferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="nuevo_choferResult" nillable="true" type="q3:chofer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nuevo_vehiculo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="placa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nuevo_vehiculoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="nuevo_vehiculoResult" nillable="true" type="q4:vehiculo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nueva_unidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamano" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="linea" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nueva_unidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="nueva_unidadResult" nillable="true" type="q5:unidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtener_token">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtener_tokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="obtener_tokenResult" nillable="true" type="q6:token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtener_token_mensaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtener_token_mensajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="obtener_token_mensajeResult" nillable="true" type="q7:token" />
+        <xs:element minOccurs="0" name="error" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="preavisar_turno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="_turno" nillable="true" type="q8:turno" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="_token" nillable="true" type="q9:token" />
+        <xs:element minOccurs="0" name="creador" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="preavisar_turnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="preavisar_turnoResult" nillable="true" type="q10:respuesta_metodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="preavisar_turno_simple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q11:token" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="horario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unidad_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamano" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="linea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="placa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="preavisar_turno_simpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="preavisar_turno_simpleResult" nillable="true" type="q12:respuesta_metodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelar_turno_preavisado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="_turno" nillable="true" type="q13:turno" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="_token" nillable="true" type="q14:token" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="causa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelar_turno_preavisadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="cancelar_turno_preavisadoResult" nillable="true" type="q15:respuesta_metodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelar_turno_preavisado_simple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q16:token" />
+        <xs:element minOccurs="0" name="turno_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unidad_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="causa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelar_turno_preavisado_simpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="cancelar_turno_preavisado_simpleResult" nillable="true" type="q17:respuesta_metodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizar_turno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q18:token" />
+        <xs:element minOccurs="0" name="id_turno" type="xs:int" />
+        <xs:element minOccurs="0" name="documento_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documento_estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documento_fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizar_turnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="actualizar_turnoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizar_turno_simple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q19:token" />
+        <xs:element minOccurs="0" name="id_turno" type="xs:int" />
+        <xs:element minOccurs="0" name="documento_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documento_estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizar_turno_simpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="actualizar_turno_simpleResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listar_turnos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q20:token" />
+        <xs:element minOccurs="0" name="desde" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="hasta" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listar_turnosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="listar_turnosResult" nillable="true" type="q21:ArrayOfturno" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="response" nillable="true" type="q22:respuesta_metodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listar_turnos_simple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q23:token" />
+        <xs:element minOccurs="0" name="desde" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hasta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listar_turnos_simpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="listar_turnos_simpleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="choferes_bloqueados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q24:token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="choferes_bloqueadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="choferes_bloqueadosResult" nillable="true" type="q25:ArrayOfchofer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chofer_es_valido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q26:token" />
+        <xs:element minOccurs="0" name="licencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chofer_es_validoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chofer_es_validoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vehiculos_bloqueados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q27:token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vehiculos_bloqueadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="vehiculos_bloqueadosResult" nillable="true" type="q28:ArrayOfvehiculo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vehiculo_es_valido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q29:token" />
+        <xs:element minOccurs="0" name="placa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vehiculo_es_validoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiculo_es_validoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test_data_contract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="texto_de_pruebas" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test_data_contractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="test_data_contractResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pruebas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dato" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PruebasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="PruebasResult" nillable="true" type="q30:TestClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test_data_config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test_data_configResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="test_data_configResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test_data_config_value">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="t1" nillable="true" type="q31:token" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test_data_config_valueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="test_data_config_valueResult" nillable="true" type="q32:respuesta_metodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="token_es_valido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="tok" nillable="true" type="q33:token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="token_es_validoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/WS_Preadvise" minOccurs="0" name="token_es_validoResult" nillable="true" type="q34:respuesta_metodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="check_container_number">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cntr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="check_container_numberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="check_container_numberResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

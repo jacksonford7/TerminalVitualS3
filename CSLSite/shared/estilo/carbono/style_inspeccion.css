@@ -1,0 +1,27 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;	vertical-align: baseline; } ol, ul { list-style: none; } * { outline: none; box-sizing: border-box; } html,body{ background: #f0f0f0; font-family: 'Open Sans', sans-serif; }
+.certificado { height:297mm; width:210mm; background: url(../../imgs/carbono_img/background.jpg) no-repeat; margin: auto; background-size: contain; padding: 40px; }
+.certificado > div { font-size: 14px; line-height: 1.5; margin-top: 100px; }
+.certificado > div p, .certificado > div h2 { margin-bottom: 25px; }
+.certificado > div h2 { font-weight: 700; text-align: center; font-size: 28px; line-height: 30px; padding: 10px 0; }
+header h5 { color: #ffffff; font-size: 16px; line-height: 16px; margin-bottom: 53px; }
+header h5:before { content: ''; position: relative; display: block; height: 4px; width: 16px; background: #ffffff; margin-bottom: 30px; margin-top: 22px; }
+header h1 { font-size: 41px; line-height: 49px; color: #fff; }
+header h1 strong, .certificado > div strong { font-weight: 700; }
+header h1 strong { display: block; }
+.signature { font-size: 14px; line-height: 1.5; text-align: center; width: 300px; margin: 90px auto 0; border-top: 2px solid rgba(112, 112, 112, 0.5); padding-top: 20px; position: relative; }
+.signature.variant { margin-top: 30px; }
+    .signature:before {
+        content: 'CONTECON GUAYAQUIL CGSA';
+        position: absolute;
+        width: 340px;
+        height: 10px;
+        background-size: contain;
+        top: -30px;
+        left: 50%;
+        margin-left: -170px;
+    }
+.logos { font-size: 0; text-align: center; line-height: 154px; }
+.logos img, footer span, footer img { display: inline-block; vertical-align: middle; margin: 0 20px; }
+footer { font-size: 0; text-align: center; line-height: 60px; padding-top: 30px; }
+footer span { font-size: 12px; }
+footer span, footer img { margin: 0 10px; }

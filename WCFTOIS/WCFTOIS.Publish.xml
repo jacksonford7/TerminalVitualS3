@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Publicar\WCFTOIS" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="WFCPASEPUERTA.svc" publishTime="09/21/2013 11:57:42" />
+    <file relUrl="bin/Logger.dll" publishTime="10/18/2013 13:57:34" />
+    <file relUrl="bin/ConectorN4.dll" publishTime="10/21/2013 17:15:54" />
+    <file relUrl="Web.config" publishTime="12/08/2016 16:51:36" />
+    <file relUrl="bin/WCFTOIS.dll" publishTime="12/08/2016 16:51:00" />
+    <file relUrl="bin/ClSPOLTOIS.dll" publishTime="12/08/2016 16:50:59" />
+    <file relUrl="bin/ClSPOLTOIS.pdb" publishTime="12/08/2016 16:50:59" />
+    <file relUrl="bin/WCFTOIS.pdb" publishTime="12/08/2016 16:51:00" />
+  </publishProfile>
+</publishData>

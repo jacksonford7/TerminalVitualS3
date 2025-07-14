@@ -1,0 +1,127 @@
+﻿
+#pager { font-size:small;  vertical-align:top; font-style:italic;}
+body 
+
+{
+     background-color:#CCC;
+     font-family:Segoe UI;
+}
+.catabody
+{
+     width:900px;
+     height:100%;
+     overflow:hidden;
+     background-color:White;
+     margin:0 auto;
+     border-radius: 15px 15px 15px 15px;
+     padding:10px;
+}
+    
+.catawrap
+    {
+         border:1px solid #CCC;
+         padding:5px;
+          border-radius: 10px 10px 10px 10px;
+           min-height:99%;
+    }
+
+.catalabel
+{
+     display:inline-block!important;
+      text-align:right; 
+      color:Black; 
+      margin:0; 
+      padding:3px;
+      font-weight:bold; 
+      width:30%;
+}
+    
+.catacapa{ background-color:#F8F8F8;  border-radius: 8px 8px 0px 0px;}  
+
+    
+.catavalida
+{ text-align:center; 
+  color:Red; 
+  font-style:italic;
+  margin:0; 
+  padding:1px;
+  font-size:small;
+}
+ 
+.catamayusc{ text-transform:uppercase; }
+.catable{ width:100%; font-size:small;}
+.booking 
+{
+     border:1px solid #CCC; background-color:#F8F8F8;
+    }
+    
+    .labelp { font-weight:bolder; text-align:right;  font-style:italic; font-size:small;   padding:0px 4px 0px 4px; margin:0; }
+    .pnumber
+    {
+         background-image:url('../imgs/find.gif');
+         background-repeat: no-repeat;
+         background-position:left center;
+        }
+     
+     
+     div.separator { margin:0; padding:0; 
+               width:100%;  
+               background-color:#052e6b;  
+               height:18px;
+               color:White;
+               }
+               
+.datasee { margin:0!important; padding:0!important; display:block!important; text-align:center;}
+.ascendente
+{
+          background-image:url('../imgs/desc.png');
+         background-repeat: no-repeat;
+         background-position:left center;
+    }
+    
+    .descendente
+{
+          background-image:url('../imgs/asc.png');
+         background-repeat: no-repeat;
+         background-position:left center;
+    }
+    
+             tr.rowdis td
+         {
+             text-decoration:line-through;
+             font-style:italic;
+             color:Red;
+         }
+         
+ tr.rowdis td *
+         {
+             text-decoration:line-through;
+             font-style:italic;
+             color:Red;
+         }
+
+  .azul{ color:Blue; font-weight:bolder;}
+  .naranja{ color:Orange;font-weight:bolder;}
+ 
+ #bkresult{ text-align:left; color:black; font-size:1em; max-height:150px; }    
+  #bkresult table tr  { color:Black; text-align:center;}    
+         
+         
+    div.resultados { overflow:auto; max-height:300px; vertical-align:top; min-height:30px;  width:62%; display: inline-block; margin: 2px; padding:20x; border:1px solid #ccc; font-size:.9em;}       
+    div.resultados  p {  background-color:#CCC; text-align:center; margin:0; padding:0; font-weight:bolder;} 
+    div.resultados table { width:99%;}
+    div.resultados table th { background-color:Yellow;}
+    div.resultados table tr td { border:1px dotted #CCC;  font-size:0.8em;}
+   .oki { background-image:url(../imgs/ok.png); background-repeat:no-repeat; background-position: 5px center; padding-left:25px;  }
+   .bad { background-image:url(../imgs/action_stop.gif); background-repeat:no-repeat; background-position: 5px center; padding-left:25px;  }
+ 
+
+ #unit_ok { width:250px!important;}
+         
+div.propiedad{ background-color:#CCC; 
+               text-align:center; 
+               text-transform:uppercase; 
+               font-size:1.2em; color:black;
+                font-family:Consolas; 
+               font-style:italic;
+               }         

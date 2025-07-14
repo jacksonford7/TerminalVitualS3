@@ -1,0 +1,38 @@
+﻿
+
+#tablasort .point:hover td {
+    background-color: #ccc;
+    cursor: pointer;
+
+}
+.pagedisplay{ width:50px!important;}
+.red { color: Red; font-weight:bold;}
+
+
+
+#pager {
+      vertical-align: top;
+      background-color:transparent;
+      border: 1px solid #ccc;
+      padding:2px;
+      text-align:center;
+}
+
+    #pager > select {
+        width: 10%;
+    }
+    #pager input[type=text] {
+        width: 10%;
+    }
+
+    .ascendente {
+        background-image: url('../imgs/desc.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+
+.descendente {
+    background-image: url('../imgs/asc.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}

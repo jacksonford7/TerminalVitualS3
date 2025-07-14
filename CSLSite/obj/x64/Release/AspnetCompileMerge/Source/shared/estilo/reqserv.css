@@ -1,0 +1,149 @@
+.rs_tbl0
+{
+  border-width : 1px;
+  width: 98%; 
+	border-color:#000000;
+	border-style:solid;
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;
+}
+
+.rs_tbl0 td
+{
+  padding: 2px 2px 2px 2px;  
+}
+.rs_txtArea
+{
+	border-bottom: dotted 1px #cccccc;
+	height: 20px;
+}
+.rs_print
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;
+	text-decoration: underline;
+	cursor: pointer;
+	text-align:right;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+
+.rs_label
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;
+	font-weight: bold;	
+	width: 150px;
+}
+.rs_big
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 16px;
+	font-weight:bolder;
+}
+ 
+.rs_tbl1
+{
+	width: 100%; 
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;		
+	margin-bottom: 20px;
+	
+}
+.rs_tbl1 td
+{
+	border-bottom: dotted 1px #cccccc;
+}
+
+.lchkbox
+{
+	border: solid 1px #000000;
+	background-color: #ffffff;
+	width: 10px;
+	height: 10px;
+}
+.rs_Seccion1
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;		
+	font-weight: bold;
+	padding: 15px 5px 5px 5px;
+	background-color: #eeeeee;
+}
+
+.rs_rowUnder{
+   border-bottom-width: 1px;
+   border-bottom-color:#000000;
+   border-bottom-style:solid;
+}
+.rs_cellRight{
+   border-right-width: 1px;
+   border-right-color:#000000;
+   border-right-style:solid;
+}
+
+ .rs_Seccion1_rs_cellRight
+ {
+	border-right-width: 1px;
+   border-right-color:#000000;
+   border-right-style:solid;
+   font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;		
+	font-weight: bold;
+	padding: 15px 5px 5px 5px;
+	background-color: #eeeeee;
+ }
+
+.rs_cellRightUnder{
+   border-bottom-width: 1px;
+   border-bottom-color:#000000;
+   border-bottom-style:solid;        
+   border-right-width: 1px;
+   border-right-color:#000000;
+   border-right-style:solid;
+        }
+        
+.reqserv_lnk 
+{
+	padding: 2px 2px 10px 2px; 
+	float: left; 
+	cursor:pointer;
+	text-decoration: underline;
+	
+}
+
+.reqserv_tbl_contenedores
+{
+	
+	border: dotted 1px #cccccc;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+
+.reqserv_tbl_contenedores th 
+{
+	background-color: #eeeeee;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+
+.reqserv_tbl_contenedores th b
+{
+	font-size: 12px;
+	color: #336666;
+}
+
+.reqserv_tbl_contenedores td
+{
+	background-color: #ffffff;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+
+
+
+
+
+
+

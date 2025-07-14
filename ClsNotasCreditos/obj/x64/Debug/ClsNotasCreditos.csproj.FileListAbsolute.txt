@@ -1,0 +1,11 @@
+D:\Proyect\PortalS3\ClsNotasCreditos\bin\x64\Debug\ClsNotasCreditos.dll
+D:\Proyect\PortalS3\ClsNotasCreditos\bin\x64\Debug\ClsNotasCreditos.pdb
+D:\Proyect\PortalS3\ClsNotasCreditos\bin\x64\Debug\ControlOPC.Entidades.dll
+D:\Proyect\PortalS3\ClsNotasCreditos\bin\x64\Debug\SQlHandler.dll
+D:\Proyect\PortalS3\ClsNotasCreditos\bin\x64\Debug\ControlOPC.Entidades.pdb
+D:\Proyect\PortalS3\ClsNotasCreditos\bin\x64\Debug\SQlHandler.pdb
+D:\Proyect\PortalS3\ClsNotasCreditos\obj\x64\Debug\ClsNotasCreditos.csprojAssemblyReference.cache
+D:\Proyect\PortalS3\ClsNotasCreditos\obj\x64\Debug\ClsNotasCreditos.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3\ClsNotasCreditos\obj\x64\Debug\ClsNotasCreditos.csproj.CopyComplete
+D:\Proyect\PortalS3\ClsNotasCreditos\obj\x64\Debug\ClsNotasCreditos.dll
+D:\Proyect\PortalS3\ClsNotasCreditos\obj\x64\Debug\ClsNotasCreditos.pdb

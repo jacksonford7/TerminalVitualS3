@@ -1,0 +1,40 @@
+﻿.xclass { padding: 0.5em 0.5em; background: #FFFFAA; border: 1px solid #FFAD33; }
+* html a:hover { background: transparent; }
+
+.xinfo {
+	border-bottom: 1px dotted #000000;	
+	color: #000000; 
+	outline: none;				
+	cursor: help; 
+	text-decoration: none;
+	position: relative;
+	}
+
+.xinfo span {				
+	margin-left: -9999em;
+	position: absolute;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+	-moz-box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+	}
+
+.xinfo:hover span {
+   text-align:left;
+	position: absolute;
+	left: 7em;
+	top: -2px;
+	z-index: 1001;
+	margin-left: 0;
+	width: 160px;
+	font-family:Segoe UI;
+	font-size:small;
+	margin:2px; padding:2px;
+	line-height:14px;
+	
+	}
+.xinfo:hover span h3 { display:inline-block;}
+
+

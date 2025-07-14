@@ -1,0 +1,11 @@
+C:\PortalS3TV\ClsNotasCreditos\bin\x64\Release\ClsNotasCreditos.dll
+C:\PortalS3TV\ClsNotasCreditos\bin\x64\Release\ClsNotasCreditos.pdb
+C:\PortalS3TV\ClsNotasCreditos\bin\x64\Release\ControlOPC.Entidades.dll
+C:\PortalS3TV\ClsNotasCreditos\bin\x64\Release\SQlHandler.dll
+C:\PortalS3TV\ClsNotasCreditos\bin\x64\Release\ControlOPC.Entidades.pdb
+C:\PortalS3TV\ClsNotasCreditos\bin\x64\Release\SQlHandler.pdb
+C:\PortalS3TV\ClsNotasCreditos\obj\x64\Release\ClsNotasCreditos.csproj.AssemblyReference.cache
+C:\PortalS3TV\ClsNotasCreditos\obj\x64\Release\ClsNotasCreditos.csproj.CoreCompileInputs.cache
+C:\PortalS3TV\ClsNotasCreditos\obj\x64\Release\ClsNotasCreditos.csproj.CopyComplete
+C:\PortalS3TV\ClsNotasCreditos\obj\x64\Release\ClsNotasCreditos.dll
+C:\PortalS3TV\ClsNotasCreditos\obj\x64\Release\ClsNotasCreditos.pdb

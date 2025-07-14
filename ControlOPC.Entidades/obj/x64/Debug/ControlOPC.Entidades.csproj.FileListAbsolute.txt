@@ -1,0 +1,9 @@
+D:\Proyect\PortalS3\ControlOPC.Entidades\bin\x64\Debug\ControlOPC.Entidades.dll
+D:\Proyect\PortalS3\ControlOPC.Entidades\bin\x64\Debug\ControlOPC.Entidades.pdb
+D:\Proyect\PortalS3\ControlOPC.Entidades\bin\x64\Debug\SQlHandler.dll
+D:\Proyect\PortalS3\ControlOPC.Entidades\bin\x64\Debug\SQlHandler.pdb
+D:\Proyect\PortalS3\ControlOPC.Entidades\obj\x64\Debug\ControlOPC.Entidades.csprojAssemblyReference.cache
+D:\Proyect\PortalS3\ControlOPC.Entidades\obj\x64\Debug\ControlOPC.Entidades.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3\ControlOPC.Entidades\obj\x64\Debug\ControlOPC.Entidades.csproj.CopyComplete
+D:\Proyect\PortalS3\ControlOPC.Entidades\obj\x64\Debug\ControlOPC.Entidades.dll
+D:\Proyect\PortalS3\ControlOPC.Entidades\obj\x64\Debug\ControlOPC.Entidades.pdb

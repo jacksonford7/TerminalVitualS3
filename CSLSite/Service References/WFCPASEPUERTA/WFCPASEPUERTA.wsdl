@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WFCPASEPUERTA" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWFCPASEPUERTA_GetContainerinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetContainerinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetUserFacturainfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFacturainfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetUserFacturainfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFacturainfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetCFSSubIteminfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCFSSubIteminfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetCFSSubIteminfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCFSSubIteminfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetContainerN4info_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerN4info" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetContainerN4info_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerN4infoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetChoferinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChoferinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetChoferinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChoferinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetEmpresainfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpresainfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetEmpresainfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpresainfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetPlacainfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlacainfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetPlacainfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlacainfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetTurnoinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTurnoinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetTurnoinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTurnoinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetFacturainfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacturainfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetFacturainfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacturainfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SavePasePuerta_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePasePuerta" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SavePasePuerta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePasePuertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_RImprePasePuerta_InputMessage">
+    <wsdl:part name="parameters" element="tns:RImprePasePuerta" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_RImprePasePuerta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RImprePasePuertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetObserFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObserFactura" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetObserFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObserFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFactura" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveCancelarPasePuerta_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelarPasePuerta" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveCancelarPasePuerta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelarPasePuertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveTempTurno_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTurno" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveTempTurno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveDAI_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDAI" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveDAI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDAIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_IsTempTurnoInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsTempTurnoInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_IsTempTurnoInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsTempTurnoInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_IsManifContenedorInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsManifContenedorInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_IsManifContenedorInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsManifContenedorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetRIDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRIDT" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetRIDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRIDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetServicesinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetServicesinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetBookinginfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookinginfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetBookinginfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookinginfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetSysproControlCreditoinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSysproControlCreditoinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetSysproControlCreditoinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSysproControlCreditoinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetBreakBulkN4info_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreakBulkN4info" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetBreakBulkN4info_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreakBulkN4infoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveRefeer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefeer" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveRefeer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefeerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_EXECICU_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXECICU" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_EXECICU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXECICUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_EXECICU_tmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXECICU_tmp" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_EXECICU_tmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXECICU_tmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetPNinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPNinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetPNinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPNinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_ISDateValidoLiblockCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ISDateValidoLiblockCliente" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_ISDateValidoLiblockCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ISDateValidoLiblockClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveLiberacion_Clientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLiberacion_Clientes" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveLiberacion_Clientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLiberacion_ClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveLock_Clientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLock_Clientes" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SaveLock_Clientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLock_ClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetLibClientesinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLibClientesinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetLibClientesinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLibClientesinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetLockClientesinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockClientesinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetLockClientesinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockClientesinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_RImpLibLockCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RImpLibLockCliente" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_RImpLibLockCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RImpLibLockClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetCatalogoinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogoinfo" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetCatalogoinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogoinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetPNAsignacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPNAsignacion" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_GetPNAsignacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPNAsignacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SavePNAsignacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePNAsignacion" />
+  </wsdl:message>
+  <wsdl:message name="IWFCPASEPUERTA_SavePNAsignacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePNAsignacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWFCPASEPUERTA">
+    <wsdl:operation name="GetContainerinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetContainerinfo" message="tns:IWFCPASEPUERTA_GetContainerinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetContainerinfoResponse" message="tns:IWFCPASEPUERTA_GetContainerinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFacturainfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetUserFacturainfo" message="tns:IWFCPASEPUERTA_GetUserFacturainfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetUserFacturainfoResponse" message="tns:IWFCPASEPUERTA_GetUserFacturainfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCFSSubIteminfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetCFSSubIteminfo" message="tns:IWFCPASEPUERTA_GetCFSSubIteminfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetCFSSubIteminfoResponse" message="tns:IWFCPASEPUERTA_GetCFSSubIteminfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerN4info">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetContainerN4info" message="tns:IWFCPASEPUERTA_GetContainerN4info_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetContainerN4infoResponse" message="tns:IWFCPASEPUERTA_GetContainerN4info_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChoferinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetChoferinfo" message="tns:IWFCPASEPUERTA_GetChoferinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetChoferinfoResponse" message="tns:IWFCPASEPUERTA_GetChoferinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpresainfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetEmpresainfo" message="tns:IWFCPASEPUERTA_GetEmpresainfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetEmpresainfoResponse" message="tns:IWFCPASEPUERTA_GetEmpresainfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlacainfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetPlacainfo" message="tns:IWFCPASEPUERTA_GetPlacainfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetPlacainfoResponse" message="tns:IWFCPASEPUERTA_GetPlacainfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTurnoinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetTurnoinfo" message="tns:IWFCPASEPUERTA_GetTurnoinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetTurnoinfoResponse" message="tns:IWFCPASEPUERTA_GetTurnoinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFacturainfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetFacturainfo" message="tns:IWFCPASEPUERTA_GetFacturainfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetFacturainfoResponse" message="tns:IWFCPASEPUERTA_GetFacturainfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePasePuerta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SavePasePuerta" message="tns:IWFCPASEPUERTA_SavePasePuerta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SavePasePuertaResponse" message="tns:IWFCPASEPUERTA_SavePasePuerta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RImprePasePuerta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/RImprePasePuerta" message="tns:IWFCPASEPUERTA_RImprePasePuerta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/RImprePasePuertaResponse" message="tns:IWFCPASEPUERTA_RImprePasePuerta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObserFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetObserFactura" message="tns:IWFCPASEPUERTA_GetObserFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetObserFacturaResponse" message="tns:IWFCPASEPUERTA_GetObserFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveFactura" message="tns:IWFCPASEPUERTA_SaveFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveFacturaResponse" message="tns:IWFCPASEPUERTA_SaveFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelarPasePuerta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveCancelarPasePuerta" message="tns:IWFCPASEPUERTA_SaveCancelarPasePuerta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveCancelarPasePuertaResponse" message="tns:IWFCPASEPUERTA_SaveCancelarPasePuerta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTurno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveTempTurno" message="tns:IWFCPASEPUERTA_SaveTempTurno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveTempTurnoResponse" message="tns:IWFCPASEPUERTA_SaveTempTurno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDAI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveDAI" message="tns:IWFCPASEPUERTA_SaveDAI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveDAIResponse" message="tns:IWFCPASEPUERTA_SaveDAI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsTempTurnoInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/IsTempTurnoInfo" message="tns:IWFCPASEPUERTA_IsTempTurnoInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/IsTempTurnoInfoResponse" message="tns:IWFCPASEPUERTA_IsTempTurnoInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsManifContenedorInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/IsManifContenedorInfo" message="tns:IWFCPASEPUERTA_IsManifContenedorInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/IsManifContenedorInfoResponse" message="tns:IWFCPASEPUERTA_IsManifContenedorInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRIDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetRIDT" message="tns:IWFCPASEPUERTA_GetRIDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetRIDTResponse" message="tns:IWFCPASEPUERTA_GetRIDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetServicesinfo" message="tns:IWFCPASEPUERTA_GetServicesinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetServicesinfoResponse" message="tns:IWFCPASEPUERTA_GetServicesinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookinginfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetBookinginfo" message="tns:IWFCPASEPUERTA_GetBookinginfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetBookinginfoResponse" message="tns:IWFCPASEPUERTA_GetBookinginfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSysproControlCreditoinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetSysproControlCreditoinfo" message="tns:IWFCPASEPUERTA_GetSysproControlCreditoinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetSysproControlCreditoinfoResponse" message="tns:IWFCPASEPUERTA_GetSysproControlCreditoinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBreakBulkN4info">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetBreakBulkN4info" message="tns:IWFCPASEPUERTA_GetBreakBulkN4info_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetBreakBulkN4infoResponse" message="tns:IWFCPASEPUERTA_GetBreakBulkN4info_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefeer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveRefeer" message="tns:IWFCPASEPUERTA_SaveRefeer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveRefeerResponse" message="tns:IWFCPASEPUERTA_SaveRefeer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EXECICU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/EXECICU" message="tns:IWFCPASEPUERTA_EXECICU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/EXECICUResponse" message="tns:IWFCPASEPUERTA_EXECICU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EXECICU_tmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/EXECICU_tmp" message="tns:IWFCPASEPUERTA_EXECICU_tmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/EXECICU_tmpResponse" message="tns:IWFCPASEPUERTA_EXECICU_tmp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPNinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetPNinfo" message="tns:IWFCPASEPUERTA_GetPNinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetPNinfoResponse" message="tns:IWFCPASEPUERTA_GetPNinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ISDateValidoLiblockCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/ISDateValidoLiblockCliente" message="tns:IWFCPASEPUERTA_ISDateValidoLiblockCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/ISDateValidoLiblockClienteResponse" message="tns:IWFCPASEPUERTA_ISDateValidoLiblockCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLiberacion_Clientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveLiberacion_Clientes" message="tns:IWFCPASEPUERTA_SaveLiberacion_Clientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveLiberacion_ClientesResponse" message="tns:IWFCPASEPUERTA_SaveLiberacion_Clientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLock_Clientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveLock_Clientes" message="tns:IWFCPASEPUERTA_SaveLock_Clientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SaveLock_ClientesResponse" message="tns:IWFCPASEPUERTA_SaveLock_Clientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibClientesinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetLibClientesinfo" message="tns:IWFCPASEPUERTA_GetLibClientesinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetLibClientesinfoResponse" message="tns:IWFCPASEPUERTA_GetLibClientesinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockClientesinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetLockClientesinfo" message="tns:IWFCPASEPUERTA_GetLockClientesinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetLockClientesinfoResponse" message="tns:IWFCPASEPUERTA_GetLockClientesinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RImpLibLockCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/RImpLibLockCliente" message="tns:IWFCPASEPUERTA_RImpLibLockCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/RImpLibLockClienteResponse" message="tns:IWFCPASEPUERTA_RImpLibLockCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogoinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetCatalogoinfo" message="tns:IWFCPASEPUERTA_GetCatalogoinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetCatalogoinfoResponse" message="tns:IWFCPASEPUERTA_GetCatalogoinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPNAsignacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetPNAsignacion" message="tns:IWFCPASEPUERTA_GetPNAsignacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/GetPNAsignacionResponse" message="tns:IWFCPASEPUERTA_GetPNAsignacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePNAsignacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SavePNAsignacion" message="tns:IWFCPASEPUERTA_SavePNAsignacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWFCPASEPUERTA/SavePNAsignacionResponse" message="tns:IWFCPASEPUERTA_SavePNAsignacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWFCPASEPUERTA" type="tns:IWFCPASEPUERTA">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContainerinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetContainerinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFacturainfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetUserFacturainfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCFSSubIteminfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetCFSSubIteminfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerN4info">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetContainerN4info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChoferinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetChoferinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpresainfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetEmpresainfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlacainfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetPlacainfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTurnoinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetTurnoinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFacturainfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetFacturainfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePasePuerta">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SavePasePuerta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RImprePasePuerta">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/RImprePasePuerta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObserFactura">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetObserFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFactura">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SaveFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelarPasePuerta">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SaveCancelarPasePuerta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTurno">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SaveTempTurno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDAI">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SaveDAI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsTempTurnoInfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/IsTempTurnoInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsManifContenedorInfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/IsManifContenedorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRIDT">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetRIDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetServicesinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookinginfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetBookinginfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSysproControlCreditoinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetSysproControlCreditoinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreakBulkN4info">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetBreakBulkN4info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefeer">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SaveRefeer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXECICU">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/EXECICU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXECICU_tmp">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/EXECICU_tmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPNinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetPNinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISDateValidoLiblockCliente">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/ISDateValidoLiblockCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLiberacion_Clientes">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SaveLiberacion_Clientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLock_Clientes">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SaveLock_Clientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibClientesinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetLibClientesinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLockClientesinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetLockClientesinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RImpLibLockCliente">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/RImpLibLockCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogoinfo">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetCatalogoinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPNAsignacion">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/GetPNAsignacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePNAsignacion">
+      <soap:operation soapAction="http://tempuri.org/IWFCPASEPUERTA/SavePNAsignacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WFCPASEPUERTA">
+    <wsdl:port name="BasicHttpBinding_IWFCPASEPUERTA" binding="tns:BasicHttpBinding_IWFCPASEPUERTA">
+      <soap:address location="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBMPORTALCGSA">
+  <DataContextMoniker Name="/DBMPORTALCGSADataContext" />
+  <nestedChildShapes>
+    <classShape Id="fa44fb12-18bf-47d5-a018-7a26293f6b3f" absoluteBounds="0.875, 0.5, 2, 3.8900577799479166">
+      <DataClassMoniker Name="/DBMPORTALCGSADataContext/VW_CSC_BL_CSL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6eb68ca6-9f4d-4fa1-9706-632697f82a78" absoluteBounds="0.89000000000000012, 0.96, 1.9700000000000002, 3.3300577799479165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd3b595d-63e5-4813-997e-ed6add77c645" absoluteBounds="3.625, 1, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/DBMPORTALCGSADataContext/VBS2_PlanOperacionIntervalo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="028bc378-f89c-4a8c-8777-76c56bd61e64" absoluteBounds="3.6399999999999997, 1.46, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ecc67613-3f38-46d4-b886-d1e2a59b6312" absoluteBounds="3.625, 4.75, 2.75, 2.7396264648437496">
+      <DataClassMoniker Name="/DBMPORTALCGSADataContext/VBS2_Reserva" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ef81eef-61c8-4462-9ab0-526d621fc5fb" absoluteBounds="3.6399999999999997, 5.21, 2.7199999999999998, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 4.75); (4.625 : 2.58919514973958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBMPORTALCGSADataContext/VBS2_Reserva/VBS2_Reserva_VBS2_PlanOperacionIntervalo" />
+      <nodes>
+        <classShapeMoniker Id="ecc67613-3f38-46d4-b886-d1e2a59b6312" />
+        <classShapeMoniker Id="fd3b595d-63e5-4813-997e-ed6add77c645" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="761de5bb-0243-4f79-9dec-0cc82e1907ea" absoluteBounds="1.25, 4.875, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/DBMPORTALCGSADataContext/CSL_Catalogo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94c08aae-7704-4eca-b266-3eaaad5efcc1" absoluteBounds="1.2650000000000001, 5.335, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48a9ae9c-a09a-4925-9593-83c097f43d2c" absoluteBounds="6.375, 1.25, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/DBMPORTALCGSADataContext/CLIENTS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2dfc9f73-0109-41fc-b01f-05464b331b43" absoluteBounds="6.39, 1.71, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

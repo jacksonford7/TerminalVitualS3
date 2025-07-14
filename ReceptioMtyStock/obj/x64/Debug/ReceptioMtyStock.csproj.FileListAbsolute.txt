@@ -1,0 +1,11 @@
+D:\Proyect\PortalS3\ReceptioMtyStock\bin\x64\Debug\ReceptioMtyStock.dll
+D:\Proyect\PortalS3\ReceptioMtyStock\bin\x64\Debug\ReceptioMtyStock.pdb
+D:\Proyect\PortalS3\ReceptioMtyStock\bin\x64\Debug\ControlOPC.Entidades.dll
+D:\Proyect\PortalS3\ReceptioMtyStock\bin\x64\Debug\SQlHandler.dll
+D:\Proyect\PortalS3\ReceptioMtyStock\bin\x64\Debug\ControlOPC.Entidades.pdb
+D:\Proyect\PortalS3\ReceptioMtyStock\bin\x64\Debug\SQlHandler.pdb
+D:\Proyect\PortalS3\ReceptioMtyStock\obj\x64\Debug\ReceptioMtyStock.csprojAssemblyReference.cache
+D:\Proyect\PortalS3\ReceptioMtyStock\obj\x64\Debug\ReceptioMtyStock.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3\ReceptioMtyStock\obj\x64\Debug\ReceptioMtyStock.csproj.CopyComplete
+D:\Proyect\PortalS3\ReceptioMtyStock\obj\x64\Debug\ReceptioMtyStock.dll
+D:\Proyect\PortalS3\ReceptioMtyStock\obj\x64\Debug\ReceptioMtyStock.pdb

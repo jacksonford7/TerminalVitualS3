@@ -1,0 +1,123 @@
+﻿<%@ Master  Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="CSLSite.site" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="xhead">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title></title>
+     <link href="shared/estilo/base-site.css" rel="stylesheet" type="text/css" />
+     <link href="Inicio/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="shared/estilo/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.datetimepicker.js" type="text/javascript"></script>
+     <script type='text/javascript'>
+         //<![CDATA[
+        /*funcion para la barra de carga*/
+        (function ($) {
+            $("#header").ready(function () { $("#cargando").stop().animate({ width: "25%" }, 1500) });
+            $("#footer").ready(function () { $("#cargando").stop().animate({ width: "75%" }, 1500) });
+            $(window).load(function () {
+                $("#cargando").stop().animate({ width: "100%" }, 600, function () {
+                    $("#cargando").fadeOut("fast", function () { $(this).remove(); });
+                });
+            });
+        })($);
+</script>
+ <asp:ContentPlaceHolder ID="placehead" runat="server"/>
+</head>
+<body>
+<div id="content">
+<form id="fmrinset" runat="server" method="post" accept-charset="UTF-8" autocomplete="off">
+<div id='cargando'></div>
+<div id="wall-panel">
+<div class="xlogin">
+  <div class="wraper-line" > 
+   <span class="loginame" id="namelogin" runat="server">LoginName</span>
+   <asp:ImageButton ID="btnCambiarPassword" runat="server"   
+          CausesValidation="False"   ImageUrl="~/shared/imgs/btn-cambiar.png" 
+          onclick="btnCambiarPassword_Click" style="margin-bottom: 3px; border-radius: 2px;" />
+      <asp:ImageButton ID="closebt" runat="server"  ImageUrl="~/shared/imgs/btn-salir.png"  CausesValidation="False" onclick="btexit_Click" />
+ </div>
+</div>
+<div id="wraper-panel">
+    <div id="logoCGSA"></div>
+     <br />
+      <div class="left">
+      <div class="envolve">
+      <a href="../csl/menudefault"><i class="element-menu"></i>Menú principal</a>
+      </div>
+      <div class="zona-info">
+         <div>
+           <i class="ico-info"></i><span class="info-title">Informativo</span>
+           <p id="panel_info" runat="server" clientidmode="Static">
+               Cargando notificaciones..
+           </p>
+         </div>
+      </div>
+      </div>
+      <div class="right">
+             <asp:ContentPlaceHolder ID="placebody" runat="server"/>
+     </div>
+      <div id="foot-panel">
+        <table class="tabla" cellpadding="1" cellspacing ="1">
+        <tr>
+        <td class="nota-pie">
+        <p class="al-left ">
+                 Cualquier inquietud puede ser remitida a  <a href="mailto: CGSA-CustomerService@cgsa.com.ec">CGSA-CustomerService@cgsa.com.ec.</a> Nos es grato poder servirle. 
+        </p>
+        </td>
+        <td class="nota-pie"><p class="al-right">© 2014 CONTECON S.A</p></td>
+        </tr>
+        </table>
+      <br />
+   </div>
+   </div>
+</div>
+</form>
+</div>
+<script type="text/javascript">
+    $(window).load(function () {
+       setInterval("AsyncMensenger()" ,20000);
+        $(document).keypress(function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    });
+    window.onbeforeunload = function PostSession() {
+        var params = {};
+        params.tokenID = '<%=Session["tokenID"] %>';
+        params = JSON.stringify(params);
+        $.ajax({
+            type: "POST",
+            url: "../services/catalogo.asmx/PostSesion",
+            data: params,
+            contentType: "application/json; charset=utf-8",
+            async: false
+        });
+    }
+    function AsyncMensenger() {
+        var params = {};
+        var valor = 1;
+        var idzona = document.getElementById('zonaid');
+        if (idzona != null && idzona != undefined) {
+            valor = idzona.value;
+        }
+        params.formulario = valor;
+        params = JSON.stringify(params);
+        $.ajax({
+            type: "POST",
+            url: "../services/catalogo.asmx/getalertas",
+            data: params,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            async: true,
+            success: function (response) {
+                document.getElementById('panel_info').innerHTML = response.d;
+            }
+        });
+    }
+</script>
+</body>
+</html>

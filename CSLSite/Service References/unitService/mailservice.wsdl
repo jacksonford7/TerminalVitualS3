@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cgsa.com.ec/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.cgsa.com.ec/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cgsa.com.ec/">
+      <s:element name="preavisar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="containers" type="tns:ArrayOfUnidad" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="freigthKind" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUnidad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="unidad" nillable="true" type="tns:unidad" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="unidad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="unidadID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bokingID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itemID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="uniISO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lineaID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="preadvice" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="iscancel" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="exist" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="imo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pod1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="shiper" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="temp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reefer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hume" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ventU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="group" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaTurno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="horaTurno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idTurno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="preavisarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="cancelar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="containers" type="tns:ArrayOfUnidad" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancelarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="sendmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hmtlmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendmailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="catchOverwrite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="unidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="booking" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailintenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="catchOverwriteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="retornarOk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="server" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="catalogo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retornarOkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retornarOkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="preavisarSoapIn">
+    <wsdl:part name="parameters" element="tns:preavisar" />
+  </wsdl:message>
+  <wsdl:message name="preavisarSoapOut">
+    <wsdl:part name="parameters" element="tns:preavisarResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelarSoapIn">
+    <wsdl:part name="parameters" element="tns:cancelar" />
+  </wsdl:message>
+  <wsdl:message name="cancelarSoapOut">
+    <wsdl:part name="parameters" element="tns:cancelarResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendmailSoapIn">
+    <wsdl:part name="parameters" element="tns:sendmail" />
+  </wsdl:message>
+  <wsdl:message name="sendmailSoapOut">
+    <wsdl:part name="parameters" element="tns:sendmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="catchOverwriteSoapIn">
+    <wsdl:part name="parameters" element="tns:catchOverwrite" />
+  </wsdl:message>
+  <wsdl:message name="catchOverwriteSoapOut">
+    <wsdl:part name="parameters" element="tns:catchOverwriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="retornarOkSoapIn">
+    <wsdl:part name="parameters" element="tns:retornarOk" />
+  </wsdl:message>
+  <wsdl:message name="retornarOkSoapOut">
+    <wsdl:part name="parameters" element="tns:retornarOkResponse" />
+  </wsdl:message>
+  <wsdl:portType name="mailserviceSoap">
+    <wsdl:operation name="preavisar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite preavisar unidades y enviar mail</wsdl:documentation>
+      <wsdl:input message="tns:preavisarSoapIn" />
+      <wsdl:output message="tns:preavisarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite cancelar los preavisos y enviar mail</wsdl:documentation>
+      <wsdl:input message="tns:cancelarSoapIn" />
+      <wsdl:output message="tns:cancelarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendmail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite enviar un mail desde la cuenta de csl</wsdl:documentation>
+      <wsdl:input message="tns:sendmailSoapIn" />
+      <wsdl:output message="tns:sendmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="catchOverwrite">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite enviar mail de alerta a usuario cuando se intenta sobrescribir</wsdl:documentation>
+      <wsdl:input message="tns:catchOverwriteSoapIn" />
+      <wsdl:output message="tns:catchOverwriteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retornarOk">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite valida la conexión a cada motor de datos relacionado</wsdl:documentation>
+      <wsdl:input message="tns:retornarOkSoapIn" />
+      <wsdl:output message="tns:retornarOkSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="mailserviceSoap" type="tns:mailserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="preavisar">
+      <soap:operation soapAction="http://www.cgsa.com.ec/preavisar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <soap:operation soapAction="http://www.cgsa.com.ec/cancelar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendmail">
+      <soap:operation soapAction="http://www.cgsa.com.ec/sendmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="catchOverwrite">
+      <soap:operation soapAction="http://www.cgsa.com.ec/catchOverwrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornarOk">
+      <soap:operation soapAction="http://www.cgsa.com.ec/retornarOk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="mailserviceSoap12" type="tns:mailserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="preavisar">
+      <soap12:operation soapAction="http://www.cgsa.com.ec/preavisar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <soap12:operation soapAction="http://www.cgsa.com.ec/cancelar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendmail">
+      <soap12:operation soapAction="http://www.cgsa.com.ec/sendmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="catchOverwrite">
+      <soap12:operation soapAction="http://www.cgsa.com.ec/catchOverwrite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornarOk">
+      <soap12:operation soapAction="http://www.cgsa.com.ec/retornarOk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="mailservice">
+    <wsdl:port name="mailserviceSoap" binding="tns:mailserviceSoap">
+      <soap:address location="http://localhost:14064/mailservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="mailserviceSoap12" binding="tns:mailserviceSoap12">
+      <soap12:address location="http://localhost:14064/mailservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SysproCompanyC" Class="DBMSYSPRODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CGERP01;Initial Catalog=syspro_tois;Persist Security Info=True;User ID=syspro_sp" SettingsObjectName="ClSPOLTOIS.Properties.Settings" SettingsPropertyName="SysproCompanyCConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SYP_PRO_CONTROL_CREDITO" Method="SYP_PRO_CONTROL_CREDITO">
+    <Parameter Name="RUC_CLIENTE" Parameter="rUC_CLIENTE" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="TOTAL_FACT" Parameter="tOTAL_FACT" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="FECHA_FACTURA" Parameter="fECHA_FACTURA" Type="System.String" DbType="VarChar(10)" Direction="InOut" />
+    <Parameter Name="F_MENSAJE" Parameter="f_MENSAJE" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

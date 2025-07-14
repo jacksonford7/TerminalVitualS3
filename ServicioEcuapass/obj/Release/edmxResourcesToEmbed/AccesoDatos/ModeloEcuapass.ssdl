@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ecuapassModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ecuapassModelStoreContainer">
+    <EntitySet Name="ECU_CONSULTAS_ESTADO_FACTURAS" EntityType="ecuapassModel.Store.ECU_CONSULTAS_ESTADO_FACTURAS" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ECU_LIQUIDACION_BANCOS" EntityType="ecuapassModel.Store.ECU_LIQUIDACION_BANCOS" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ECU_LIQUIDACION_ESTADO" EntityType="ecuapassModel.Store.ECU_LIQUIDACION_ESTADO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ECU_LIQUIDACION_LOGS_WCF" EntityType="ecuapassModel.Store.ECU_LIQUIDACION_LOGS_WCF" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ECU_LIQUIDACION_PAGO_SENAE" EntityType="ecuapassModel.Store.ECU_LIQUIDACION_PAGO_SENAE" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ECU_LIQUIDACION_SENAE" EntityType="ecuapassModel.Store.ECU_LIQUIDACION_SENAE" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="ECU_CONSULTAS_ESTADO_FACTURAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NUMERO_LIQUIDACION" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="VALOR_FACTURA" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="VALOR_PAGADO" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="VALOR_PENDIENTE" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="USUARIO" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="FUE_OK" Type="bit" Nullable="false" />
+    <Property Name="MENSAJE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_BANCOS">
+    <Key>
+      <PropertyRef Name="BANCO_SYSPRO" />
+    </Key>
+    <Property Name="BANCO_SYSPRO" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="BANCO_SENAE" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="SAP_GL_CODE" Type="varchar" MaxLength="20" />
+    <Property Name="BANCO_BANRED" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_ESTADO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="CODIGO_UNICO" Type="bigint" Nullable="false" />
+    <Property Name="NUMERO_LIQUIDACION" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="ESTADO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="USUARIO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_LOGS_WCF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="MENSAJE" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="DETALLE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ES_SERVICIO_ADUANA" Type="bit" Nullable="false" />
+    <Property Name="USUARIO" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_PAGO_SENAE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESTADO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CODIGO_FACTURA" Type="bigint" Nullable="false" />
+    <Property Name="CANAL_RECAUDO" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="BANCO_PAGO" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FECHA_RECAUDACION" Type="datetime" Nullable="false" />
+    <Property Name="CODIGO_PAGO" Type="varchar" MaxLength="20" />
+    <Property Name="CODIGO_ACEPTACION_PAGO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FECHA_CONTABLE" Type="datetime" Nullable="false" />
+    <Property Name="NUMERO_LIQUIDACION" Type="varchar" MaxLength="30" />
+    <Property Name="TIPO_TRANSACCION" Type="char" MaxLength="1" />
+    <Property Name="MOTIVO_PAGO" Type="char" MaxLength="2" />
+    <Property Name="FECHA_REGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="USUARIO_REGISTRO" Type="varchar" MaxLength="30" />
+    <Property Name="CODIGO_FACTURA_ANTICIPO" Type="bigint" />
+    <Property Name="INVOICE" Type="varchar" MaxLength="10" />
+    <Property Name="CUSTOMER" Type="varchar" MaxLength="10" />
+    <Property Name="BANCO_SYSPRO" Type="varchar" MaxLength="10" />
+    <Property Name="SYSPRO" Type="varchar" MaxLength="3" />
+    <Property Name="CODIGO_CLIENTE" Type="varchar" MaxLength="20" />
+    <Property Name="SOCIEDAD_SAP" Type="varchar" MaxLength="20" />
+    <Property Name="ESTADO_SAP" Type="varchar" MaxLength="20" />
+    <Property Name="MES_REGISTRO" Type="varchar" MaxLength="20" />
+    <Property Name="MONEDA" Type="varchar" MaxLength="20" />
+    <Property Name="NUMERO_ANTICIPO_SAP" Type="varchar" MaxLength="20" />
+    <Property Name="NUMERO_FACTURA_REFERENCIA" Type="varchar" MaxLength="20" />
+    <Property Name="MENSAJE_SAP" Type="varchar" MaxLength="300" />
+    <Property Name="FECHA_ESTADO_SAP" Type="datetime" />
+    <Property Name="MONTO_RECAUDADO" Type="decimal" Precision="16" Scale="2" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_SENAE">
+    <Key>
+      <PropertyRef Name="CODIGO_UNICO" />
+    </Key>
+    <Property Name="TRAMITE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="ESTADO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CODIGO_UNICO" Type="bigint" Nullable="false" />
+    <Property Name="NUMERO_FACTURA" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FECHA_LIQUIDACION" Type="datetime" Nullable="false" />
+    <Property Name="FECHA_VIGENCIA" Type="datetime" Nullable="false" />
+    <Property Name="RAZON_SOCIAL" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="NUMERO_IDENTIFICACION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SUBTOTAL_SINIVA" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="IVA" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="MONTO_TOTAL" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="NUMERO_LIQUIDACION" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="FECHA_REGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="USUARIO_REGISTRO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ESTADO_PROCESO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="FECHA_PROCESO" Type="datetime" />
+    <Property Name="USUARIO_PROCESO" Type="varchar" MaxLength="20" />
+    <Property Name="TIPO" Type="varchar" MaxLength="5" />
+    <Property Name="NUMERO_BOOKING" Type="nvarchar" MaxLength="20" />
+    <Property Name="ROL" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Function Name="ECU_INGRESO_PAGO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigoPago" Type="varchar" Mode="In" />
+    <Parameter Name="numeroLiquidacion" Type="varchar" Mode="In" />
+    <Parameter Name="monto" Type="decimal" Mode="In" />
+    <Parameter Name="canal" Type="varchar" Mode="In" />
+    <Parameter Name="banco" Type="varchar" Mode="In" />
+    <Parameter Name="fechaRecaudacion" Type="datetime" Mode="In" />
+    <Parameter Name="codigoAceptacionPago" Type="varchar" Mode="In" />
+    <Parameter Name="fechaContable" Type="datetime" Mode="In" />
+    <Parameter Name="TipoTransaccion" Type="char" Mode="In" />
+    <Parameter Name="customer" Type="char" Mode="In" />
+    <Parameter Name="ruc" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

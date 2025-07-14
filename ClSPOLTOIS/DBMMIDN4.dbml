@@ -1,0 +1,809 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="N4Middleware" Class="DBMMIDN4DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=cgdes11;Initial Catalog=N4Middleware;User ID=n4" SettingsObjectName="ClSPOLTOIS.Properties.Settings" SettingsPropertyName="N4MiddlewareConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.RVA_AUTORIZACION_VEH" Member="RVA_AUTORIZACION_VEH">
+    <Type Name="RVA_AUTORIZACION_VEH">
+      <Column Name="ID_RETIRO_VACIO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGO_SENAE" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AUTO_VEH" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_VEHICULO" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="USUARIO_INGRESO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="RVA_AUTORIZACION_RVA_AUTORIZACION_VEH" Member="RVA_AUTORIZACION" ThisKey="ID_RETIRO_VACIO,CODIGO_SENAE" OtherKey="ID_RETIRO_VACIO,CODIGO_SENAE" Type="RVA_AUTORIZACION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RVA_AUTORIZACION_CNTR" Member="RVA_AUTORIZACION_CNTR">
+    <Type Name="RVA_AUTORIZACION_CNTR">
+      <Column Name="ID_RETIRO_VACIO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGO_SENAE" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AUTO_CNTR" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_CONTENEDOR" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="USUARIO_INGRESO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="RVA_AUTORIZACION_RVA_AUTORIZACION_CNTR" Member="RVA_AUTORIZACION" ThisKey="ID_RETIRO_VACIO,CODIGO_SENAE" OtherKey="ID_RETIRO_VACIO,CODIGO_SENAE" Type="RVA_AUTORIZACION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RVA_AUTORIZACION_CHOFER" Member="RVA_AUTORIZACION_CHOFER">
+    <Type Name="RVA_AUTORIZACION_CHOFER">
+      <Column Name="ID_RETIRO_VACIO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGO_SENAE" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AUTO_CFS" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_CHOFER" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="USUARIO_INGRESO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="RVA_AUTORIZACION_RVA_AUTORIZACION_CHOFER" Member="RVA_AUTORIZACION" ThisKey="ID_RETIRO_VACIO,CODIGO_SENAE" OtherKey="ID_RETIRO_VACIO,CODIGO_SENAE" Type="RVA_AUTORIZACION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RVA_AUTORIZACION" Member="RVA_AUTORIZACION">
+    <Type Name="RVA_AUTORIZACION">
+      <Column Name="ID_RETIRO_VACIO" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LINEA_NAVIERA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CODIGO_SENAE" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="USUARIO_INGRESO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="RVA_AUTORIZACION_RVA_AUTORIZACION_VEH" Member="RVA_AUTORIZACION_VEH" ThisKey="ID_RETIRO_VACIO,CODIGO_SENAE" OtherKey="ID_RETIRO_VACIO,CODIGO_SENAE" Type="RVA_AUTORIZACION_VEH" />
+      <Association Name="RVA_AUTORIZACION_RVA_AUTORIZACION_CNTR" Member="RVA_AUTORIZACION_CNTR" ThisKey="ID_RETIRO_VACIO,CODIGO_SENAE" OtherKey="ID_RETIRO_VACIO,CODIGO_SENAE" Type="RVA_AUTORIZACION_CNTR" />
+      <Association Name="RVA_AUTORIZACION_RVA_AUTORIZACION_CHOFER" Member="RVA_AUTORIZACION_CHOFER" ThisKey="ID_RETIRO_VACIO,CODIGO_SENAE" OtherKey="ID_RETIRO_VACIO,CODIGO_SENAE" Type="RVA_AUTORIZACION_CHOFER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONTAINERS" Member="CONTAINERS">
+    <Type Name="CONTAINERS">
+      <Column Name="CONSECUTIVO" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CNTR_CONTAINER" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VEH_CAMION_AUTORIZA" Member="VEH_CAMION_AUTORIZA">
+    <Type Name="VEH_CAMION_AUTORIZA">
+      <Column Name="COMPANIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PLACA" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MARCA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MODELO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="COLOR" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FECHA_INI" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA_END" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USUARIO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MOTIVO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EMPRESA" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_POLIZA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DOCUMENTO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DOCUMENTO2" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_MTOP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LICENCIA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VBS_T_PASE_PUERTA" Member="VBS_T_PASE_PUERTA">
+    <Type Name="VBS_T_PASE_PUERTA">
+      <Column Name="ID_PASE" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_CARGA" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FECHA_EXPIRACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_PLACA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_CHOFER" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_EMPRESA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CANTIDAD_CARGA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FECHA_REGISTRO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="USUARIO_ESTADO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FECHA_ESTADO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ID_RESERVA" Type="System.Int64" CanBeNull="true" />
+      <Column Name="TIPO_CARGA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NUMERO_PASE_N4" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RESERVA" Type="System.Boolean" DbType="Bit" CanBeNull="false" />
+      <Column Name="ESTADO_RESERVA" Type="System.Boolean" DbType="Bit" CanBeNull="false" />
+      <Association Name="VBS_T_PASE_PUERTA_VBS_DET_PASE_PUERTA" Member="VBS_DET_PASE_PUERTA" ThisKey="ID_PASE" OtherKey="ID_PASE" Type="VBS_DET_PASE_PUERTA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VBS_TEMP_TURNO" Member="VBS_TEMP_TURNO">
+    <Type Name="VBS_TEMP_TURNO">
+      <Column Name="USUARIO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ID_PLAN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_CNTR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_PLAN_SECUENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SERVICES_BILL" Member="SERVICES_BILL">
+    <Type Name="SERVICES_BILL">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="life_cycle_state" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VEH_TRANSPORT_AUTORIZA" Member="VEH_TRANSPORT_AUTORIZA">
+    <Type Name="VEH_TRANSPORT_AUTORIZA">
+      <Column Name="ID_CODIGO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CHOFER" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="APELLIDO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMPRESA" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_INI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_END" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MOTIVO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LICENCIA" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="USUARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FNA_LIBERATION_CLIENTS" Member="FNA_LIBERATION_CLIENTS">
+    <Type Name="FNA_LIBERATION_CLIENTS">
+      <Column Name="LCLNT_CUSTOMER" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_SECUENCIAL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LCLNT_START_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_END_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_STATUS" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_USER" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_TERMINAL" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LCLNT_USER_UPDATE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_TERMINAL_UPDATE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_DATE_UPDATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LCLNT_COMMENTS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FNA_LOCK_CLIENTS" Member="FNA_LOCK_CLIENTS">
+    <Type Name="FNA_LOCK_CLIENTS">
+      <Column Name="LCLNT_CUSTOMER" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_SECUENCIAL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LCLNT_START_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_END_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_STATUS" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="LCLNT_USER" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_TERMINAL" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LCLNT_USER_UPDATE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_TERMINAL_UPDATE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LCLNT_DATE_UPDATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LCLNT_COMMENTS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CFS_TARJA" Member="CFS_TARJA">
+    <Type Name="CFS_TARJA">
+      <Column Name="CODIGO_TARJA" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BL" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MRN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FECHA_REGISTRO" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ESTADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="COD_TARJA_ECPASS" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CONTENEDOR" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Association Name="CFS_TARJA_CFS_TARJA_ITEM" Member="CFS_TARJA_ITEM" ThisKey="CODIGO_TARJA" OtherKey="CODIGO_TARJA" Type="CFS_TARJA_ITEM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CFS_TARJA_SUBITEM" Member="CFS_TARJA_SUBITEM">
+    <Type Name="CFS_TARJA_SUBITEM">
+      <Column Name="CODIGO_TARJA" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODIGO_TARJA_ITEM" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODIGO_TARJA_SUBITEM" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CANTIDAD" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="PESO" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRA" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="FECHA_REGISTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CODIGO_PALLET" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="OBSERVACION" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PESO_SALIDA" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="BOQUETE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="CFS_TARJA_ITEM_CFS_TARJA_SUBITEM" Member="CFS_TARJA_ITEM" ThisKey="CODIGO_TARJA,CODIGO_TARJA_ITEM" OtherKey="CODIGO_TARJA,CODIGO_TARJA_ITEM" Type="CFS_TARJA_ITEM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CFS_TARJA_ITEM" Member="CFS_TARJA_ITEM">
+    <Type Name="CFS_TARJA_ITEM">
+      <Column Name="CODIGO_TARJA" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODIGO_TARJA_ITEM" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HSN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ITEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SECUENCIA_INGRESO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MARK" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="OVERMARK" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="PESO" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="M3" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="BL" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DOCUMENTO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CANTIDAD_INGRESO" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="CANTIDAD_SALIDA" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="CONSIGNATARIO" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="BROKER" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PACKING" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="CONTENEDOR" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="CODIGO_CONTENEDOR" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VEHICULO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="USUARIO_INGRESO" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CODIGO_TIPO_DOCUMENTO_SENAE" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FECHA_REGISTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PESO_NDI" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="CANTIDAD_NDI" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="NOM_CONSIGNATARIO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PESABLE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CFS_TARJA_ITEM_CFS_TARJA_SUBITEM" Member="CFS_TARJA_SUBITEM" ThisKey="CODIGO_TARJA,CODIGO_TARJA_ITEM" OtherKey="CODIGO_TARJA,CODIGO_TARJA_ITEM" Type="CFS_TARJA_SUBITEM" />
+      <Association Name="CFS_TARJA_CFS_TARJA_ITEM" Member="CFS_TARJA" ThisKey="CODIGO_TARJA" OtherKey="CODIGO_TARJA" Type="CFS_TARJA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VBS_DET_PASE_PUERTA" Member="VBS_DET_PASE_PUERTA">
+    <Type Name="VBS_DET_PASE_PUERTA">
+      <Column Name="ID_PASE" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_DET_PASE" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_SUBSEC_CFS" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CANTIDAD_SUBSEC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA_REGISTRO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="VBS_T_PASE_PUERTA_VBS_DET_PASE_PUERTA" Member="VBS_T_PASE_PUERTA" ThisKey="ID_PASE" OtherKey="ID_PASE" Type="VBS_T_PASE_PUERTA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BREAK_BULKS_BILL" Member="BREAK_BULKS_BILL">
+    <Type Name="BREAK_BULKS_BILL">
+      <Column Name="BRBK_CONSECUTIVO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BRBK_QUANTITY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BRBK_GROSS_WEIGHT" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="BRBK_VOLUME" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BRBK_TYPE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="BRBK_YARD_STATUS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BRBK_BKLO_BLOCK" Type="System.String" DbType="NVarChar(42)" CanBeNull="true" />
+      <Column Name="BRBK_TYPE_DOCUMENT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="BRBK_DOCUMENT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BRBK_LOAD_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BRBK_UNLOAD_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BRBK_VEPR_REFERENCE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_LINE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_CONSIG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_SHIPPER" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_AGENCY" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_BKNG_BOOKING" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_BKNG_TYPE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="BRBK_MARK" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="BRBK_OVER_MARK" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="BRBK_DESCRIPTION" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="BRBK_ITEM_ITEM" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BRBK_MRN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_MSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_HSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_CATY_CARGO_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARGO_TYPE_M" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="OPERATION" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VESSELS_PROGRAM" Member="VESSELS_PROGRAM">
+    <Type Name="VESSELS_PROGRAM">
+      <Column Name="VEPR_REFERENCE" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="VEPR_VSSL_VESSEL" Type="System.String" DbType="NVarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="VEPR_ACTIVE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="VEPR_CLNT_CUSTOMER_LINE" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="VEPR_ESTIMATED_ARRIVAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_ESTIMATED_DEPART" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_VSSL_NAME" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="VEPR_ACTUAL_ARRIVAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_ACTUAL_DEPART" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_CUSTOM_IMPO_REGISTER" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="VEPR_CUSTOM_EXPO_REGISTER" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="VEPR_VOYAGE" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+      <Column Name="VEPR_CLOSING_DATE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VEPR_LAST_ESTIMATED_ARRIVAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VEPR_LAST_ESTIMATED_DEPART" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VEPR_TOTAL_MOVES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VEPR_LAST_TRANSACTION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_DEADLINE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_BERTHED" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="VEPR_LASE_CODE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="VEPR_BERTH" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="VEPR_TIPO_CARGA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="VEPR_INITIAL_OPERATION_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_FINAL_OPERATION_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VEPR_REG_APG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="VEPR_GKEY_VVD" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="VEPR_GKEY_VESSEL" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GEN_C_PARAMETROS" Member="GEN_C_PARAMETROS">
+    <Type Name="GEN_C_PARAMETROS">
+      <Column Name="P_GKEY" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="P_TIPO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="P_SUBTIPO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="P_VALOR1" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="P_VALOR2" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="P_VALOR3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="P_DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="P_ESTADO" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="P_VALOR4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BOOKINGS_BILL" Member="BOOKINGS_BILL">
+    <Type Name="BOOKINGS_BILL">
+      <Column Name="BKNG_BOOKING" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BKNG_CLTE_CLNT_CUSTOMER_LINE" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="BKNG_CLTE_CLNT_CUSTOMER" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="BKNG_VEPR_REFERENCE" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BKNG_DEADLINE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BKNG_ID_CARGO_TYPE" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="BKNG_AVAILABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BKNG_freight_kind" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTS_BILL" Member="CLIENTS_BILL">
+    <Type Name="CLIENTS_BILL">
+      <Column Name="CLNT_CUSTOMER" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_NAME" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="CLNT_CITY" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CLNT_STATE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLNT_ADRESS1" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="CLNT_TRANSACTION_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CLNT_EMAIL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CLNT_TYPE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CLNT_EBILLING" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_FAX_INVC" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="CLNT_RFC" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_ACTIVE" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_CONT_CONSECUTIVO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONTAINERS_BILL" Member="CONTAINERS_BILL">
+    <Type Name="CONTAINERS_BILL">
+      <Column Name="CNTR_CONSECUTIVO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_CONTAINER" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_TYPE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_TYSZ_SIZE" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="CNTR_TYSZ_ISO" Type="System.String" DbType="NVarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_TYSZ_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_FULL_EMPTY_CODE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CNTR_LUFE_STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CNTR_GROSS_WEIGHT" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_GROSS_WEIGHT_ORIGINAL" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_DESISTIMIENTO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_YARD_POSITION" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CNTR_YARD_STATUS" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_STORAGE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_UNLOAD_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_LOAD_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_TERMINAL_ARRIVAL_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_TEMPERATURE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CNTR_TYPE_DOCUMENT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="CNTR_DOCUMENT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_VEPR_REFERENCE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_BKNG_BOOKING" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_CMMD_COMMODITY" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CNTR_COMMODITY" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_LINE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_CONSIG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_REQUES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_SHIPPER" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_AGENCY" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_SEQUENCE_REMOVE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_DATE_REMOVE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CNTR_DATE_GATE_REMOVE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_SEQUENCE_DEPOSIT" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_DATE_DEPOSIT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CNTR_TARE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CNTR_CATY_CARGO_TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CNTR_DAMAGED" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_LCL_FCL" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_MRN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_MSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_HSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_ITEM" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_BKLO_BLOCK" Type="System.String" DbType="NVarChar(42)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_3" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_4" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_NET_WEIGHT" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_HOLD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_DD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_FECHA_CAS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cntr_bl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_consignee" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_consignee_NAME" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BIL_INVOICE" Member="BIL_INVOICE">
+    <Type Name="BIL_INVOICE">
+      <Column Name="CODIGO" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_CARGA" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_CARGA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DRAFT_CARGA" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="DRAFT_INVOICE" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="USUARIO_INGRESO" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO_INVOICE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="AGENTE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="COMENTARIO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.N4_P_Cons_Turnos_Disponibles" Method="N4_P_Cons_Turnos_Disponibles">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <ElementType Name="N4_P_Cons_Turnos_DisponiblesResult">
+      <Column Name="Plan_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Plan_Inicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Plan_Fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Turno_Secuencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Turno" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBS_P_BIL_INVOICE" Method="VBS_P_BIL_INVOICE">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBS_P_PASE_PUERTA" Method="VBS_P_PASE_PUERTA">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="xmlDatosN4" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBS_P_TEMP_TURNO" Method="VBS_P_TEMP_TURNO">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBS_P_PASE_PUERTA_BREAKBULK" Method="VBS_P_PASE_PUERTA_BREAKBULK">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="xmlDatosN4" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBS_P_CAN_PASE_PUERTA" Method="VBS_P_CAN_PASE_PUERTA">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="xmlDatosN4" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.vbs_fun_vbs_enabled" Method="vbs_fun_vbs_enabled" IsComposable="true">
+    <Parameter Name="ld_fecha" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.FNA_P_LIBERATION_CLIENTS" Method="FNA_P_LIBERATION_CLIENTS">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FNA_P_LOCK_CLIENTS" Method="FNA_P_LOCK_CLIENTS">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FNA_FUN_LOCK_CLIENTS" Method="FNA_FUN_LOCK_CLIENTS" IsComposable="true">
+    <Parameter Name="lv_customer" Type="System.String" DbType="VarChar(4000)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.FNA_FUN_LIBERATION_CLIENTS" Method="FNA_FUN_LIBERATION_CLIENTS" IsComposable="true">
+    <Parameter Name="lv_customer" Type="System.String" DbType="VarChar(4000)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.FNA_PRO_LOCK_CLIENTS" Method="FNA_PRO_LOCK_CLIENTS">
+    <Parameter Name="FECHA_INI" Parameter="fECHA_INI" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FECHA_FIN" Parameter="fECHA_FIN" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DT_STATUS" Parameter="dT_STATUS" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="CUSTOMER" Parameter="cUSTOMER" Type="System.String" DbType="VarChar(1)" />
+    <ElementType Name="FNA_PRO_LOCK_CLIENTSResult">
+      <Column Name="Identificacion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="FechaInicial" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFinal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Comentario" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UsuarioIngreso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FechaIngreso" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UsuarioActualizo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FechaActualizo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FNA_PRO_LIBERATION_CLIENTS" Method="FNA_PRO_LIBERATION_CLIENTS">
+    <Parameter Name="FECHA_INI" Parameter="fECHA_INI" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FECHA_FIN" Parameter="fECHA_FIN" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DT_STATUS" Parameter="dT_STATUS" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="CUSTOMER" Parameter="cUSTOMER" Type="System.String" DbType="VarChar(1)" />
+    <ElementType Name="FNA_PRO_LIBERATION_CLIENTSResult">
+      <Column Name="Identificacion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="FechaInicial" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFinal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Comentario" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UsuarioIngreso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FechaIngreso" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UsuarioActualizo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FechaActualizo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cgsa_fn_return_catalogo" Method="cgsa_fn_return_catalogo" IsComposable="true">
+    <Parameter Name="Tabla" Parameter="tabla" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(1)" />
+    <ElementType Name="cgsa_fn_return_catalogoResult">
+      <Column Name="IdTabla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescAlterno" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBS_REPORT_PASE_PUERTA_BREAK" Method="VBS_REPORT_PASE_PUERTA_BREAK">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="TIPO_CARGA" Parameter="tIPO_CARGA" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="VBS_REPORT_PASE_PUERTA_BREAKResult">
+      <Column Name="MRN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="HSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="MARK" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="VOMUNEN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PESO" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="UNIT" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UBICACION" Type="System.String" DbType="NVarChar(42)" CanBeNull="true" />
+      <Column Name="BL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LINE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BUQUE" Type="System.String" DbType="NVarChar(71)" CanBeNull="true" />
+      <Column Name="IMPORTADOR" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="ADUANA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DOCUMENTO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RUC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EMPRESA" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PLACA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LICENCIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CONDUCTOR" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PASE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARGA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EXPIRA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ENTREGA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FACTURADOR" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FACTURA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SN" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BLOCK" Type="System.String" DbType="NVarChar(42)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBS_REPORT_PASE_PUERTA" Method="VBS_REPORT_PASE_PUERTA">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="TIPO_CARGA" Parameter="tIPO_CARGA" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="VBS_REPORT_PASE_PUERTAResult">
+      <Column Name="CONTAINER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MRN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HSN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="BL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ITEM" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="SELLO1" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="SELLO2" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="SELLO3" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="SELLO4" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="SELLOCGSA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UBICACIO" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+      <Column Name="ISO" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="NETO" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="BRUTO" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="LINE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="BUQUE" Type="System.String" DbType="NVarChar(71)" CanBeNull="true" />
+      <Column Name="IMPORTADOR" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ADUANA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DOCUMENTO" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EMPRESA" Type="System.String" DbType="VarChar(230)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PLACA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LICENCIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CONDUCTOR" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PASE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TTURNO" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TINICIO" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TFIN" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="SN" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBS_P_ASIG_TURNO" Method="VBS_P_ASIG_TURNO">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FNA_FUN_CONTAINERS_BILL" Method="FNA_FUN_CONTAINERS_BILL" IsComposable="true">
+    <Parameter Name="mrn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hsn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cont" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="booking" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="referencia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="reefer" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="booking_all" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="FNA_FUN_CONTAINERS_BILLResult">
+      <Column Name="CNTR_CONSECUTIVO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_CONTAINER" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_TYPE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_TYSZ_SIZE" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="CNTR_TYSZ_ISO" Type="System.String" DbType="NVarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_TYSZ_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_FULL_EMPTY_CODE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CNTR_LUFE_STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CNTR_GROSS_WEIGHT" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_GROSS_WEIGHT_ORIGINAL" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_DESISTIMIENTO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_YARD_POSITION" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CNTR_YARD_STATUS" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_STORAGE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_UNLOAD_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_LOAD_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_TERMINAL_ARRIVAL_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_TEMPERATURE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CNTR_TYPE_DOCUMENT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="CNTR_DOCUMENT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_VEPR_REFERENCE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_BKNG_BOOKING" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_CMMD_COMMODITY" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CNTR_COMMODITY" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_LINE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_CONSIG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_REQUES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_SHIPPER" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_AGENCY" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_SEQUENCE_REMOVE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_DATE_REMOVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_DATE_GATE_REMOVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_SEQUENCE_DEPOSIT" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_DATE_DEPOSIT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_TARE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CNTR_CATY_CARGO_TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CNTR_DAMAGED" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_LCL_FCL" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_MRN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CNTR_MSN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CNTR_HSN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CNTR_ITEM" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_BKLO_BLOCK" Type="System.String" DbType="NVarChar(42)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_3" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_4" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_NET_WEIGHT" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_HOLD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_DD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_FECHA_CAS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cntr_bl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_consignee" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CNTR_consignee_NAME" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="NUMERO_PASE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_RESERVA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA_EXPIRACION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ULT_FECHA_FACTURA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RESERVA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FNA_FUN_BREAKBULK_BILL_N5" Method="FNA_FUN_BREAKBULK_BILL_N5">
+    <Parameter Name="mrn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hsn" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="FNA_FUN_BREAKBULK_BILL_N5Result">
+      <Column Name="BRBK_CONSECUTIVO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BRBK_QUANTITY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BRBK_TYPE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="BRBK_YARD_STATUS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BRBK_TYPE_DOCUMENT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="BRBK_DOCUMENT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BRBK_VEPR_REFERENCE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_LINE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_CONSIG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_SHIPPER" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_CLNT_CUSTOMER_AGENCY" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BRBK_BKNG_BOOKING" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_MARK" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BRBK_OVER_MARK" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="BRBK_DESCRIPTION" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="BRBK_ITEM_ITEM" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BRBK_MRN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_MSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_HSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CARGO_TYPE_M" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="OPERATION" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BRBK_consignee" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="BRBK_consignee_NAME" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ULT_FECHA_FACTURA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SEGUNDA" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBS_CONSULTA_PASE_BREAK" Method="VBS_CONSULTA_PASE_BREAK">
+    <Parameter Name="mrn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hsn" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="VBS_CONSULTA_PASE_BREAKResult">
+      <Column Name="BRBK_MRN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_MSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BRBK_HSN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ID_PASE" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CARGA" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="TIPO_CARGA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NUMERO_PASE_N4" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FECHA_EXPIRACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ID_RESERVA" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FECHA_EXPIRACION1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="INFORMACION" Type="System.String" DbType="VarChar(63)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FNA_FUN_CONTAINERS_BILL_N5" Method="FNA_FUN_CONTAINERS_BILL_N5">
+    <Parameter Name="mrn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hsn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cont" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="booking" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="referencia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="reefer" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="booking_all" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="FNA_FUN_CONTAINERS_BILL_N5Result">
+      <Column Name="CNTR_CONSECUTIVO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_CONTAINER" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_TYPE" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_TYSZ_SIZE" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="CNTR_TYSZ_ISO" Type="System.String" DbType="NVarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_TYSZ_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_FULL_EMPTY_CODE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CNTR_LUFE_STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CNTR_GROSS_WEIGHT" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_GROSS_WEIGHT_ORIGINAL" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_DESISTIMIENTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_YARD_POSITION" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CNTR_YARD_STATUS" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_STORAGE_DATE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_UNLOAD_DATE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_LOAD_DATE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_TERMINAL_ARRIVAL_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CNTR_TEMPERATURE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CNTR_TYPE_DOCUMENT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="CNTR_DOCUMENT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_VEPR_REFERENCE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_BKNG_BOOKING" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_CMMD_COMMODITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_COMMODITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_LINE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_CONSIG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_REQUES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_SHIPPER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_CLNT_CUSTOMER_AGENCY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_SEQUENCE_REMOVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_DATE_REMOVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_DATE_GATE_REMOVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_TRSP_SEQUENCE_DEPOSIT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_TARE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CNTR_CATY_CARGO_TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CNTR_DAMAGED" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNTR_LCL_FCL" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_MRN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CNTR_MSN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CNTR_HSN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CNTR_ITEM" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CNTR_BKLO_BLOCK" Type="System.String" DbType="NVarChar(42)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_3" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_SEAL_4" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CNTR_NET_WEIGHT" Type="System.Decimal" DbType="Decimal(30,2)" CanBeNull="true" />
+      <Column Name="CNTR_HOLD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_DD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_FECHA_CAS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cntr_bl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNTR_consignee" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CNTR_consignee_NAME" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="NUMERO_PASE" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="ID_RESERVA" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="FECHA_EXPIRACION" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ULT_FECHA_FACTURA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VALICAS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_REEFER_CONT" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FNA_FUN_CONTAINERS_BILL_PASE_N5" Method="FNA_FUN_CONTAINERS_BILL_PASE_N5">
+    <Parameter Name="mrn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="hsn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="contenedor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="FNA_FUN_CONTAINERS_BILL_PASE_N5Result">
+      <Column Name="CNTR_CONSECUTIVO" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_CONTAINER" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ID_CARGA" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="ID_PASE" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="TIPO_CARGA" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ID_RESERVA" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="FECHA_EXPIRACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NUMERO_PASE_N4" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

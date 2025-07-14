@@ -1,0 +1,106 @@
+.clean{ clear:both; display:block; margin:0; padding:0;}
+.carrousel_inner ul li{
+    float:left;
+    list-style: none;
+    margin: 0;
+    width:200px;
+    height:135px;
+}
+
+.carrousel_inner ul li > div
+{
+    float:left;
+    width:98%;
+    height:133px;
+    margin:0; 
+    padding:1px;
+    border-left:1px solid #CCC;
+    border-right:1px solid #CCC;
+    font-size:small;
+    color:Gray;
+    font-family:Segoe UI;
+}
+
+.carrousel_inner ul li > div > table
+{
+    width:100%;
+}
+.carrousel_inner ul li > div > table td:first-child
+{
+     border:1px solid blue;
+     width:70px!important;
+}
+
+.carrousel_inner ul li > div > table td:last-child
+{
+     border:1px solid black;
+    
+    }
+
+
+.carrousel_inner ul{
+    margin:0;
+    padding:0;
+    height:101px;
+    width: 10000px;
+    overflow:hidden;
+}
+.carrousel_inner{
+    /* border:1px solid red; */
+    float:left;
+    width:600px;
+    height:101px;
+    overflow: hidden;
+    border:1px solid #CCC;
+}
+.carrousel_left, .carrousel_right{
+    height: 105px;
+    width:30px;
+    float:left;
+}
+.carrousel_left{
+    background: url(../imgs/nav_left.jpg) no-repeat  left top;
+}
+.carrousel_left:hover{
+    background:url(../imgs/nav_left.jpg) no-repeat scroll -37px top transparent
+}
+.carrousel_right{
+    background: url(../imgs/nav_right.jpg) no-repeat right top;
+}
+.carrousel_right:hover{
+    background: url(../imgs/nav_right.jpg) no-repeat -45px top;
+}
+.left_inactive,.left_inactive:hover{
+    background: url(../imgs/nav_left.jpg) no-repeat -74px top;
+}
+.right_inactive,.right_inactive:hover{
+    background: url(../imgs/nav_right.jpg) no-repeat -7px top;
+}
+
+.carrousel{
+    float:left;
+    height: 105px;
+    width: 700px;
+}
+
+/* demo page */
+.container{
+    width:900px;
+    margin:0 auto;
+    margin-left:30px;
+}
+.link{
+     background-color: #4d1414;
+     color:white;
+     padding:5px;
+     box-shadow:0 0 3px;
+     border-radius:5px;
+     text-decoration: none;
+}
+
+.overclean{ float:left; margin:0; padding:0; }
+.limpio{margin:0; padding:0;}
+
+/*--------------------zona otros elementos------------------ */
+.titulo { margin:0; padding:0; text-align:left; float:left;  clear:both; font-weight:bold; display:inline-block;  font-size:1.2em;}
+

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D253392-DD20-412C-A5B7-3F62E8747533}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLSiteUnitLogic</RootNamespace>
+    <AssemblyName>CLSiteUnitLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.1.2.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cls_CargaSuelta\CargaSueltaVista.cs" />
+    <Compile Include="Cls_CargaSuelta\Cls_CargaSuelta.cs" />
+    <Compile Include="Cls_CargaSuelta\ResultadoCargaSuelta.cs" />
+    <Compile Include="Cls_Container\Cls_Container.cs" />
+    <Compile Include="Cls_Container\ContenedorVista.cs" />
+    <Compile Include="Cls_pase_puerta\Cls_PasePuertaNew.cs" />
+    <Compile Include="Cls_pase_puerta\Configuracion.cs" />
+    <Compile Include="Cls_pase_puerta\ContenedorPase.cs" />
+    <Compile Include="Cls_pase_puerta\HttpTool.cs" />
+    <Compile Include="Cls_Peso\Cls_Peso_Expo.cs" />
+    <Compile Include="Cls_TranVirtual\transacMVirtual.cs" />
+    <Compile Include="Cls_Vgm\Cls_VGM.cs" />
+    <Compile Include="Cls_Vgm\Cls_VGMExpo.cs" />
+    <Compile Include="FacturaCls\Cls_Factura.cs" />
+    <Compile Include="FacturaCls\Color.cs" />
+    <Compile Include="LogicExcel.cs" />
+    <Compile Include="LogicPdfs.cs" />
+    <Compile Include="LogicXml.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{69B1835F-3AF8-4063-A784-80C69670307A}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aduanas\Aduanas.csproj">
+      <Project>{8882444a-f025-4d8e-a9b1-7f10b1fefcc7}</Project>
+      <Name>Aduanas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BillionEntidades\BillionEntidades.csproj">
+      <Project>{50300D8F-5D66-49E1-AB83-322809F9226B}</Project>
+      <Name>BillionEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CasManual\CasManual.csproj">
+      <Project>{b1d5be0a-799d-404b-b042-4590afa3c622}</Project>
+      <Name>CasManual</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuraciones\Configuraciones.csproj">
+      <Project>{4d0a2b47-a4cd-4cde-bf7b-767fef8339e3}</Project>
+      <Name>Configuraciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlPagos\ControlPagos.csproj">
+      <Project>{992b118f-9938-4cda-9dfb-b90dabe9d61e}</Project>
+      <Name>ControlPagos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\N4Ws\N4Ws.csproj">
+      <Project>{51e68bb1-aec3-4fe3-bd81-d575206af2a8}</Project>
+      <Name>N4Ws</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\N4WS_CRE\N4WS_CRE.csproj">
+      <Project>{2e4415c5-3d87-4104-b9cf-544c2e6492f2}</Project>
+      <Name>N4WS_CRE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\N4\N4.csproj">
+      <Project>{fefd21dd-ef14-45a6-be48-eaa338efcb07}</Project>
+      <Name>N4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PasePuerta\PasePuerta.csproj">
+      <Project>{9c09c189-61e0-46ee-9d41-be0cbc61d036}</Project>
+      <Name>PasePuerta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlConexion\SqlConexion.csproj">
+      <Project>{72e7c9d6-11e9-4bca-a214-5d06b1b880fd}</Project>
+      <Name>SqlConexion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

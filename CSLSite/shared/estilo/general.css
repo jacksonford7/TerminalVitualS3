@@ -1,0 +1,40 @@
+﻿#TextBoxesGroup div {
+    margin: 0;
+    padding: 0;
+}
+
+#TextBoxesGroup span {
+    color: Blue;
+    display: inline-block !important;
+    text-align: left !important;
+}
+
+#TextBoxesGroup input[type='text'] {
+    display: inline-block !important;
+}
+
+div.barra_colapser {
+    cursor: pointer;
+}
+    div.barra_colapser:hover {
+        background-color: #CCC;
+        opacity: 0.60;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .barra_cerrar {
+        background-image: url("../imgs/col.png");
+        background-position: 99% center;
+        background-repeat: no-repeat;
+    }
+
+.barra_abrir {
+    background-image: url("../imgs/ex.png");
+    background-position: 99% center;
+    background-repeat: no-repeat;
+  
+}
+
+
+.validacion { color:red;
+}

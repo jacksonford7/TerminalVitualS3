@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBMECUAPASS">
+  <DataContextMoniker Name="/DBMECUAPASSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1f9e9904-cf34-46fa-9413-9bd2363e106e" absoluteBounds="2.625, 0.5, 2, 3.8900577799479166">
+      <DataClassMoniker Name="/DBMECUAPASSDataContext/ECU_RIDT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1f12433-112b-4442-8b39-afc538ad746c" absoluteBounds="2.6399999999999997, 0.96, 1.9700000000000002, 3.3300577799479165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

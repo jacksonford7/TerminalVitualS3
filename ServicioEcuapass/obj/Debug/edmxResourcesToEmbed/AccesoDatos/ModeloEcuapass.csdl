@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ecuapassModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="ecuapassEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="ECU_LIQUIDACION_SENAE" EntityType="ecuapassModel.ECU_LIQUIDACION_SENAE" />
+    <EntitySet Name="ECU_LIQUIDACION_PAGO_SENAE" EntityType="ecuapassModel.ECU_LIQUIDACION_PAGO_SENAE" />
+    <AssociationSet Name="FK_ECU_LIQUIDACION_PAGO_SENAE_FK" Association="ecuapassModel.FK_ECU_LIQUIDACION_PAGO_SENAE_FK">
+      <End EntitySet="ECU_LIQUIDACION_SENAE" Role="ECU_LIQUIDACION_SENAE" />
+      <End EntitySet="ECU_LIQUIDACION_PAGO_SENAE" Role="ECU_LIQUIDACION_PAGO_SENAE" />
+    </AssociationSet>
+    <EntitySet Name="ECU_CONSULTAS_ESTADO_FACTURAS" EntityType="ecuapassModel.ECU_CONSULTAS_ESTADO_FACTURA" />
+    <EntitySet Name="ECU_LIQUIDACION_ESTADO" EntityType="ecuapassModel.ECU_LIQUIDACION_ESTADO" />
+    <EntitySet Name="ECU_LIQUIDACION_LOGS_WCF" EntityType="ecuapassModel.ECU_LIQUIDACION_LOG_WCF" />
+    <FunctionImport Name="IngresoPago">
+      <Parameter Name="codigoPago" Mode="In" Type="String" />
+      <Parameter Name="numeroLiquidacion" Mode="In" Type="String" />
+      <Parameter Name="monto" Mode="In" Type="Decimal" />
+      <Parameter Name="canal" Mode="In" Type="String" />
+      <Parameter Name="banco" Mode="In" Type="String" />
+      <Parameter Name="fechaRecaudacion" Mode="In" Type="DateTime" />
+      <Parameter Name="codigoAceptacionPago" Mode="In" Type="String" />
+      <Parameter Name="fechaContable" Mode="In" Type="DateTime" />
+      <Parameter Name="TipoTransaccion" Mode="In" Type="String" />
+      <Parameter Name="customer" Mode="In" Type="String" />
+      <Parameter Name="ruc" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ECU_LIQUIDACION_BANCOS" EntityType="ecuapassModel.ECU_LIQUIDACION_BANCOS" />
+  </EntityContainer>
+  <EntityType Name="ECU_LIQUIDACION_SENAE">
+    <Key>
+      <PropertyRef Name="CODIGO_UNICO" />
+    </Key>
+    <Property Name="TRAMITE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" Type="String" />
+    <Property Name="ESTADO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" Type="String" />
+    <Property Name="CODIGO_UNICO" Nullable="false" Type="Int64" />
+    <Property Name="NUMERO_FACTURA" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="FECHA_LIQUIDACION" Nullable="false" Type="DateTime" />
+    <Property Name="FECHA_VIGENCIA" Nullable="false" Type="DateTime" />
+    <Property Name="RAZON_SOCIAL" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="NUMERO_IDENTIFICACION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="SUBTOTAL_SINIVA" Nullable="false" Precision="16" Scale="4" Type="Decimal" />
+    <Property Name="IVA" Nullable="false" Precision="16" Scale="4" Type="Decimal" />
+    <Property Name="MONTO_TOTAL" Nullable="false" Precision="16" Scale="4" Type="Decimal" />
+    <Property Name="NUMERO_LIQUIDACION" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="FECHA_REGISTRO" Nullable="false" Type="DateTime" />
+    <Property Name="USUARIO_REGISTRO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="ESTADO_PROCESO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" Type="String" />
+    <Property Name="FECHA_PROCESO" Type="DateTime" />
+    <Property Name="USUARIO_PROCESO" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="TIPO" MaxLength="5" FixedLength="false" Unicode="false" Type="String" />
+    <NavigationProperty Name="ECU_LIQUIDACION_PAGO_SENAE" Relationship="ecuapassModel.FK_ECU_LIQUIDACION_PAGO_SENAE_FK" FromRole="ECU_LIQUIDACION_SENAE" ToRole="ECU_LIQUIDACION_PAGO_SENAE" />
+    <Property Name="NUMERO_BOOKING" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="ROL" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_PAGO_SENAE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="ESTADO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" Type="String" />
+    <Property Name="CODIGO_FACTURA" Nullable="false" Type="Int64" />
+    <Property Name="MONTO_RECAUDADO" Precision="16" Scale="4" Type="Decimal" />
+    <Property Name="CANAL_RECAUDO" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="BANCO_PAGO" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="FECHA_RECAUDACION" Nullable="false" Type="DateTime" />
+    <Property Name="CODIGO_PAGO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="CODIGO_ACEPTACION_PAGO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="FECHA_CONTABLE" Nullable="false" Type="DateTime" />
+    <Property Name="NUMERO_LIQUIDACION" MaxLength="30" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="TIPO_TRANSACCION" MaxLength="1" FixedLength="true" Unicode="false" Type="String" />
+    <Property Name="MOTIVO_PAGO" MaxLength="2" FixedLength="true" Unicode="false" Type="String" />
+    <Property Name="FECHA_REGISTRO" Nullable="false" Type="DateTime" />
+    <Property Name="USUARIO_REGISTRO" MaxLength="30" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="CODIGO_FACTURA_ANTICIPO" Type="Int64" />
+    <Property Name="INVOICE" MaxLength="10" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="CUSTOMER" MaxLength="10" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="BANCO_SYSPRO" MaxLength="10" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="SYSPRO" MaxLength="3" FixedLength="false" Unicode="false" Type="String" />
+    <NavigationProperty Name="ECU_LIQUIDACION_SENAE" Relationship="ecuapassModel.FK_ECU_LIQUIDACION_PAGO_SENAE_FK" FromRole="ECU_LIQUIDACION_PAGO_SENAE" ToRole="ECU_LIQUIDACION_SENAE" />
+    <Property Name="CODIGO_CLIENTE" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="SOCIEDAD_SAP" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="ESTADO_SAP" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="MES_REGISTRO" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="MONEDA" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="NUMERO_ANTICIPO_SAP" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="NUMERO_FACTURA_REFERENCIA" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="MENSAJE_SAP" MaxLength="300" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="FECHA_ESTADO_SAP" Type="DateTime" />
+  </EntityType>
+  <Association Name="FK_ECU_LIQUIDACION_PAGO_SENAE_FK">
+    <End Type="ecuapassModel.ECU_LIQUIDACION_SENAE" Multiplicity="1" Role="ECU_LIQUIDACION_SENAE" />
+    <End Type="ecuapassModel.ECU_LIQUIDACION_PAGO_SENAE" Multiplicity="*" Role="ECU_LIQUIDACION_PAGO_SENAE" />
+    <ReferentialConstraint>
+      <Principal Role="ECU_LIQUIDACION_SENAE">
+        <PropertyRef Name="CODIGO_UNICO" />
+      </Principal>
+      <Dependent Role="ECU_LIQUIDACION_PAGO_SENAE">
+        <PropertyRef Name="CODIGO_FACTURA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ECU_CONSULTAS_ESTADO_FACTURA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int64" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="NUMERO_LIQUIDACION" Nullable="false" MaxLength="30" FixedLength="false" Type="String" />
+    <Property Name="VALOR_FACTURA" Nullable="false" Precision="18" Scale="2" Type="Decimal" />
+    <Property Name="VALOR_PAGADO" Nullable="false" Precision="18" Scale="2" Type="Decimal" />
+    <Property Name="VALOR_PENDIENTE" Nullable="false" Precision="18" Scale="2" Type="Decimal" />
+    <Property Name="FECHA" Nullable="false" Type="DateTime" />
+    <Property Name="USUARIO" Nullable="false" MaxLength="20" FixedLength="false" Type="String" />
+    <Property Name="FUE_OK" Nullable="false" Type="Boolean" />
+    <Property Name="MENSAJE" Nullable="false" MaxLength="Max" FixedLength="false" Type="String" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_ESTADO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="CODIGO_UNICO" Nullable="false" />
+    <Property Type="String" Name="NUMERO_LIQUIDACION" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_LOG_WCF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="DateTime" Name="FECHA" Nullable="false" />
+    <Property Type="String" Name="MENSAJE" Nullable="false" FixedLength="false" MaxLength="255" />
+    <Property Type="String" Name="DETALLE" Nullable="false" FixedLength="false" MaxLength="Max" />
+    <Property Type="Boolean" Name="ES_SERVICIO_ADUANA" Nullable="false" />
+    <Property Type="String" Name="USUARIO" Nullable="false" FixedLength="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ECU_LIQUIDACION_BANCOS">
+    <Key>
+      <PropertyRef Name="BANCO_SYSPRO" />
+    </Key>
+    <Property Type="String" Name="BANCO_SYSPRO" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BANCO_SENAE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SAP_GL_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BANCO_BANRED" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

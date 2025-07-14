@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://codepen.io/Rino70/pen/QVjPmB -->
+<html lang="en" class="pc chrome107 js"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Bootstrap notify.js plugin</title>
+  
+	 <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+	  <link href="../css/jquery.notify.css" type="text/css" rel="stylesheet" />
+	   <link href="../css/w3.css" type="text/css" rel="stylesheet" />
+	    <link href="../css/animate.min.css" type="text/css" rel="stylesheet" />
+	   
+   <script type="text/javascript" src="../js/jquery.min.js"></script> 
+	<script type="text/javascript" src="../js/bootstrap-notify.min.js"></script>
+
+	
+ <script>
+ var successClick = function(){
+  $.notify({
+	// options
+	title: '<strong>Success</strong>',
+	message: "<br>Facendo click su questa notifica, si aprirà la pagina di Robert McIntosh, autore del plugin <em><strong>notify.js</strong></em>",
+  icon: 'glyphicon glyphicon-ok',
+	url: 'https://github.com/mouse0270/bootstrap-notify',
+	target: '_blank'
+},{
+	// settings
+	element: 'body',
+	//position: null,
+	type: "success",
+	//allow_dismiss: true,
+	//newest_on_top: false,
+	showProgressbar: false,
+	placement: {
+		from: "top",
+		align: "right"
+	},
+	offset: 20,
+	spacing: 10,
+	z_index: 1031,
+	delay: 3300,
+	timer: 1000,
+	url_target: '_blank',
+	mouse_over: null,
+	animate: {
+		enter: 'animated fadeInDown',
+		exit: 'animated fadeOutRight'
+	},
+	onShow: null,
+	onShown: null,
+	onClose: null,
+	onClosed: null,
+	icon_type: 'class',
+});
+}
+
+var infoClick = function(){
+  $.notify({
+	// options
+	title: '<strong>Info</strong>',
+	message: "<br>Lorem ipsum Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum.",
+  icon: 'glyphicon glyphicon-info-sign',
+},{
+	// settings
+	element: 'body',
+	position: null,
+	type: "info",
+	allow_dismiss: true,
+	newest_on_top: false,
+	showProgressbar: false,
+	placement: {
+		from: "top",
+		align: "right"
+	},
+	offset: 20,
+	spacing: 10,
+	z_index: 1031,
+	delay: 3300,
+	timer: 1000,
+	url_target: '_blank',
+	mouse_over: null,
+	animate: {
+		enter: 'animated bounceInDown',
+		exit: 'animated bounceOutUp'
+	},
+	onShow: null,
+	onShown: null,
+	onClose: null,
+	onClosed: null,
+	icon_type: 'class',
+});
+}
+
+var warningClick = function(){
+  $.notify({
+	// options
+	title: '<strong>Warning</strong>',
+	message: "<br>Lorem ipsum Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum.",
+  icon: 'glyphicon glyphicon-warning-sign',
+},{
+	// settings
+	element: 'body',
+	position: null,
+	type: "warning",
+	allow_dismiss: true,
+	newest_on_top: false,
+	showProgressbar: false,
+	placement: {
+		from: "top",
+		align: "right"
+	},
+	offset: 20,
+	spacing: 10,
+	z_index: 1031,
+	delay: 3300,
+	timer: 1000,
+	url_target: '_blank',
+	mouse_over: null,
+	animate: {
+		enter: 'animated bounceIn',
+		exit: 'animated bounceOut'
+	},
+	onShow: null,
+	onShown: null,
+	onClose: null,
+	onClosed: null,
+	icon_type: 'class',
+});
+}
+
+var dangerClick = function(){
+  $.notify({
+	// options
+	title: '<strong>Danger</strong>',
+	message: "<br>Lorem ipsum Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum.",
+  icon: 'glyphicon glyphicon-remove-sign',
+},{
+	// settings
+	element: 'body',
+	position: null,
+	type: "danger",
+	allow_dismiss: true,
+	newest_on_top: false,
+	showProgressbar: false,
+	placement: {
+		from: "top",
+		align: "right"
+	},
+	offset: 20,
+	spacing: 10,
+	z_index: 1031,
+	delay: 3300,
+	timer: 1000,
+	url_target: '_blank',
+	mouse_over: null,
+	animate: {
+		enter: 'animated flipInY',
+		exit: 'animated flipOutX'
+	},
+	onShow: null,
+	onShown: null,
+	onClose: null,
+	onClosed: null,
+	icon_type: 'class',
+});
+}
+
+var primaryClick = function(){
+  $.notify({
+	// options
+	title: '<strong>Primary</strong>',
+	message: "<br>Lorem ipsum Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum.",
+  icon: 'glyphicon glyphicon-ruble',
+},{
+	// settings
+	element: 'body',
+	position: null,
+	type: "success",
+	allow_dismiss: true,
+	newest_on_top: false,
+	showProgressbar: false,
+	placement: {
+		from: "top",
+		align: "right"
+	},
+	offset: 20,
+	spacing: 10,
+	z_index: 1031,
+	delay: 3300,
+	timer: 1000,
+	url_target: '_blank',
+	mouse_over: null,
+	animate: {
+		enter: 'animated lightSpeedIn',
+		exit: 'animated lightSpeedOut'
+	},
+	onShow: null,
+	onShown: null,
+	onClose: null,
+	onClosed: null,
+	icon_type: 'class',
+});
+}
+
+var defaultClick = function(){
+  $.notify({
+	// options
+	title: '<strong>Default</strong>',
+	message: "<br>Lorem ipsum Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum.",
+  icon: 'glyphicon glyphicon-ok-circle',
+},{
+	// settings
+	element: 'body',
+	position: null,
+	type: "warning",
+	allow_dismiss: true,
+	newest_on_top: false,
+	showProgressbar: false,
+	placement: {
+		from: "top",
+		align: "right"
+	},
+	offset: 20,
+	spacing: 10,
+	z_index: 1031,
+	delay: 3300,
+	timer: 1000,
+	url_target: '_blank',
+	mouse_over: null,
+	animate: {
+		enter: 'animated rollIn',
+		exit: 'animated rollOut'
+	},
+	onShow: null,
+	onShown: null,
+	onClose: null,
+	onClosed: null,
+	icon_type: 'class',
+});
+}
+
+var linkClick = function(){
+  $.notify({
+	// options
+	title: '<strong>Link</strong>',
+	message: "<br>Lorem ipsum Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum.",
+  icon: 'glyphicon glyphicon-search',
+},{
+	// settings
+	element: 'body',
+	position: null,
+	type: "danger",
+	allow_dismiss: true,
+	newest_on_top: false,
+	showProgressbar: false,
+	placement: {
+		from: "top",
+		align: "right"
+	},
+	offset: 20,
+	spacing: 10,
+	z_index: 1031,
+	delay: 3300,
+	timer: 1000,
+	url_target: '_blank',
+	mouse_over: null,
+	animate: {
+		enter: 'animated zoomInDown',
+		exit: 'animated zoomOutUp'
+	},
+	onShow: null,
+	onShown: null,
+	onClose: null,
+	onClosed: null,
+	icon_type: 'class',
+});
+}
+ 
+ </script>
+</head>
+<body>
+   
+	<div class="container mt">
+  <h1>Bootstrap notify.js Plugin</h1>
+  <div class="container">
+  <h3>Example</h3>
+    <p class="lead">This is an example about  use <code>notify.js</code> plugin.</p>
+</div>
+  <button class="btn btn-success" onClick="successClick()">Success</button>
+  <button class="btn btn-info" onClick="infoClick()">Information</button>
+  <button class="btn btn-warning" onClick="warningClick()">Warning</button>
+  <button class="btn btn-danger" onClick="dangerClick()">Danger</button>
+  <button class="btn btn-primary" onClick="primaryClick()">Primary</button>
+<button class="btn btn-default" onClick="defaultClick()">Default</button>
+  <button class="btn btn-link" onClick="linkClick()">Link</button>
+  
+  <hr>
+  
+  <p class="lead">Web Site: <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">Bootstrap notify.js</a></p>
+  
+</div>
+
+</body>
+
+</html>

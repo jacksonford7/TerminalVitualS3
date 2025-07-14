@@ -1,0 +1,9 @@
+﻿namespace CgsaMaster.sep.reportes.AppCode
+{
+
+
+    public partial class dsConsolidadoSeguimiento
+    {
+
+    }
+}

@@ -1,0 +1,1971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{613BE1B1-A54D-4955-866B-05DB3B644E81}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSLSite</RootNamespace>
+    <AssemblyName>CSLSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.725, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>C:\toolkit\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ConectorN4">
+      <HintPath>..\ConectorN4.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>C:\toolkit\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Logger">
+      <HintPath>..\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MSCaptcha">
+      <HintPath>..\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="advice\casvacios.aspx" />
+    <Content Include="aisv\replicar.aspx" />
+    <Content Include="aisv\impresion.aspx" />
+    <Content Include="aisv\detalle.aspx" />
+    <Content Include="aisv\container.aspx" />
+    <Content Include="advice\cancel.aspx" />
+    <Content Include="aisv\consolidadora.aspx" />
+    <Content Include="aisv\printaisv.aspx" />
+    <Content Include="atraque\consulta.aspx" />
+    <Content Include="atraque\printer.aspx" />
+    <Content Include="atraque\solicitud.aspx" />
+    <Content Include="catalogo\bookinList.aspx" />
+    <Content Include="catalogo\bookinListConsolidacion.aspx" />
+    <Content Include="catalogo\buque.aspx" />
+    <Content Include="catalogo\Calendario.aspx" />
+    <Content Include="catalogo\bookingPro.aspx" />
+    <Content Include="catalogo\calendarioConsolidacion.aspx" />
+    <Content Include="catalogo\consultaCoductorDesignado.aspx" />
+    <Content Include="catalogo\consultaColaboradorNominaOnlyControl.aspx" />
+    <Content Include="catalogo\consultaColaboradorNominaPeaton.aspx" />
+    <Content Include="catalogo\consultaColaboradorSCA.aspx" />
+    <Content Include="catalogo\consultaPlacas.aspx" />
+    <Content Include="catalogo\consultaSolicitudDetalle.aspx" />
+    <Content Include="catalogo\consultaSolicitudDetalleExportacion.aspx" />
+    <Content Include="catalogo\contenedores.aspx" />
+    <Content Include="catalogo\consultaContenedores.aspx" />
+    <Content Include="catalogo\consultaContenedoresAnalista.aspx" />
+    <Content Include="catalogo\contenedoresExportacion.aspx" />
+    <Content Include="catalogo\chofer.aspx" />
+    <Content Include="catalogo\empresas.aspx" />
+    <Content Include="catalogo\linea.aspx" />
+    <Content Include="catalogo\listaDeBooking.aspx" />
+    <Content Include="catalogo\naves.aspx" />
+    <Content Include="advice\vacios.aspx" />
+    <Content Include="catalogo\puerto.aspx" />
+    <Content Include="catalogo\referenciaBuque.aspx" />
+    <Content Include="cgsa.aspx" />
+    <Content Include="cliente\actualizasolicitudempresa.aspx" />
+    <Content Include="cliente\consultaestadosolicitud.aspx" />
+    <Content Include="cliente\consultafacturacolaborador.aspx" />
+    <Content Include="cliente\consultafacturavehiculo.aspx" />
+    <Content Include="cliente\consultasolicitud.aspx" />
+    <Content Include="cliente\consultasolicitudcolaborador.aspx" />
+    <Content Include="cliente\consultasolicitudcolaboradordocumentos.aspx" />
+    <Content Include="cliente\consultasolicitudempresa.aspx" />
+    <Content Include="cliente\consultasolicitudpermisodeacceso.aspx" />
+    <Content Include="cliente\consultasolicitudpermisodeaccesovehiculo.aspx" />
+    <Content Include="cliente\consultasolicitudpermisoprovisional.aspx" />
+    <Content Include="cliente\consultasolicitudpermisoprovisionaldocumentos.aspx" />
+    <Content Include="cliente\consultasolicitudvehiculo.aspx" />
+    <Content Include="cliente\consultasolicitudvehiculodocumentos.aspx" />
+    <Content Include="cliente\imprimirdatosvehiculo.aspx" />
+    <Content Include="cliente\generatecaptcha.aspx" />
+    <Content Include="cliente\imprimirdatoscolaborador.aspx" />
+    <Content Include="cliente\solicitudcolaborador.aspx" />
+    <Content Include="cliente\solicitudcolaboradordocumentos.aspx" />
+    <Content Include="cliente\solicitudcolaboradordocumentosprovisional.aspx" />
+    <Content Include="cliente\solicitudcolaboradorprovisional.aspx" />
+    <Content Include="cliente\solicitudempresa.aspx" />
+    <Content Include="cliente\solicitudpermisodeacceso.aspx" />
+    <Content Include="cliente\solicitudpermisodeaccesovehiculo.aspx" />
+    <Content Include="cliente\solicitudvehiculo.aspx" />
+    <Content Include="cliente\solicitudvehiculodocumentos.aspx" />
+    <Content Include="consolidacion\cancelar.aspx" />
+    <Content Include="consolidacion\reporte.aspx" />
+    <Content Include="consolidacion\reservas.aspx" />
+    <Content Include="consolidacion\rptreservas.aspx" />
+    <Content Include="consolidacion\turnos.aspx" />
+    <Content Include="credenciales\consultacomprobantedepagocolaborador.aspx" />
+    <Content Include="credenciales\consultacomprobantedepagovehiculos.aspx" />
+    <Content Include="credenciales\consultasolicitud.aspx" />
+    <Content Include="credenciales\consultasolicitudcolaborador.aspx" />
+    <Content Include="credenciales\consultasolicitudvehiculo.aspx" />
+    <Content Include="credenciales\datossolicitudvehiculo.aspx" />
+    <Content Include="credenciales\nosecargodocumento.aspx" />
+    <Content Include="credenciales\revisasolicitudcolaborador.aspx" />
+    <Content Include="credenciales\revisasolicitudcolaboradordocumentos.aspx" />
+    <Content Include="credenciales\revisasolicitudempresa.aspx" />
+    <Content Include="credenciales\revisasolicitudpermisodeacceso.aspx" />
+    <Content Include="credenciales\revisasolicitudpermisodeaccesovehiculo.aspx" />
+    <Content Include="credenciales\revisasolicitudpermisoprovisional.aspx" />
+    <Content Include="credenciales\revisasolicitudpermisoprovisionaldocumentos.aspx" />
+    <Content Include="credenciales\revisasolicitudvehiculo.aspx" />
+    <Content Include="credenciales\revisasolicitudvehiculodocumentos.aspx" />
+    <Content Include="cuenta\cambiarpassword.aspx" />
+    <Content Include="cliente\consultadatoscolaborador.aspx" />
+    <Content Include="logincliente\consultasolicitudrechazoempresa.aspx" />
+    <Content Include="cliente\consultadatosvehiculo.aspx" />
+    <Content Include="logincliente\login.aspx" />
+    <Content Include="man_pro_expo\pago_terceros.aspx" />
+    <Content Include="man_pro_expo\lineas_horas_reefer.aspx" />
+    <Content Include="man_pro_expo\horas_reefer.aspx" />
+    <Content Include="Pago en Linea\Compensacion.aspx" />
+    <Content Include="Pago en Linea\ConsultaAnticipo.aspx" />
+    <Content Include="Pago en Linea\ImprimirAnticipo.aspx" />
+    <Content Include="Pago en Linea\ImprimirFacturasPagadas.aspx" />
+    <Content Include="recuperar\recuperacion.aspx" />
+    <Content Include="cuenta\recuperarpassword.aspx" />
+    <Content Include="cuenta\zonesAdmin.aspx" />
+    <Content Include="cuenta\zonesDefault.aspx" />
+    <Content Include="catalogo\booking.aspx" />
+    <Content Include="catalogo\agente.aspx" />
+    <Content Include="aisv\consulta.aspx" />
+    <Content Include="aisv\cargasuelta.aspx" />
+    <Content Include="aisv\cargaconsolidar.aspx" />
+    <Content Include="aisv\printer.aspx" />
+    <Content Include="catalogo\exportador.aspx" />
+    <Content Include="catalogo\lineas.aspx" />
+    <Content Include="cuenta\login.aspx" />
+    <Content Include="cuenta\zones.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Inicio\base-site.css" />
+    <Content Include="Inicio\bg-body.jpg" />
+    <Content Include="Inicio\bg-tableth.jpg" />
+    <Content Include="Inicio\bglistfull.png" />
+    <Content Include="Inicio\css\font-awesome.css" />
+    <Content Include="Inicio\css\font-awesome.min.css" />
+    <Content Include="Inicio\dato.txt" />
+    <Content Include="Inicio\fonts\fontawesome-webfont.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\header-login.jpg" />
+    <Content Include="Inicio\header.png" />
+    <Content Include="Inicio\icon-auth-ingreso.png" />
+    <Content Include="Inicio\icon-info2.png" />
+    <Content Include="Inicio\icon-informe-naviera.png" />
+    <Content Include="Inicio\icon-requerim-servicio.png" />
+    <Content Include="Inicio\icon-servicios.png" />
+    <Content Include="Inicio\icon-solicitud-atraque.png" />
+    <Content Include="Inicio\logoContecon.png" />
+    <Content Include="aisv\printaisvfull.aspx" />
+    <Content Include="advice\preaviso.aspx" />
+    <Content Include="advice\preimpresion.aspx" />
+    <Content Include="navieras\ConsCas.aspx" />
+    <Content Include="navieras\ConsReqService.aspx" />
+    <Content Include="navieras\ConsTurn.aspx" />
+    <Content Include="navieras\EmptyCntDesc.aspx" />
+    <Content Include="navieras\EmptyCntLoad.aspx" />
+    <Content Include="navieras\FullCntDesc.aspx" />
+    <Content Include="navieras\FullCntLoad.aspx" />
+    <Content Include="navieras\GateIn.aspx" />
+    <Content Include="navieras\GateOut.aspx" />
+    <Content Include="navieras\RefCont.aspx" />
+    <Content Include="navieras\RptEmptyCntDesc.aspx" />
+    <Content Include="navieras\RptEmptyCntLoad.aspx" />
+    <Content Include="navieras\RptFullCntDesc.aspx" />
+    <Content Include="navieras\RptFullCntLoad.aspx" />
+    <Content Include="navieras\RptGateIn.aspx" />
+    <Content Include="navieras\RptGateOut.aspx" />
+    <Content Include="navieras\RptRefCont.aspx" />
+    <Content Include="navieras\RptReqService.aspx" />
+    <Content Include="poolServicios\consultaSolicitudUsuario.aspx" />
+    <Content Include="poolServicios\etiquetar.aspx" />
+    <Content Include="poolServicios\verficacion.aspx" />
+    <Content Include="poolServicios\repesaje.aspx" />
+    <Content Include="poolServicios\revisiontecnica.aspx" />
+    <Content Include="poolServicios\mantenimientoCerrojo.aspx" />
+    <Content Include="poolServicios\listadoEmbarque.aspx" />
+    <Content Include="poolServicios\mantenimientoOperario.aspx" />
+    <Content Include="poolServicios\reporteLateArrival.aspx" />
+    <Content Include="poolServicios\solicitudCorreccionExportacion.aspx" />
+    <Content Include="poolServicios\mesaServicio.aspx" />
+    <Content Include="poolServicios\solicitudUsuarios.aspx" />
+    <Content Include="poolServicios\solicitudUsuariosCerrojoElectronico.aspx" />
+    <Content Include="poolServicios\solicitudUsuariosLateArrival.aspx" />
+    <Content Include="poolServicios\solicitudUsuariosReestiba.aspx" />
+    <Content Include="portal\consultapro.aspx" />
+    <Content Include="portal\printproforma.aspx" />
+    <Content Include="portal\proforma.aspx" />
+    <Content Include="Scripts\AddIn.js" />
+    <Content Include="Scripts\atraque.js" />
+    <Content Include="Scripts\centroServicios.js" />
+    <Content Include="Scripts\credenciales.js" />
+    <Content Include="Scripts\dialog_box.js" />
+    <Content Include="Scripts\exportar.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
+    <Content Include="Scripts\jquery.easytabs.min.js" />
+    <Content Include="Scripts\jquery.tablePagination.0.1.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="handler\exporter.ashx" />
+    <Content Include="handler\filer.ashx" />
+    <Content Include="Scripts\pages_mod.js" />
+    <Content Include="handler\excel.ashx" />
+    <Content Include="seguridad\Web.config" />
+    <Content Include="handler\getFile.ashx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\n4Service\n4Service.disco" />
+    <None Include="Service References\n4Service\configuration91.svcinfo" />
+    <None Include="Service References\n4Service\configuration.svcinfo" />
+    <None Include="Service References\n4Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="seguridad\consultausuario.aspx" />
+    <Content Include="seguridad\consultausuarioadministrador.aspx" />
+    <Content Include="seguridad\datosarea.aspx" />
+    <Content Include="seguridad\datosgrupos.aspx" />
+    <Content Include="seguridad\datosgruposoperadores.aspx" />
+    <Content Include="seguridad\datosgruposusuarios.aspx" />
+    <Content Include="seguridad\datosopcionservicios.aspx" />
+    <Content Include="seguridad\datospermisos.aspx" />
+    <Content Include="seguridad\datosservicio.aspx" />
+    <Content Include="seguridad\datosusuario.aspx" />
+    <None Include="Service References\unitService\mailservice.disco" />
+    <None Include="Service References\unitService\configuration91.svcinfo" />
+    <None Include="Service References\unitService\configuration.svcinfo" />
+    <None Include="Service References\unitService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="services\atraque.asmx" />
+    <Content Include="shared\avisos\popup_script.js" />
+    <Content Include="shared\avisos\popup_script_cta.js" />
+    <Content Include="shared\avisos\popup_script_home.js" />
+    <Content Include="shared\avisos\ppt.css" />
+    <Content Include="shared\estilo\atraque.css" />
+    <Content Include="shared\estilo\catalogobkg.css" />
+    <Content Include="shared\estilo\catalogodocumentos.css" />
+    <Content Include="shared\estilo\catalogoestadosolicitud.css" />
+    <Content Include="shared\estilo\catalogosolicitud.css" />
+    <Content Include="shared\estilo\catalogosolicitudcolaborador.css" />
+    <Content Include="shared\estilo\catalogosolicitudempresa.css" />
+    <Content Include="shared\estilo\catalogosolicitudvehiculo.css" />
+    <Content Include="shared\estilo\catalogo_mod.css" />
+    <Content Include="shared\estilo\catcomprobantedepago.css" />
+    <Content Include="shared\estilo\centroSolicitud.css" />
+    <Content Include="shared\estilo\comprobantedepago.css" />
+    <Content Include="shared\estilo\ppt.css" />
+    <Content Include="shared\estilo\reqserv.css" />
+    <Content Include="shared\estilo\solicitudempresa.css" />
+    <Content Include="shared\estilo\tabs.css" />
+    <Content Include="shared\estilo\w3-progressbar.css" />
+    <Content Include="shared\imgs\add.png" />
+    <Content Include="shared\imgs\btn-cambiar.png" />
+    <Content Include="shared\imgs\del.png" />
+    <Content Include="shared\imgs\ic_ADMINISTRACION DE SEGURIDAD.png" />
+    <Content Include="shared\imgs\ic_Area CGS.png" />
+    <Content Include="shared\imgs\ic_sinicono.png" />
+    <Content Include="sia\cntrimo.aspx" />
+    <Content Include="sia\bbkimo.aspx" />
+    <Content Include="sia\conteconpersonal.aspx" />
+    <Content Include="sia\externoscgsa.aspx" />
+    <Content Include="sia\visitantes.aspx" />
+    <None Include="Service References\n4Service\n4Service.wsdl" />
+    <Content Include="App_Browsers\ie.browser" />
+    <Content Include="App_Browsers\firefox.browser" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\pages.js" />
+    <Content Include="Scripts\revalidate.js" />
+    <Content Include="Scripts\turnos.js" />
+    <Content Include="services\catalogo.asmx" />
+    <Content Include="shared\error.aspx" />
+    <Content Include="shared\estilo\aisv-general.css" />
+    <Content Include="shared\estilo\base-site.css" />
+    <Content Include="shared\estilo\carrusel.css" />
+    <Content Include="shared\estilo\catalogos.css" />
+    <Content Include="shared\estilo\dialog_box.css" />
+    <Content Include="shared\estilo\info.css" />
+    <Content Include="shared\estilo\jquery.datetimepicker.css" />
+    <Content Include="shared\estilo\login.css" />
+    <Content Include="shared\estilo\menu-old.css" />
+    <Content Include="shared\estilo\modal.css" />
+    <Content Include="shared\estilo\print.css" />
+    <Content Include="shared\estilo\proforma.css" />
+    <Content Include="shared\estilo\tables.css" />
+    <Content Include="shared\estilo\work.css" />
+    <Content Include="shared\imgs\action_print.gif" />
+    <Content Include="shared\imgs\action_stop.gif" />
+    <Content Include="shared\imgs\aisv.png" />
+    <Content Include="shared\imgs\alert.gif" />
+    <Content Include="shared\imgs\asc.png" />
+    <Content Include="shared\imgs\atraque.png" />
+    <Content Include="shared\imgs\bg-body.jpg" />
+    <Content Include="shared\imgs\bg-tableth.jpg" />
+    <Content Include="shared\imgs\bglistfull.png" />
+    <Content Include="shared\imgs\blue.gif" />
+    <Content Include="shared\imgs\btn-salir.png" />
+    <Content Include="shared\imgs\chrome.png" />
+    <Content Include="shared\imgs\col.png" />
+    <Content Include="shared\imgs\csv.gif" />
+    <Content Include="shared\imgs\decrypted.png" />
+    <Content Include="shared\imgs\derecha.gif" />
+    <Content Include="shared\imgs\desc.png" />
+    <Content Include="shared\imgs\dialog_close.gif" />
+    <Content Include="shared\imgs\encrypted.png" />
+    <Content Include="shared\imgs\ep.gif" />
+    <Content Include="shared\imgs\error_bg.jpg" />
+    <Content Include="shared\imgs\error_header.gif" />
+    <Content Include="shared\imgs\ex.png" />
+    <Content Include="shared\imgs\explore.png" />
+    <Content Include="shared\imgs\find.gif" />
+    <Content Include="shared\imgs\firefox.jpg" />
+    <Content Include="shared\imgs\first.gif" />
+    <Content Include="shared\imgs\flecha.gif" />
+    <Content Include="shared\imgs\green.gif" />
+    <Content Include="shared\imgs\header-login.jpg" />
+    <Content Include="shared\imgs\header.png" />
+    <Content Include="shared\imgs\icon-info2.png" />
+    <Content Include="shared\imgs\icon_favourites.gif" />
+    <Content Include="shared\imgs\info.gif" />
+    <Content Include="shared\imgs\izquierda.gif" />
+    <Content Include="shared\imgs\js.png" />
+    <Content Include="shared\imgs\last.gif" />
+    <Content Include="shared\imgs\loader.gif" />
+    <Content Include="shared\imgs\logoContecon.png" />
+    <Content Include="shared\imgs\modal-gloss.png" />
+    <Content Include="shared\imgs\modified.jpg" />
+    <Content Include="shared\imgs\more.gif" />
+    <Content Include="shared\imgs\nav_left.jpg" />
+    <Content Include="shared\imgs\nav_left_0.gif" />
+    <Content Include="shared\imgs\nav_right.jpg" />
+    <Content Include="shared\imgs\nav_right_0.gif" />
+    <Content Include="shared\imgs\next.gif" />
+    <Content Include="shared\imgs\ok.png" />
+    <Content Include="shared\imgs\orange.gif" />
+    <Content Include="shared\imgs\prev.gif" />
+    <Content Include="shared\imgs\prompt_bg.jpg" />
+    <Content Include="shared\imgs\prompt_header.gif" />
+    <Content Include="shared\imgs\red.gif" />
+    <Content Include="shared\imgs\reportes.png" />
+    <Content Include="shared\imgs\safari.png" />
+    <Content Include="shared\imgs\servicios.png" />
+    <Content Include="shared\imgs\sort_ascend.png" />
+    <Content Include="shared\imgs\sort_descend.png" />
+    <Content Include="shared\imgs\success_bg.jpg" />
+    <Content Include="shared\imgs\success_header.gif" />
+    <Content Include="shared\imgs\tablet.png" />
+    <Content Include="shared\imgs\text.gif" />
+    <Content Include="shared\imgs\warning_bg.jpg" />
+    <Content Include="shared\imgs\warning_header.gif" />
+    <Content Include="shared\imgs\water.png" />
+    <Content Include="shared\imgs\white.gif" />
+    <Content Include="shared\imo\1.gif" />
+    <Content Include="shared\imo\2.gif" />
+    <Content Include="shared\imo\3.gif" />
+    <Content Include="shared\imo\4.gif" />
+    <Content Include="shared\imo\5.gif" />
+    <Content Include="shared\imo\6.gif" />
+    <Content Include="shared\imo\7.gif" />
+    <Content Include="shared\imo\8.gif" />
+    <Content Include="shared\imo\9.gif" />
+    <Content Include="shared\Site.css" />
+    <Content Include="sinsoporte.htm" />
+    <Content Include="turnos\cancelar.aspx" />
+    <Content Include="turnos\rptreservas.aspx" />
+    <Content Include="turnos\reservas.aspx" />
+    <Content Include="turnos\reporte.aspx" />
+    <Content Include="turnos\turnos.aspx" />
+    <None Include="Service References\unitService\mailservice.wsdl" />
+    <None Include="Web References\GetFile\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GetFile\Service.wsdl" />
+    <None Include="Web References\OnlyControl\OnlyServiceWeb.wsdl" />
+    <None Include="Web References\OnlyControl\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_Customer_Statement_NAVIS_CGSA\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_Customer_Statement_NAVIS_CGSA\Service.wsdl" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\GetFile\Service.disco" />
+    <None Include="Web References\OnlyControl\OnlyServiceWeb.disco" />
+    <None Include="Web References\SI_Customer_Statement_NAVIS_CGSA\Service.disco" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="advice\adviceHelper.cs" />
+    <Compile Include="advice\casvacios.aspx.cs">
+      <DependentUpon>casvacios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="advice\casvacios.aspx.designer.cs">
+      <DependentUpon>casvacios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\replicar.aspx.cs">
+      <DependentUpon>replicar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\replicar.aspx.designer.cs">
+      <DependentUpon>replicar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\impresion.aspx.cs">
+      <DependentUpon>impresion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\impresion.aspx.designer.cs">
+      <DependentUpon>impresion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\detalle.aspx.cs">
+      <DependentUpon>detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\detalle.aspx.designer.cs">
+      <DependentUpon>detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\container.aspx.cs">
+      <DependentUpon>container.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\container.aspx.designer.cs">
+      <DependentUpon>container.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="advice\cancel.aspx.cs">
+      <DependentUpon>cancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="advice\cancel.aspx.designer.cs">
+      <DependentUpon>cancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\consolidadora.aspx.cs">
+      <DependentUpon>consolidadora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\consolidadora.aspx.designer.cs">
+      <DependentUpon>consolidadora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\printaisv.aspx.cs">
+      <DependentUpon>printaisv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\printaisv.aspx.designer.cs">
+      <DependentUpon>printaisv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app_start\atraque.cs" />
+    <Compile Include="app_start\atraqueHelper.cs" />
+    <Compile Include="app_start\CLSDataCentroSolicitud.cs" />
+    <Compile Include="app_start\CLSDataSeguridad.cs" />
+    <Compile Include="app_start\contenedor.cs" />
+    <Compile Include="app_start\man_pro_expo.cs" />
+    <Compile Include="app_start\credenciales.cs" />
+    <Compile Include="app_start\dataHelper.cs" />
+    <Compile Include="app_start\dbconfigs.cs" />
+    <Compile Include="app_start\oFile.cs" />
+    <Compile Include="app_start\PagoEnLineaData.cs" />
+    <Compile Include="app_start\Proforma.cs" />
+    <Compile Include="app_start\ProformaHelper.cs" />
+    <Compile Include="app_start\RandomImage.cs" />
+    <Compile Include="app_start\repNavieras.cs" />
+    <Compile Include="app_start\turno.cs" />
+    <Compile Include="app_start\turnoConsolidacion.cs" />
+    <Compile Include="app_start\UIHelper.cs" />
+    <Compile Include="app_start\VesselVisit.cs" />
+    <Compile Include="atraque\consulta.aspx.cs">
+      <DependentUpon>consulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="atraque\consulta.aspx.designer.cs">
+      <DependentUpon>consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atraque\printer.aspx.cs">
+      <DependentUpon>printer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="atraque\printer.aspx.designer.cs">
+      <DependentUpon>printer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atraque\solicitud.aspx.cs">
+      <DependentUpon>solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="atraque\solicitud.aspx.designer.cs">
+      <DependentUpon>solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\bookinList.aspx.cs">
+      <DependentUpon>bookinList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\bookinList.aspx.designer.cs">
+      <DependentUpon>bookinList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\bookinListConsolidacion.aspx.cs">
+      <DependentUpon>bookinListConsolidacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\bookinListConsolidacion.aspx.designer.cs">
+      <DependentUpon>bookinListConsolidacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\buque.aspx.cs">
+      <DependentUpon>buque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\buque.aspx.designer.cs">
+      <DependentUpon>buque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\Calendario.aspx.cs">
+      <DependentUpon>Calendario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\Calendario.aspx.designer.cs">
+      <DependentUpon>Calendario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\bookingPro.aspx.cs">
+      <DependentUpon>bookingPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\bookingPro.aspx.designer.cs">
+      <DependentUpon>bookingPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\calendarioConsolidacion.aspx.cs">
+      <DependentUpon>calendarioConsolidacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\calendarioConsolidacion.aspx.designer.cs">
+      <DependentUpon>calendarioConsolidacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaCoductorDesignado.aspx.cs">
+      <DependentUpon>consultaCoductorDesignado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaCoductorDesignado.aspx.designer.cs">
+      <DependentUpon>consultaCoductorDesignado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaColaboradorNominaOnlyControl.aspx.cs">
+      <DependentUpon>consultaColaboradorNominaOnlyControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaColaboradorNominaOnlyControl.aspx.designer.cs">
+      <DependentUpon>consultaColaboradorNominaOnlyControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaColaboradorNominaPeaton.aspx.cs">
+      <DependentUpon>consultaColaboradorNominaPeaton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaColaboradorNominaPeaton.aspx.designer.cs">
+      <DependentUpon>consultaColaboradorNominaPeaton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaColaboradorSCA.aspx.cs">
+      <DependentUpon>consultaColaboradorSCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaColaboradorSCA.aspx.designer.cs">
+      <DependentUpon>consultaColaboradorSCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaPlacas.aspx.cs">
+      <DependentUpon>consultaPlacas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaPlacas.aspx.designer.cs">
+      <DependentUpon>consultaPlacas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaSolicitudDetalle.aspx.cs">
+      <DependentUpon>consultaSolicitudDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaSolicitudDetalle.aspx.designer.cs">
+      <DependentUpon>consultaSolicitudDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaSolicitudDetalleExportacion.aspx.cs">
+      <DependentUpon>consultaSolicitudDetalleExportacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaSolicitudDetalleExportacion.aspx.designer.cs">
+      <DependentUpon>consultaSolicitudDetalleExportacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\contenedores.aspx.cs">
+      <DependentUpon>contenedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\contenedores.aspx.designer.cs">
+      <DependentUpon>contenedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaContenedores.aspx.cs">
+      <DependentUpon>consultaContenedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaContenedores.aspx.designer.cs">
+      <DependentUpon>consultaContenedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\consultaContenedoresAnalista.aspx.cs">
+      <DependentUpon>consultaContenedoresAnalista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\consultaContenedoresAnalista.aspx.designer.cs">
+      <DependentUpon>consultaContenedoresAnalista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\contenedoresExportacion.aspx.cs">
+      <DependentUpon>contenedoresExportacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\contenedoresExportacion.aspx.designer.cs">
+      <DependentUpon>contenedoresExportacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\chofer.aspx.cs">
+      <DependentUpon>chofer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\chofer.aspx.designer.cs">
+      <DependentUpon>chofer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\empresas.aspx.cs">
+      <DependentUpon>empresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\empresas.aspx.designer.cs">
+      <DependentUpon>empresas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\linea.aspx.cs">
+      <DependentUpon>linea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\linea.aspx.designer.cs">
+      <DependentUpon>linea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\listaDeBooking.aspx.cs">
+      <DependentUpon>listaDeBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\listaDeBooking.aspx.designer.cs">
+      <DependentUpon>listaDeBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\naves.aspx.cs">
+      <DependentUpon>naves.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\naves.aspx.designer.cs">
+      <DependentUpon>naves.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\CslHelper.cs" />
+    <Compile Include="advice\vacios.aspx.cs">
+      <DependentUpon>vacios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="advice\vacios.aspx.designer.cs">
+      <DependentUpon>vacios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app_start\unidadAdvice.cs" />
+    <Compile Include="catalogo\puerto.aspx.cs">
+      <DependentUpon>puerto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\puerto.aspx.designer.cs">
+      <DependentUpon>puerto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\referenciaBuque.aspx.cs">
+      <DependentUpon>referenciaBuque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\referenciaBuque.aspx.designer.cs">
+      <DependentUpon>referenciaBuque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cgsa.aspx.cs">
+      <DependentUpon>cgsa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cgsa.aspx.designer.cs">
+      <DependentUpon>cgsa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\actualizasolicitudempresa.aspx.cs">
+      <DependentUpon>actualizasolicitudempresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\actualizasolicitudempresa.aspx.designer.cs">
+      <DependentUpon>actualizasolicitudempresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultaestadosolicitud.aspx.cs">
+      <DependentUpon>consultaestadosolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultaestadosolicitud.aspx.designer.cs">
+      <DependentUpon>consultaestadosolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultafacturacolaborador.aspx.cs">
+      <DependentUpon>consultafacturacolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultafacturacolaborador.aspx.designer.cs">
+      <DependentUpon>consultafacturacolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultafacturavehiculo.aspx.cs">
+      <DependentUpon>consultafacturavehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultafacturavehiculo.aspx.designer.cs">
+      <DependentUpon>consultafacturavehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitud.aspx.cs">
+      <DependentUpon>consultasolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitud.aspx.designer.cs">
+      <DependentUpon>consultasolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudcolaborador.aspx.cs">
+      <DependentUpon>consultasolicitudcolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudcolaborador.aspx.designer.cs">
+      <DependentUpon>consultasolicitudcolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudcolaboradordocumentos.aspx.cs">
+      <DependentUpon>consultasolicitudcolaboradordocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudcolaboradordocumentos.aspx.designer.cs">
+      <DependentUpon>consultasolicitudcolaboradordocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudempresa.aspx.cs">
+      <DependentUpon>consultasolicitudempresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudempresa.aspx.designer.cs">
+      <DependentUpon>consultasolicitudempresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisodeacceso.aspx.cs">
+      <DependentUpon>consultasolicitudpermisodeacceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisodeacceso.aspx.designer.cs">
+      <DependentUpon>consultasolicitudpermisodeacceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisodeaccesovehiculo.aspx.cs">
+      <DependentUpon>consultasolicitudpermisodeaccesovehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisodeaccesovehiculo.aspx.designer.cs">
+      <DependentUpon>consultasolicitudpermisodeaccesovehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisoprovisional.aspx.cs">
+      <DependentUpon>consultasolicitudpermisoprovisional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisoprovisional.aspx.designer.cs">
+      <DependentUpon>consultasolicitudpermisoprovisional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisoprovisionaldocumentos.aspx.cs">
+      <DependentUpon>consultasolicitudpermisoprovisionaldocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudpermisoprovisionaldocumentos.aspx.designer.cs">
+      <DependentUpon>consultasolicitudpermisoprovisionaldocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudvehiculo.aspx.cs">
+      <DependentUpon>consultasolicitudvehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudvehiculo.aspx.designer.cs">
+      <DependentUpon>consultasolicitudvehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudvehiculodocumentos.aspx.cs">
+      <DependentUpon>consultasolicitudvehiculodocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultasolicitudvehiculodocumentos.aspx.designer.cs">
+      <DependentUpon>consultasolicitudvehiculodocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\imprimirdatosvehiculo.aspx.cs">
+      <DependentUpon>imprimirdatosvehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\imprimirdatosvehiculo.aspx.designer.cs">
+      <DependentUpon>imprimirdatosvehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\generatecaptcha.aspx.cs">
+      <DependentUpon>generatecaptcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\generatecaptcha.aspx.designer.cs">
+      <DependentUpon>generatecaptcha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\imprimirdatoscolaborador.aspx.cs">
+      <DependentUpon>imprimirdatoscolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\imprimirdatoscolaborador.aspx.designer.cs">
+      <DependentUpon>imprimirdatoscolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaborador.aspx.cs">
+      <DependentUpon>solicitudcolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaborador.aspx.designer.cs">
+      <DependentUpon>solicitudcolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaboradordocumentos.aspx.cs">
+      <DependentUpon>solicitudcolaboradordocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaboradordocumentos.aspx.designer.cs">
+      <DependentUpon>solicitudcolaboradordocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaboradordocumentosprovisional.aspx.cs">
+      <DependentUpon>solicitudcolaboradordocumentosprovisional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaboradordocumentosprovisional.aspx.designer.cs">
+      <DependentUpon>solicitudcolaboradordocumentosprovisional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaboradorprovisional.aspx.cs">
+      <DependentUpon>solicitudcolaboradorprovisional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudcolaboradorprovisional.aspx.designer.cs">
+      <DependentUpon>solicitudcolaboradorprovisional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudempresa.aspx.cs">
+      <DependentUpon>solicitudempresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudempresa.aspx.designer.cs">
+      <DependentUpon>solicitudempresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudpermisodeacceso.aspx.cs">
+      <DependentUpon>solicitudpermisodeacceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudpermisodeacceso.aspx.designer.cs">
+      <DependentUpon>solicitudpermisodeacceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudpermisodeaccesovehiculo.aspx.cs">
+      <DependentUpon>solicitudpermisodeaccesovehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudpermisodeaccesovehiculo.aspx.designer.cs">
+      <DependentUpon>solicitudpermisodeaccesovehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudvehiculo.aspx.cs">
+      <DependentUpon>solicitudvehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudvehiculo.aspx.designer.cs">
+      <DependentUpon>solicitudvehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\solicitudvehiculodocumentos.aspx.cs">
+      <DependentUpon>solicitudvehiculodocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\solicitudvehiculodocumentos.aspx.designer.cs">
+      <DependentUpon>solicitudvehiculodocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consolidacion\cancelar.aspx.cs">
+      <DependentUpon>cancelar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consolidacion\cancelar.aspx.designer.cs">
+      <DependentUpon>cancelar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consolidacion\reporte.aspx.cs">
+      <DependentUpon>reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consolidacion\reporte.aspx.designer.cs">
+      <DependentUpon>reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consolidacion\reservas.aspx.cs">
+      <DependentUpon>reservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consolidacion\reservas.aspx.designer.cs">
+      <DependentUpon>reservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consolidacion\rptreservas.aspx.cs">
+      <DependentUpon>rptreservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consolidacion\rptreservas.aspx.designer.cs">
+      <DependentUpon>rptreservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consolidacion\turnos.aspx.cs">
+      <DependentUpon>turnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consolidacion\turnos.aspx.designer.cs">
+      <DependentUpon>turnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\consultacomprobantedepagocolaborador.aspx.cs">
+      <DependentUpon>consultacomprobantedepagocolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\consultacomprobantedepagocolaborador.aspx.designer.cs">
+      <DependentUpon>consultacomprobantedepagocolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\consultacomprobantedepagovehiculos.aspx.cs">
+      <DependentUpon>consultacomprobantedepagovehiculos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\consultacomprobantedepagovehiculos.aspx.designer.cs">
+      <DependentUpon>consultacomprobantedepagovehiculos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\consultasolicitud.aspx.cs">
+      <DependentUpon>consultasolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\consultasolicitud.aspx.designer.cs">
+      <DependentUpon>consultasolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\consultasolicitudcolaborador.aspx.cs">
+      <DependentUpon>consultasolicitudcolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\consultasolicitudcolaborador.aspx.designer.cs">
+      <DependentUpon>consultasolicitudcolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\consultasolicitudvehiculo.aspx.cs">
+      <DependentUpon>consultasolicitudvehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\consultasolicitudvehiculo.aspx.designer.cs">
+      <DependentUpon>consultasolicitudvehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\datossolicitudvehiculo.aspx.cs">
+      <DependentUpon>datossolicitudvehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\datossolicitudvehiculo.aspx.designer.cs">
+      <DependentUpon>datossolicitudvehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\nosecargodocumento.aspx.cs">
+      <DependentUpon>nosecargodocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\nosecargodocumento.aspx.designer.cs">
+      <DependentUpon>nosecargodocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudcolaborador.aspx.cs">
+      <DependentUpon>revisasolicitudcolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudcolaborador.aspx.designer.cs">
+      <DependentUpon>revisasolicitudcolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudcolaboradordocumentos.aspx.cs">
+      <DependentUpon>revisasolicitudcolaboradordocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudcolaboradordocumentos.aspx.designer.cs">
+      <DependentUpon>revisasolicitudcolaboradordocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudempresa.aspx.cs">
+      <DependentUpon>revisasolicitudempresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudempresa.aspx.designer.cs">
+      <DependentUpon>revisasolicitudempresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisodeacceso.aspx.cs">
+      <DependentUpon>revisasolicitudpermisodeacceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisodeacceso.aspx.designer.cs">
+      <DependentUpon>revisasolicitudpermisodeacceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisodeaccesovehiculo.aspx.cs">
+      <DependentUpon>revisasolicitudpermisodeaccesovehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisodeaccesovehiculo.aspx.designer.cs">
+      <DependentUpon>revisasolicitudpermisodeaccesovehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisoprovisional.aspx.cs">
+      <DependentUpon>revisasolicitudpermisoprovisional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisoprovisional.aspx.designer.cs">
+      <DependentUpon>revisasolicitudpermisoprovisional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisoprovisionaldocumentos.aspx.cs">
+      <DependentUpon>revisasolicitudpermisoprovisionaldocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudpermisoprovisionaldocumentos.aspx.designer.cs">
+      <DependentUpon>revisasolicitudpermisoprovisionaldocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudvehiculo.aspx.cs">
+      <DependentUpon>revisasolicitudvehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudvehiculo.aspx.designer.cs">
+      <DependentUpon>revisasolicitudvehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudvehiculodocumentos.aspx.cs">
+      <DependentUpon>revisasolicitudvehiculodocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="credenciales\revisasolicitudvehiculodocumentos.aspx.designer.cs">
+      <DependentUpon>revisasolicitudvehiculodocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\cambiarpassword.aspx.cs">
+      <DependentUpon>cambiarpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\cambiarpassword.aspx.designer.cs">
+      <DependentUpon>cambiarpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultadatoscolaborador.aspx.cs">
+      <DependentUpon>consultadatoscolaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultadatoscolaborador.aspx.designer.cs">
+      <DependentUpon>consultadatoscolaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logincliente\consultasolicitudrechazoempresa.aspx.cs">
+      <DependentUpon>consultasolicitudrechazoempresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logincliente\consultasolicitudrechazoempresa.aspx.designer.cs">
+      <DependentUpon>consultasolicitudrechazoempresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\consultadatosvehiculo.aspx.cs">
+      <DependentUpon>consultadatosvehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cliente\consultadatosvehiculo.aspx.designer.cs">
+      <DependentUpon>consultadatosvehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logincliente\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logincliente\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="man_pro_expo\pago_terceros.aspx.cs">
+      <DependentUpon>pago_terceros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="man_pro_expo\pago_terceros.aspx.designer.cs">
+      <DependentUpon>pago_terceros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="man_pro_expo\lineas_horas_reefer.aspx.cs">
+      <DependentUpon>lineas_horas_reefer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="man_pro_expo\lineas_horas_reefer.aspx.designer.cs">
+      <DependentUpon>lineas_horas_reefer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="man_pro_expo\horas_reefer.aspx.cs">
+      <DependentUpon>horas_reefer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="man_pro_expo\horas_reefer.aspx.designer.cs">
+      <DependentUpon>horas_reefer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pago en Linea\Compensacion.aspx.cs">
+      <DependentUpon>Compensacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pago en Linea\Compensacion.aspx.designer.cs">
+      <DependentUpon>Compensacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pago en Linea\ConsultaAnticipo.aspx.cs">
+      <DependentUpon>ConsultaAnticipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pago en Linea\ConsultaAnticipo.aspx.designer.cs">
+      <DependentUpon>ConsultaAnticipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pago en Linea\ImprimirAnticipo.aspx.cs">
+      <DependentUpon>ImprimirAnticipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pago en Linea\ImprimirAnticipo.aspx.designer.cs">
+      <DependentUpon>ImprimirAnticipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pago en Linea\ImprimirFacturasPagadas.aspx.cs">
+      <DependentUpon>ImprimirFacturasPagadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pago en Linea\ImprimirFacturasPagadas.aspx.designer.cs">
+      <DependentUpon>ImprimirFacturasPagadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="recuperar\recuperacion.aspx.cs">
+      <DependentUpon>recuperacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recuperar\recuperacion.aspx.designer.cs">
+      <DependentUpon>recuperacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\recuperarpassword.aspx.cs">
+      <DependentUpon>recuperarpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\recuperarpassword.aspx.designer.cs">
+      <DependentUpon>recuperarpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\zonesAdmin.aspx.cs">
+      <DependentUpon>zonesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\zonesAdmin.aspx.designer.cs">
+      <DependentUpon>zonesAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\zonesDefault.aspx.cs">
+      <DependentUpon>zonesDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\zonesDefault.aspx.designer.cs">
+      <DependentUpon>zonesDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\filer.ashx.cs">
+      <DependentUpon>filer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\getFile.ashx.cs">
+      <DependentUpon>getFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="app_start\billoflading.cs" />
+    <Compile Include="app_start\CLSData.cs" />
+    <Compile Include="app_start\ExtensoresPagina.cs" />
+    <Compile Include="app_start\RouteConfig.cs" />
+    <Compile Include="catalogo\booking.aspx.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\booking.aspx.designer.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\agente.aspx.cs">
+      <DependentUpon>agente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\agente.aspx.designer.cs">
+      <DependentUpon>agente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app_start\unit.cs" />
+    <Compile Include="app_start\xmlHelper.cs" />
+    <Compile Include="Catalogos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Catalogos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\consulta.aspx.cs">
+      <DependentUpon>consulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\consulta.aspx.designer.cs">
+      <DependentUpon>consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\cargaconsolidar.aspx.cs">
+      <DependentUpon>cargaconsolidar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\cargaconsolidar.aspx.designer.cs">
+      <DependentUpon>cargaconsolidar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\printer.aspx.cs">
+      <DependentUpon>printer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\printer.aspx.designer.cs">
+      <DependentUpon>printer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app_start\Crytpo.cs" />
+    <Compile Include="aisv\cargasuelta.aspx.cs">
+      <DependentUpon>cargasuelta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\cargasuelta.aspx.designer.cs">
+      <DependentUpon>cargasuelta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app_start\DataTransformHelper.cs" />
+    <Compile Include="app_start\EntityClases.cs" />
+    <Compile Include="catalogo\exportador.aspx.cs">
+      <DependentUpon>exportador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\exportador.aspx.designer.cs">
+      <DependentUpon>exportador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\lineas.aspx.cs">
+      <DependentUpon>lineas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\lineas.aspx.designer.cs">
+      <DependentUpon>lineas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\Usuario.cs" />
+    <Compile Include="cuenta\zones.aspx.cs">
+      <DependentUpon>zones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\zones.aspx.designer.cs">
+      <DependentUpon>zones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\barcode.ashx.cs">
+      <DependentUpon>barcode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="cuenta\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="aisv\printaisvfull.aspx.cs">
+      <DependentUpon>printaisvfull.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aisv\printaisvfull.aspx.designer.cs">
+      <DependentUpon>printaisvfull.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="advice\preaviso.aspx.cs">
+      <DependentUpon>preaviso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="advice\preaviso.aspx.designer.cs">
+      <DependentUpon>preaviso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="advice\preimpresion.aspx.cs">
+      <DependentUpon>preimpresion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="advice\preimpresion.aspx.designer.cs">
+      <DependentUpon>preimpresion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\ConsCas.aspx.cs">
+      <DependentUpon>ConsCas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\ConsCas.aspx.designer.cs">
+      <DependentUpon>ConsCas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\ConsReqService.aspx.cs">
+      <DependentUpon>ConsReqService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\ConsReqService.aspx.designer.cs">
+      <DependentUpon>ConsReqService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\ConsTurn.aspx.cs">
+      <DependentUpon>ConsTurn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\ConsTurn.aspx.designer.cs">
+      <DependentUpon>ConsTurn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\EmptyCntDesc.aspx.cs">
+      <DependentUpon>EmptyCntDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\EmptyCntDesc.aspx.designer.cs">
+      <DependentUpon>EmptyCntDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\EmptyCntLoad.aspx.cs">
+      <DependentUpon>EmptyCntLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\EmptyCntLoad.aspx.designer.cs">
+      <DependentUpon>EmptyCntLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\FullCntDesc.aspx.cs">
+      <DependentUpon>FullCntDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\FullCntDesc.aspx.designer.cs">
+      <DependentUpon>FullCntDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\FullCntLoad.aspx.cs">
+      <DependentUpon>FullCntLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\FullCntLoad.aspx.designer.cs">
+      <DependentUpon>FullCntLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\GateIn.aspx.cs">
+      <DependentUpon>GateIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\GateIn.aspx.designer.cs">
+      <DependentUpon>GateIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\GateOut.aspx.cs">
+      <DependentUpon>GateOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\GateOut.aspx.designer.cs">
+      <DependentUpon>GateOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RefCont.aspx.cs">
+      <DependentUpon>RefCont.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RefCont.aspx.designer.cs">
+      <DependentUpon>RefCont.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptEmptyCntDesc.aspx.cs">
+      <DependentUpon>RptEmptyCntDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptEmptyCntDesc.aspx.designer.cs">
+      <DependentUpon>RptEmptyCntDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptEmptyCntLoad.aspx.cs">
+      <DependentUpon>RptEmptyCntLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptEmptyCntLoad.aspx.designer.cs">
+      <DependentUpon>RptEmptyCntLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptFullCntDesc.aspx.cs">
+      <DependentUpon>RptFullCntDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptFullCntDesc.aspx.designer.cs">
+      <DependentUpon>RptFullCntDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptFullCntLoad.aspx.cs">
+      <DependentUpon>RptFullCntLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptFullCntLoad.aspx.designer.cs">
+      <DependentUpon>RptFullCntLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptGateIn.aspx.cs">
+      <DependentUpon>RptGateIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptGateIn.aspx.designer.cs">
+      <DependentUpon>RptGateIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptGateOut.aspx.cs">
+      <DependentUpon>RptGateOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptGateOut.aspx.designer.cs">
+      <DependentUpon>RptGateOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptRefCont.aspx.cs">
+      <DependentUpon>RptRefCont.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptRefCont.aspx.designer.cs">
+      <DependentUpon>RptRefCont.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="navieras\RptReqService.aspx.cs">
+      <DependentUpon>RptReqService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navieras\RptReqService.aspx.designer.cs">
+      <DependentUpon>RptReqService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\consultaSolicitudUsuario.aspx.cs">
+      <DependentUpon>consultaSolicitudUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\consultaSolicitudUsuario.aspx.designer.cs">
+      <DependentUpon>consultaSolicitudUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\etiquetar.aspx.cs">
+      <DependentUpon>etiquetar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\etiquetar.aspx.designer.cs">
+      <DependentUpon>etiquetar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\verficacion.aspx.cs">
+      <DependentUpon>verficacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\verficacion.aspx.designer.cs">
+      <DependentUpon>verficacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\repesaje.aspx.cs">
+      <DependentUpon>repesaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\repesaje.aspx.designer.cs">
+      <DependentUpon>repesaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\revisiontecnica.aspx.cs">
+      <DependentUpon>revisiontecnica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\revisiontecnica.aspx.designer.cs">
+      <DependentUpon>revisiontecnica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\mantenimientoCerrojo.aspx.cs">
+      <DependentUpon>mantenimientoCerrojo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\mantenimientoCerrojo.aspx.designer.cs">
+      <DependentUpon>mantenimientoCerrojo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\IntegracionService.cs" />
+    <Compile Include="poolServicios\listadoEmbarque.aspx.cs">
+      <DependentUpon>listadoEmbarque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\listadoEmbarque.aspx.designer.cs">
+      <DependentUpon>listadoEmbarque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\mantenimientoOperario.aspx.cs">
+      <DependentUpon>mantenimientoOperario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\mantenimientoOperario.aspx.designer.cs">
+      <DependentUpon>mantenimientoOperario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\reporteLateArrival.aspx.cs">
+      <DependentUpon>reporteLateArrival.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\reporteLateArrival.aspx.designer.cs">
+      <DependentUpon>reporteLateArrival.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\solicitudCorreccionExportacion.aspx.cs">
+      <DependentUpon>solicitudCorreccionExportacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\solicitudCorreccionExportacion.aspx.designer.cs">
+      <DependentUpon>solicitudCorreccionExportacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\CslHelperServicios.cs" />
+    <Compile Include="poolServicios\mesaServicio.aspx.cs">
+      <DependentUpon>mesaServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\mesaServicio.aspx.designer.cs">
+      <DependentUpon>mesaServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuarios.aspx.cs">
+      <DependentUpon>solicitudUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuarios.aspx.designer.cs">
+      <DependentUpon>solicitudUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuariosCerrojoElectronico.aspx.cs">
+      <DependentUpon>solicitudUsuariosCerrojoElectronico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuariosCerrojoElectronico.aspx.designer.cs">
+      <DependentUpon>solicitudUsuariosCerrojoElectronico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuariosLateArrival.aspx.cs">
+      <DependentUpon>solicitudUsuariosLateArrival.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuariosLateArrival.aspx.designer.cs">
+      <DependentUpon>solicitudUsuariosLateArrival.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuariosReestiba.aspx.cs">
+      <DependentUpon>solicitudUsuariosReestiba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poolServicios\solicitudUsuariosReestiba.aspx.designer.cs">
+      <DependentUpon>solicitudUsuariosReestiba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poolServicios\Utility.cs" />
+    <Compile Include="portal\consultapro.aspx.cs">
+      <DependentUpon>consultapro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="portal\consultapro.aspx.designer.cs">
+      <DependentUpon>consultapro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="portal\printproforma.aspx.cs">
+      <DependentUpon>printproforma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="portal\printproforma.aspx.designer.cs">
+      <DependentUpon>printproforma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="portal\proforma.aspx.cs">
+      <DependentUpon>proforma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="portal\proforma.aspx.designer.cs">
+      <DependentUpon>proforma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seguridad\Area.cs" />
+    <Compile Include="seguridad\consultausuario.aspx.cs">
+      <DependentUpon>consultausuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\consultausuario.aspx.designer.cs">
+      <DependentUpon>consultausuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\consultausuarioadministrador.aspx.cs">
+      <DependentUpon>consultausuarioadministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\consultausuarioadministrador.aspx.designer.cs">
+      <DependentUpon>consultausuarioadministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datosarea.aspx.cs">
+      <DependentUpon>datosarea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datosarea.aspx.designer.cs">
+      <DependentUpon>datosarea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datosgrupos.aspx.cs">
+      <DependentUpon>datosgrupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datosgrupos.aspx.designer.cs">
+      <DependentUpon>datosgrupos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datosgruposoperadores.aspx.cs">
+      <DependentUpon>datosgruposoperadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datosgruposoperadores.aspx.designer.cs">
+      <DependentUpon>datosgruposoperadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datosgruposusuarios.aspx.cs">
+      <DependentUpon>datosgruposusuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datosgruposusuarios.aspx.designer.cs">
+      <DependentUpon>datosgruposusuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datosopcionservicios.aspx.cs">
+      <DependentUpon>datosopcionservicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datosopcionservicios.aspx.designer.cs">
+      <DependentUpon>datosopcionservicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datospermisos.aspx.cs">
+      <DependentUpon>datospermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datospermisos.aspx.designer.cs">
+      <DependentUpon>datospermisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datosservicio.aspx.cs">
+      <DependentUpon>datosservicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datosservicio.aspx.designer.cs">
+      <DependentUpon>datosservicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\datosusuario.aspx.cs">
+      <DependentUpon>datosusuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\datosusuario.aspx.designer.cs">
+      <DependentUpon>datosusuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\Empresa.cs" />
+    <Compile Include="seguridad\Grupo.cs" />
+    <Compile Include="seguridad\OpcionesServicio.cs" />
+    <Compile Include="seguridad\Permiso.cs" />
+    <Compile Include="seguridad\Seguridad.cs" />
+    <Compile Include="seguridad\Servicio.cs" />
+    <Compile Include="seguridad\UsuarioSeguridad.cs" />
+    <Compile Include="seguridad\UsuariosRolesSeguridad.cs" />
+    <Compile Include="seguridad\Utils.cs" />
+    <Compile Include="Service References\n4Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\unitService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="services\atraque.asmx.cs">
+      <DependentUpon>atraque.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="services\catalogo.asmx.cs">
+      <DependentUpon>catalogo.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="services\dataServiceHelper.cs" />
+    <Compile Include="services\servicesHelper.cs" />
+    <Compile Include="shared\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shared\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sia\cntrimo.aspx.cs">
+      <DependentUpon>cntrimo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sia\cntrimo.aspx.designer.cs">
+      <DependentUpon>cntrimo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sia\bbkimo.aspx.cs">
+      <DependentUpon>bbkimo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sia\bbkimo.aspx.designer.cs">
+      <DependentUpon>bbkimo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sia\conteconpersonal.aspx.cs">
+      <DependentUpon>conteconpersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sia\conteconpersonal.aspx.designer.cs">
+      <DependentUpon>conteconpersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sia\externoscgsa.aspx.cs">
+      <DependentUpon>externoscgsa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sia\externoscgsa.aspx.designer.cs">
+      <DependentUpon>externoscgsa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sia\visitantes.aspx.cs">
+      <DependentUpon>visitantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sia\visitantes.aspx.designer.cs">
+      <DependentUpon>visitantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site.Master.cs">
+      <DependentUpon>site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site.Master.designer.cs">
+      <DependentUpon>site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="turnos\cancelar.aspx.cs">
+      <DependentUpon>cancelar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="turnos\cancelar.aspx.designer.cs">
+      <DependentUpon>cancelar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="turnos\rptreservas.aspx.cs">
+      <DependentUpon>rptreservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="turnos\rptreservas.aspx.designer.cs">
+      <DependentUpon>rptreservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="turnos\reservas.aspx.cs">
+      <DependentUpon>reservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="turnos\reservas.aspx.designer.cs">
+      <DependentUpon>reservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="turnos\reporte.aspx.cs">
+      <DependentUpon>reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="turnos\reporte.aspx.designer.cs">
+      <DependentUpon>reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="turnos\turnos.aspx.cs">
+      <DependentUpon>turnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="turnos\turnos.aspx.designer.cs">
+      <DependentUpon>turnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GetFile\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OnlyControl\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_Customer_Statement_NAVIS_CGSA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handler\barcode.ashx" />
+    <Content Include="handler\Fuentes\FRE3OF9X.TTF" />
+    <Content Include="handler\Fuentes\FREE3OF9.TTF" />
+    <None Include="Catalogos.xsc">
+      <DependentUpon>Catalogos.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Catalogos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Catalogos.xss">
+      <DependentUpon>Catalogos.xsd</DependentUpon>
+    </None>
+    <Content Include="Inicio\fonts\fontawesome-webfont.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\fonts\fontawesome-webfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\fonts\fontawesome-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\fonts\FontAwesome.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\bordered-pulled.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\core.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\fixed-width.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\font-awesome.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\icons.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\larger.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\list.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\mixins.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\path.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\rotated-flipped.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\spinning.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\stacked.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\less\variables.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\font-awesome.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_bordered-pulled.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_core.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_fixed-width.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_icons.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_larger.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_list.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_mixins.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_path.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_rotated-flipped.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_spinning.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_stacked.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inicio\scss\_variables.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\csl_log\csl_log.csproj">
+      <Project>{D9CB22CB-ECB2-4400-B538-761B7A7CB5C7}</Project>
+      <Name>csl_log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\httpConector\HttpConector.csproj">
+      <Project>{6D91AC95-5E57-411F-9695-BD367EF4DD46}</Project>
+      <Name>HttpConector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\n4Service\" />
+    <WCFMetadataStorage Include="Service References\unitService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.16.2.30:57575/OnlyControl/OnlyServiceWeb.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OnlyControl\</RelPath>
+      <UpdateFromURL>http://172.16.2.30:57575/OnlyControl/OnlyServiceWeb.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CSLSite_OnlyControl_OnlyControlService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.2.30:57575/Ws_Sap_EstadoDeCuenta/Service.asmx%3fop=SI_Customer_Statement_NAVIS_CGSA">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_Customer_Statement_NAVIS_CGSA\</RelPath>
+      <UpdateFromURL>http://172.16.2.30:57575/Ws_Sap_EstadoDeCuenta/Service.asmx%3fop=SI_Customer_Statement_NAVIS_CGSA</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CSLSite_SI_Customer_Statement_NAVIS_CGSA_Ws_Sap_EstadoDeCuenta</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.2.30:8080/WebServiceTransferFile/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GetFile\</RelPath>
+      <UpdateFromURL>http://172.16.2.30:8080/WebServiceTransferFile/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CSLSite_GetFile_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59429</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+D:\Proyect\PortalS3\ProcesaUnits\bin\ProcesaUnits.dll.config
+D:\Proyect\PortalS3\ProcesaUnits\bin\ProcesaUnits.dll
+D:\Proyect\PortalS3\ProcesaUnits\bin\ProcesaUnits.pdb
+D:\Proyect\PortalS3\ProcesaUnits\bin\csl_log.dll
+D:\Proyect\PortalS3\ProcesaUnits\bin\HttpConector.dll
+D:\Proyect\PortalS3\ProcesaUnits\bin\csl_log.pdb
+D:\Proyect\PortalS3\ProcesaUnits\bin\HttpConector.pdb
+D:\Proyect\PortalS3\ProcesaUnits\obj\x64\Debug\ProcesaUnits.csprojAssemblyReference.cache
+D:\Proyect\PortalS3\ProcesaUnits\obj\x64\Debug\ProcesaUnits.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3\ProcesaUnits\obj\x64\Debug\ProcesaUnits.csproj.CopyComplete
+D:\Proyect\PortalS3\ProcesaUnits\obj\x64\Debug\ProcesaUnits.dll
+D:\Proyect\PortalS3\ProcesaUnits\obj\x64\Debug\ProcesaUnits.pdb

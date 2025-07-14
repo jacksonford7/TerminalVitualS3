@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f78fa77b-e4eb-4d61-99c1-11e9fccfe6ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WFCPASEPUERTA.xsd" MetadataType="Schema" ID="1c12d56e-2b70-4809-95bd-888c9482587f" SourceId="1" SourceUrl="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd1" />
+    <MetadataFile FileName="WFCPASEPUERTA1.xsd" MetadataType="Schema" ID="87d6a375-c6a1-4ec3-9b23-eb792ac22f32" SourceId="1" SourceUrl="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd2" />
+    <MetadataFile FileName="WFCPASEPUERTA.wsdl" MetadataType="Wsdl" ID="640cd18d-dedf-44ab-9fac-a3b6ba77529a" SourceId="1" SourceUrl="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?wsdl" />
+    <MetadataFile FileName="WFCPASEPUERTA2.xsd" MetadataType="Schema" ID="d027db98-2dc2-42b5-a8d6-f49ad7913441" SourceId="1" SourceUrl="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd0" />
+    <MetadataFile FileName="WFCPASEPUERTA3.xsd" MetadataType="Schema" ID="a171f004-c103-4a1d-be71-2df439c5ec6c" SourceId="1" SourceUrl="http://cgdes19:5052/wspasepuerta/WFCPASEPUERTA.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

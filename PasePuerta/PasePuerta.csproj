@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C09C189-61E0-46EE-9D41-BE0CBC61D036}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PasePuerta</RootNamespace>
+    <AssemblyName>PasePuerta</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClienteFacturacion.cs" />
+    <Compile Include="P2D_Servicio_MultiDespacho.cs" />
+    <Compile Include="Pase_Transportista.cs" />
+    <Compile Include="Pase_BRBK.cs" />
+    <Compile Include="P2D_Servicio_Transporte.cs" />
+    <Compile Include="PaseWebBRBK.cs" />
+    <Compile Include="PaseWebCFS.cs" />
+    <Compile Include="PaseWeb.cs" />
+    <Compile Include="P2D_Pase_CFS.cs" />
+    <Compile Include="Crear_BL.cs" />
+    <Compile Include="Pase_CFS.cs" />
+    <Compile Include="Pase_Container_Expo.cs" />
+    <Compile Include="Pase_Container.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vessel_Visit.cs" />
+    <Compile Include="Servicio_Inspeccion.cs" />
+    <Compile Include="ValidaFacturaBRBK.cs" />
+    <Compile Include="ValidaCargaBRBK.cs" />
+    <Compile Include="Servicio_AppCgsa.cs" />
+    <Compile Include="Servicio_Certificado.cs" />
+    <Compile Include="SaldoCargaBRBK.cs" />
+    <Compile Include="TurnoBRBK.cs" />
+    <Compile Include="TurnoCFS.cs" />
+    <Compile Include="TurnoVBS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{69b1835f-3af8-4063-a784-80c69670307a}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aduanas\Aduanas.csproj">
+      <Project>{8882444a-f025-4d8e-a9b1-7f10b1fefcc7}</Project>
+      <Name>Aduanas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuraciones\Configuraciones.csproj">
+      <Project>{4d0a2b47-a4cd-4cde-bf7b-767fef8339e3}</Project>
+      <Name>Configuraciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\N4Ws\N4Ws.csproj">
+      <Project>{51e68bb1-aec3-4fe3-bd81-d575206af2a8}</Project>
+      <Name>N4Ws</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\N4\N4.csproj">
+      <Project>{fefd21dd-ef14-45a6-be48-eaa338efcb07}</Project>
+      <Name>N4</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

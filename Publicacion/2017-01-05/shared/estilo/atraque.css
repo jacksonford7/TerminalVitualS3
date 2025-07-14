@@ -1,0 +1,49 @@
+﻿
+#mlines{  border:1px solid #ccc; width:97%; margin: 0 auto; padding:1px; 
+             max-height:800px!important;
+   overflow:auto;
+          
+          }
+
+
+#contenedor{
+  display: table;
+  border-spacing: 5px;
+
+  
+}
+.contenidos {
+  display: table-row;  
+}
+.principal, .secundario, .lateral, .lateral2 {
+  display: table-cell;  margin:0;  margin-left:2px; 
+  border: 1px solid black;  padding:0; text-align:center; background-color:White;
+}
+.principal {
+  width: 45%;  
+}
+.secundario, .lateral {
+  width: 24%;
+}
+.lateral2{ width:140px;}
+
+.tvin, .tvout, .control, .tlinea {
+  display: table-cell;  margin-left:2px;  
+  border: 1px dotted black;  padding:0; text-align:center; 
+}
+.tvin, .tvout {
+  width: 24%!important;
+}
+.tlinea{ font-size:x-small;  width: 600px!important; }
+.quitar{ cursor:pointer; background-image:url(../imgs/del.png);  background-repeat:no-repeat; background-position: center center; width:25px; display:inline-block; }
+.add{  cursor:pointer; background-image:url(../imgs/add.png);  background-repeat:no-repeat; background-position: center center; width:25px; display:inline-block; }
+.txc{ width:160px!important; height:15px!important;  margin:0 auto;}
+#elementos { display: table-row-group; }
+
+.fuente{ font-size:x-small;}
+.line-con { font-size:x-small; color:Black; text-align:center; border:none;  margin:0; padding:0;}
+
+#clineas { margin: 0 auto; padding: 1px; }
+#tblineas { width:100%; }
+#tblineas tr th {  background-color:white; border:1px solid black; text-align:center;border: 1px solid #ccc;}
+#tblineas tr td > * { text-align:center;}

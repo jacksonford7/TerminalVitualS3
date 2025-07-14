@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/Ws_Sap_EstadoDeCuenta" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost/Ws_Sap_EstadoDeCuenta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servicio Web que invoca a un Servicio Web de SAP</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/Ws_Sap_EstadoDeCuenta">
+      <s:element name="SI_Customer_Statement_NAVIS_CGSA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMPE_RUC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USER_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PASSWORD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SI_Customer_Statement_NAVIS_CGSAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SI_Customer_Statement_NAVIS_CGSAResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SI_Customer_Statement_NAVIS_CGSASoapIn">
+    <wsdl:part name="parameters" element="tns:SI_Customer_Statement_NAVIS_CGSA" />
+  </wsdl:message>
+  <wsdl:message name="SI_Customer_Statement_NAVIS_CGSASoapOut">
+    <wsdl:part name="parameters" element="tns:SI_Customer_Statement_NAVIS_CGSAResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Ws_Sap_EstadoDeCuentaSoap">
+    <wsdl:operation name="SI_Customer_Statement_NAVIS_CGSA">
+      <wsdl:input message="tns:SI_Customer_Statement_NAVIS_CGSASoapIn" />
+      <wsdl:output message="tns:SI_Customer_Statement_NAVIS_CGSASoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Ws_Sap_EstadoDeCuentaSoap" type="tns:Ws_Sap_EstadoDeCuentaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SI_Customer_Statement_NAVIS_CGSA">
+      <soap:operation soapAction="http://localhost/Ws_Sap_EstadoDeCuenta/SI_Customer_Statement_NAVIS_CGSA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Ws_Sap_EstadoDeCuentaSoap12" type="tns:Ws_Sap_EstadoDeCuentaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SI_Customer_Statement_NAVIS_CGSA">
+      <soap12:operation soapAction="http://localhost/Ws_Sap_EstadoDeCuenta/SI_Customer_Statement_NAVIS_CGSA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Ws_Sap_EstadoDeCuenta">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servicio Web que invoca a un Servicio Web de SAP</wsdl:documentation>
+    <wsdl:port name="Ws_Sap_EstadoDeCuentaSoap" binding="tns:Ws_Sap_EstadoDeCuentaSoap">
+      <soap:address location="http://cgdes19:8080/Ws_Sap_EstadoDeCuenta/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Ws_Sap_EstadoDeCuentaSoap12" binding="tns:Ws_Sap_EstadoDeCuentaSoap12">
+      <soap12:address location="http://cgdes19:8080/Ws_Sap_EstadoDeCuenta/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

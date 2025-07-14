@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publicar WS ProcesaUnits</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/csl_log.dll">
+      <publishTime>04/01/2022 10:10:48</publishTime>
+    </File>
+    <File Include="bin/csl_log.pdb">
+      <publishTime>04/01/2022 10:10:48</publishTime>
+    </File>
+    <File Include="bin/HttpConector.dll">
+      <publishTime>04/01/2022 10:10:49</publishTime>
+    </File>
+    <File Include="bin/HttpConector.pdb">
+      <publishTime>04/01/2022 10:10:49</publishTime>
+    </File>
+    <File Include="bin/ProcesaUnits.dll">
+      <publishTime>04/12/2022 14:12:00</publishTime>
+    </File>
+    <File Include="bin/ProcesaUnits.pdb">
+      <publishTime>04/12/2022 14:12:00</publishTime>
+    </File>
+    <File Include="mailservice.asmx">
+      <publishTime>02/07/2022 11:34:50</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>04/12/2022 14:12:02</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/12/2022 14:12:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

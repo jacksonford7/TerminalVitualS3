@@ -1,0 +1,108 @@
+﻿/*Color general de los botones*/
+.fc-button {
+    background-color: #ffffff;
+    color: #E23B1B;
+    font-weight: bold;
+    border-color: #E23B1B
+}
+/* estilo para el hover del boton prev*/
+.fc-prev-button.fc-button.fc-state-default.fc-corner-left.fc-state-hover {
+    background-color: #E23B1B;
+    color: #ffffff;
+    background-image: none !important;
+}
+
+/* estilo para el hover del boton next*/
+.fc-next-button.fc-button.fc-state-default.fc-corner-right.fc-state-hover {
+    background-color: #E23B1B;
+    color: #ffffff;
+    background-image: none !important;
+}
+/* Estilo para el botón del mes inicialmente seleccionado */
+.fc-month-button.fc-button.fc-state-default.fc-corner-left.fc-state-active {
+    background-color: #E23B1B;
+    color: #ffffff;
+    border-color: transparent !important;
+}
+
+/* Estilo del hover para el botón del mes */
+.fc-month-button.fc-button.fc-state-default.fc-corner-left.fc-state-hover {
+    background-color: #E23B1B;
+    color: #ffffff;
+    background-image: none !important;
+}
+
+/* Estilo para el estado activo por default en el botón de semana */
+fc-agendaWeek-button.fc-button.fc-state-default.fc-state-active {
+    background-color: #E23B1B;
+    color: #ffffff;
+    border-color: transparent !important;
+}
+
+/* Estilo para el estado activo en el botón de semana cuando selecciona*/
+.fc-agendaWeek-button.fc-button.fc-state-active {
+    background-color: #E23B1B;
+    color: #ffffff;
+    border-color: transparent !important;
+}
+/* Estilo del hover para el botón de semana */
+.fc-agendaWeek-button.fc-button.fc-state-default.fc-state-hover {
+    background-color: #E23B1B;
+    color: #ffffff;
+    background-image: none !important; /* se Agrega esta propiedad para evitar sombras o imágenes de fondo */
+}
+/* Estilo para los días de la semana en la cabecera del calendario */
+.fc-widget-header {
+    background-color: #E23B1B;
+    color: #ffffff;
+}
+/* Estilo del hover para el botón de semana */
+.fc-prev-button.fc-button.fc-state-default.fc-corner-left.fc-state-active {
+    background-color: #E23B1B;
+    color: #ffffff;
+    border-color: transparent !important;
+}
+/* Estilo para el estado activo por default en el botón de Dia */
+.fc-agendaDay-button.fc-button.fc-state-default.fc-corner-right.fc-state-active {
+    background-color: #E23B1B;
+    color: #ffffff;
+    border-color: transparent !important;
+}
+/* Estilo para el estado Hover en el botón de Dia */
+.fc-agendaDay-button.fc-button.fc-state-default.fc-corner-right.fc-state-hover {
+    background-color: #E23B1B;
+    color: #ffffff;
+    background-image: none !important; /* Se agrega esta propiedad para evitar sombras o imágenes de fondo */
+}
+
+/* Estilo para el título de los eventos */
+.fc-title {
+    color: #ffffff;
+}
+/* Estilo para el tooltip de eventos */
+.event-tooltip {
+    position: absolute;
+    background-color: #E23B1B;
+    border-color: #E23B1B;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+    z-index: 999;
+}
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+}
+
+    #loader p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }

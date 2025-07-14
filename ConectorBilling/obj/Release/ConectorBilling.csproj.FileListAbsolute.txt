@@ -1,0 +1,57 @@
+C:\FUENTES EHINER\Fuentes Integrados\TOIS\ConectorBilling\bin\Release\ConectorBilling.dll
+C:\FUENTES EHINER\Fuentes Integrados\TOIS\ConectorBilling\bin\Release\ConectorBilling.pdb
+C:\FUENTES EHINER\Fuentes Integrados\TOIS\ConectorBilling\obj\Release\ResolveAssemblyReference.cache
+C:\FUENTES EHINER\Fuentes Integrados\TOIS\ConectorBilling\obj\Release\ConectorBilling.dll
+C:\FUENTES EHINER\Fuentes Integrados\TOIS\ConectorBilling\obj\Release\ConectorBilling.pdb
+E:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.dll
+E:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.pdb
+E:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\obj\Release\ResolveAssemblyReference.cache
+E:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.dll
+E:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.pdb
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.dll
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.pdb
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\obj\Release\ResolveAssemblyReference.cache
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.dll
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\ultima version Facturacion\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.pdb
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\last facturacion\FACTURACION_17032017\FACTURACION\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.dll
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\last facturacion\FACTURACION_17032017\FACTURACION\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.pdb
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\last facturacion\FACTURACION_17032017\FACTURACION\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.dll
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\last facturacion\FACTURACION_17032017\FACTURACION\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.pdb
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\FACTURACION02062017\FACTURACION\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.dll
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\FACTURACION02062017\FACTURACION\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.pdb
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\FACTURACION02062017\FACTURACION\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.dll
+C:\Users\jrodriguez\Documents\Visual Studio 2010\Projects\FACTURACION02062017\FACTURACION\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.pdb
+H:\PROYECTOS\FACTURACION\FACTURACION25072017\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.dll
+H:\PROYECTOS\FACTURACION\FACTURACION25072017\FACTURACION\TOIS\ConectorBilling\bin\Release\ConectorBilling.pdb
+H:\PROYECTOS\FACTURACION\FACTURACION25072017\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.csprojResolveAssemblyReference.cache
+H:\PROYECTOS\FACTURACION\FACTURACION25072017\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.dll
+H:\PROYECTOS\FACTURACION\FACTURACION25072017\FACTURACION\TOIS\ConectorBilling\obj\Release\ConectorBilling.pdb
+D:\Proyect\TOIS\ConectorBilling\bin\Release\ConectorBilling.dll
+D:\Proyect\TOIS\ConectorBilling\bin\Release\ConectorBilling.pdb
+D:\Proyect\TOIS\ConectorBilling\obj\Release\ConectorBilling.csprojAssemblyReference.cache
+D:\Proyect\TOIS\ConectorBilling\obj\Release\ConectorBilling.csproj.CoreCompileInputs.cache
+D:\Proyect\TOIS\ConectorBilling\obj\Release\ConectorBilling.dll
+D:\Proyect\TOIS\ConectorBilling\obj\Release\ConectorBilling.pdb
+D:\Proyect\PortalS3\ConectorBilling\bin\Release\ConectorBilling.dll
+D:\Proyect\PortalS3\ConectorBilling\bin\Release\ConectorBilling.pdb
+D:\Proyect\PortalS3\ConectorBilling\obj\Release\ConectorBilling.csprojAssemblyReference.cache
+D:\Proyect\PortalS3\ConectorBilling\obj\Release\ConectorBilling.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3\ConectorBilling\obj\Release\ConectorBilling.dll
+D:\Proyect\PortalS3\ConectorBilling\obj\Release\ConectorBilling.pdb
+D:\Proyect\PortalS3TV\ConectorBilling\bin\Release\ConectorBilling.dll
+D:\Proyect\PortalS3TV\ConectorBilling\bin\Release\ConectorBilling.pdb
+D:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.csprojAssemblyReference.cache
+D:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.csproj.CoreCompileInputs.cache
+D:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.dll
+D:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.pdb
+C:\Proyect\PortalS3TV\ConectorBilling\bin\Release\ConectorBilling.dll
+C:\Proyect\PortalS3TV\ConectorBilling\bin\Release\ConectorBilling.pdb
+C:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.csproj.CoreCompileInputs.cache
+C:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.dll
+C:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.pdb
+C:\PortalS3TV\ConectorBilling\bin\Release\ConectorBilling.dll
+C:\PortalS3TV\ConectorBilling\bin\Release\ConectorBilling.pdb
+C:\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.csproj.CoreCompileInputs.cache
+C:\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.dll
+C:\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.pdb
+C:\Proyect\PortalS3TV\ConectorBilling\obj\Release\ConectorBilling.csproj.AssemblyReference.cache

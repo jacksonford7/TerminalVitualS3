@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioPreavisos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cgdes19:5152/SAV/web_service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cgdes19:5152/SAV/web_service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cgdes19:5152/SAV/web_service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WS_Preadvise" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioPreavisos_nuevo_turno_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_turno" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nuevo_turno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_turnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nuevo_turno_sin_unidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_turno_sin_unidad" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nuevo_turno_sin_unidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_turno_sin_unidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nuevo_chofer_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_chofer" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nuevo_chofer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_choferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nuevo_vehiculo_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_vehiculo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nuevo_vehiculo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevo_vehiculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nueva_unidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:nueva_unidad" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_nueva_unidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nueva_unidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_obtener_token_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtener_token" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_obtener_token_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtener_tokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_obtener_token_mensaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtener_token_mensaje" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_obtener_token_mensaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtener_token_mensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_preavisar_turno_InputMessage">
+    <wsdl:part name="parameters" element="tns:preavisar_turno" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_preavisar_turno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:preavisar_turnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_preavisar_turno_simple_InputMessage">
+    <wsdl:part name="parameters" element="tns:preavisar_turno_simple" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_preavisar_turno_simple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:preavisar_turno_simpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_cancelar_turno_preavisado_InputMessage">
+    <wsdl:part name="parameters" element="tns:cancelar_turno_preavisado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_cancelar_turno_preavisado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cancelar_turno_preavisadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_cancelar_turno_preavisado_simple_InputMessage">
+    <wsdl:part name="parameters" element="tns:cancelar_turno_preavisado_simple" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_cancelar_turno_preavisado_simple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cancelar_turno_preavisado_simpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_actualizar_turno_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizar_turno" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_actualizar_turno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizar_turnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_actualizar_turno_simple_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizar_turno_simple" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_actualizar_turno_simple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizar_turno_simpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_listar_turnos_InputMessage">
+    <wsdl:part name="parameters" element="tns:listar_turnos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_listar_turnos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listar_turnosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_listar_turnos_simple_InputMessage">
+    <wsdl:part name="parameters" element="tns:listar_turnos_simple" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_listar_turnos_simple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listar_turnos_simpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_choferes_bloqueados_InputMessage">
+    <wsdl:part name="parameters" element="tns:choferes_bloqueados" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_choferes_bloqueados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:choferes_bloqueadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_chofer_es_valido_InputMessage">
+    <wsdl:part name="parameters" element="tns:chofer_es_valido" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_chofer_es_valido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chofer_es_validoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_vehiculos_bloqueados_InputMessage">
+    <wsdl:part name="parameters" element="tns:vehiculos_bloqueados" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_vehiculos_bloqueados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:vehiculos_bloqueadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_vehiculo_es_valido_InputMessage">
+    <wsdl:part name="parameters" element="tns:vehiculo_es_valido" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_vehiculo_es_valido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:vehiculo_es_validoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_test_data_contract_InputMessage">
+    <wsdl:part name="parameters" element="tns:test_data_contract" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_test_data_contract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:test_data_contractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_Pruebas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pruebas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_Pruebas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PruebasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_test_data_config_InputMessage">
+    <wsdl:part name="parameters" element="tns:test_data_config" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_test_data_config_OutputMessage">
+    <wsdl:part name="parameters" element="tns:test_data_configResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_test_data_config_value_InputMessage">
+    <wsdl:part name="parameters" element="tns:test_data_config_value" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_test_data_config_value_OutputMessage">
+    <wsdl:part name="parameters" element="tns:test_data_config_valueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_token_es_valido_InputMessage">
+    <wsdl:part name="parameters" element="tns:token_es_valido" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_token_es_valido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:token_es_validoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_check_container_number_InputMessage">
+    <wsdl:part name="parameters" element="tns:check_container_number" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPreavisos_check_container_number_OutputMessage">
+    <wsdl:part name="parameters" element="tns:check_container_numberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioPreavisos">
+    <wsdl:operation name="nuevo_turno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_turno" message="tns:IServicioPreavisos_nuevo_turno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_turnoResponse" message="tns:IServicioPreavisos_nuevo_turno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevo_turno_sin_unidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_turno_sin_unidad" message="tns:IServicioPreavisos_nuevo_turno_sin_unidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_turno_sin_unidadResponse" message="tns:IServicioPreavisos_nuevo_turno_sin_unidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevo_chofer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_chofer" message="tns:IServicioPreavisos_nuevo_chofer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_choferResponse" message="tns:IServicioPreavisos_nuevo_chofer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevo_vehiculo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_vehiculo" message="tns:IServicioPreavisos_nuevo_vehiculo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/nuevo_vehiculoResponse" message="tns:IServicioPreavisos_nuevo_vehiculo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nueva_unidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/nueva_unidad" message="tns:IServicioPreavisos_nueva_unidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/nueva_unidadResponse" message="tns:IServicioPreavisos_nueva_unidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtener_token">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/obtener_token" message="tns:IServicioPreavisos_obtener_token_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/obtener_tokenResponse" message="tns:IServicioPreavisos_obtener_token_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtener_token_mensaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/obtener_token_mensaje" message="tns:IServicioPreavisos_obtener_token_mensaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/obtener_token_mensajeResponse" message="tns:IServicioPreavisos_obtener_token_mensaje_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="preavisar_turno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/preavisar_turno" message="tns:IServicioPreavisos_preavisar_turno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/preavisar_turnoResponse" message="tns:IServicioPreavisos_preavisar_turno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="preavisar_turno_simple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/preavisar_turno_simple" message="tns:IServicioPreavisos_preavisar_turno_simple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/preavisar_turno_simpleResponse" message="tns:IServicioPreavisos_preavisar_turno_simple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar_turno_preavisado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/cancelar_turno_preavisado" message="tns:IServicioPreavisos_cancelar_turno_preavisado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/cancelar_turno_preavisadoResponse" message="tns:IServicioPreavisos_cancelar_turno_preavisado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar_turno_preavisado_simple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/cancelar_turno_preavisado_simple" message="tns:IServicioPreavisos_cancelar_turno_preavisado_simple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/cancelar_turno_preavisado_simpleResponse" message="tns:IServicioPreavisos_cancelar_turno_preavisado_simple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_turno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/actualizar_turno" message="tns:IServicioPreavisos_actualizar_turno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/actualizar_turnoResponse" message="tns:IServicioPreavisos_actualizar_turno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_turno_simple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/actualizar_turno_simple" message="tns:IServicioPreavisos_actualizar_turno_simple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/actualizar_turno_simpleResponse" message="tns:IServicioPreavisos_actualizar_turno_simple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listar_turnos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/listar_turnos" message="tns:IServicioPreavisos_listar_turnos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/listar_turnosResponse" message="tns:IServicioPreavisos_listar_turnos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listar_turnos_simple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/listar_turnos_simple" message="tns:IServicioPreavisos_listar_turnos_simple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/listar_turnos_simpleResponse" message="tns:IServicioPreavisos_listar_turnos_simple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="choferes_bloqueados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/choferes_bloqueados" message="tns:IServicioPreavisos_choferes_bloqueados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/choferes_bloqueadosResponse" message="tns:IServicioPreavisos_choferes_bloqueados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chofer_es_valido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/chofer_es_valido" message="tns:IServicioPreavisos_chofer_es_valido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/chofer_es_validoResponse" message="tns:IServicioPreavisos_chofer_es_valido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="vehiculos_bloqueados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/vehiculos_bloqueados" message="tns:IServicioPreavisos_vehiculos_bloqueados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/vehiculos_bloqueadosResponse" message="tns:IServicioPreavisos_vehiculos_bloqueados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="vehiculo_es_valido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/vehiculo_es_valido" message="tns:IServicioPreavisos_vehiculo_es_valido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/vehiculo_es_validoResponse" message="tns:IServicioPreavisos_vehiculo_es_valido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="test_data_contract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/test_data_contract" message="tns:IServicioPreavisos_test_data_contract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/test_data_contractResponse" message="tns:IServicioPreavisos_test_data_contract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pruebas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/Pruebas" message="tns:IServicioPreavisos_Pruebas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/PruebasResponse" message="tns:IServicioPreavisos_Pruebas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="test_data_config">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/test_data_config" message="tns:IServicioPreavisos_test_data_config_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/test_data_configResponse" message="tns:IServicioPreavisos_test_data_config_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="test_data_config_value">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/test_data_config_value" message="tns:IServicioPreavisos_test_data_config_value_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/test_data_config_valueResponse" message="tns:IServicioPreavisos_test_data_config_value_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="token_es_valido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/token_es_valido" message="tns:IServicioPreavisos_token_es_valido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/token_es_validoResponse" message="tns:IServicioPreavisos_token_es_valido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="check_container_number">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPreavisos/check_container_number" message="tns:IServicioPreavisos_check_container_number_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPreavisos/check_container_numberResponse" message="tns:IServicioPreavisos_check_container_number_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioPreavisos" type="tns:IServicioPreavisos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="nuevo_turno">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/nuevo_turno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevo_turno_sin_unidad">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/nuevo_turno_sin_unidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevo_chofer">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/nuevo_chofer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevo_vehiculo">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/nuevo_vehiculo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nueva_unidad">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/nueva_unidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtener_token">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/obtener_token" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtener_token_mensaje">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/obtener_token_mensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="preavisar_turno">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/preavisar_turno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="preavisar_turno_simple">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/preavisar_turno_simple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar_turno_preavisado">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/cancelar_turno_preavisado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar_turno_preavisado_simple">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/cancelar_turno_preavisado_simple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_turno">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/actualizar_turno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_turno_simple">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/actualizar_turno_simple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listar_turnos">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/listar_turnos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listar_turnos_simple">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/listar_turnos_simple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="choferes_bloqueados">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/choferes_bloqueados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chofer_es_valido">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/chofer_es_valido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vehiculos_bloqueados">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/vehiculos_bloqueados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vehiculo_es_valido">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/vehiculo_es_valido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test_data_contract">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/test_data_contract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pruebas">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/Pruebas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test_data_config">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/test_data_config" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test_data_config_value">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/test_data_config_value" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="token_es_valido">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/token_es_valido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="check_container_number">
+      <soap:operation soapAction="http://tempuri.org/IServicioPreavisos/check_container_number" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioPreavisos">
+    <wsdl:port name="BasicHttpBinding_IServicioPreavisos" binding="tns:BasicHttpBinding_IServicioPreavisos">
+      <soap:address location="http://cgdes19:5152/SAV/web_service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

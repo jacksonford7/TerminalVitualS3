@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="N4MiddlewareModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="N4MiddlewareEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="CLIENTS_BILL_SAP" EntityType="N4MiddlewareModel.CLIENTS_BILL_SAP" />
+    <EntitySet Name="CLIENTS_BILL" EntityType="N4MiddlewareModel.CLIENTS_BILL" />
+  </EntityContainer>
+  <EntityType Name="CLIENTS_BILL_SAP">
+    <Key>
+      <PropertyRef Name="CLNT_CUSTOMER" />
+      <PropertyRef Name="CLNT_EBILLING" />
+      <PropertyRef Name="CLNT_RFC" />
+      <PropertyRef Name="CLNT_ACTIVE" />
+      <PropertyRef Name="ROLE" />
+      <PropertyRef Name="CLNT_DIA_CREDITO" />
+    </Key>
+    <Property Type="String" Name="CLNT_CUSTOMER" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_NAME" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_CITY" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CLNT_STATE" />
+    <Property Type="String" Name="CLNT_ADRESS1" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CLNT_TRANSACTION_DATE" />
+    <Property Type="String" Name="CLNT_EMAIL" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_TYPE" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLNT_EBILLING" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLNT_FAX_INVC" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_RFC" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_ACTIVE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CLNT_CONT_CONSECUTIVO" />
+    <Property Type="String" Name="ROLE" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CODIGO_SAP" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="CLNT_DIA_CREDITO" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENTS_BILL">
+    <Key>
+      <PropertyRef Name="CLNT_CUSTOMER" />
+      <PropertyRef Name="CLNT_EBILLING" />
+      <PropertyRef Name="CLNT_RFC" />
+      <PropertyRef Name="CLNT_ACTIVE" />
+      <PropertyRef Name="ROLE" />
+      <PropertyRef Name="CODIGO_SAP" />
+      <PropertyRef Name="CLNT_DIA_CREDITO" />
+    </Key>
+    <Property Type="String" Name="CLNT_CUSTOMER" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_NAME" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_CITY" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CLNT_STATE" />
+    <Property Type="String" Name="CLNT_ADRESS1" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CLNT_TRANSACTION_DATE" />
+    <Property Type="String" Name="CLNT_EMAIL" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_TYPE" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLNT_EBILLING" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLNT_FAX_INVC" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_RFC" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CLNT_ACTIVE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CLNT_CONT_CONSECUTIVO" />
+    <Property Type="String" Name="ROLE" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CODIGO_SAP" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CLNT_DIA_CREDITO" Nullable="false" />
+  </EntityType>
+</Schema>

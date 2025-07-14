@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ecuapass" Class="DBMECUAPASSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=cgtndb01;Initial Catalog=ecuapass;User ID=n4" SettingsObjectName="ClSPOLTOIS.Properties.Settings" SettingsPropertyName="ecuapassConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ECU_RIDT" Member="ECU_RIDT">
+    <Type Name="ECU_RIDT">
+      <Column Name="CODIGO_RIDT" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO_RESPUESTA" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ACCEPT_DATE_TIME" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="MRN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HSN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="STATUS_CODE" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="NOMBRE_IMPORTADOR" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="ID_IMPORTADOR" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NOMBRE_AGENTE" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="ID_AGENTE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CARRY_OUT_TYPE_CODE" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="BL" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NUMERO_DECLARACION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="USUARIO_REGISTRA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FECHA_PROCESAMIENTO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="COMENTARIOS" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="FECHA_REGISTRO" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

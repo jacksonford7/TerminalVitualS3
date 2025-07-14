@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="N4MiddlewareModelStoreContainer" CdmEntityContainer="N4MiddlewareEntities">
+    <EntitySetMapping Name="CLIENTS_BILL_SAP">
+      <EntityTypeMapping TypeName="N4MiddlewareModel.CLIENTS_BILL_SAP">
+        <MappingFragment StoreEntitySet="CLIENTS_BILL_SAP">
+          <ScalarProperty Name="CLNT_DIA_CREDITO" ColumnName="CLNT_DIA_CREDITO" />
+          <ScalarProperty Name="CODIGO_SAP" ColumnName="CODIGO_SAP" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+          <ScalarProperty Name="CLNT_CONT_CONSECUTIVO" ColumnName="CLNT_CONT_CONSECUTIVO" />
+          <ScalarProperty Name="CLNT_ACTIVE" ColumnName="CLNT_ACTIVE" />
+          <ScalarProperty Name="CLNT_RFC" ColumnName="CLNT_RFC" />
+          <ScalarProperty Name="CLNT_FAX_INVC" ColumnName="CLNT_FAX_INVC" />
+          <ScalarProperty Name="CLNT_EBILLING" ColumnName="CLNT_EBILLING" />
+          <ScalarProperty Name="CLNT_TYPE" ColumnName="CLNT_TYPE" />
+          <ScalarProperty Name="CLNT_EMAIL" ColumnName="CLNT_EMAIL" />
+          <ScalarProperty Name="CLNT_TRANSACTION_DATE" ColumnName="CLNT_TRANSACTION_DATE" />
+          <ScalarProperty Name="CLNT_ADRESS1" ColumnName="CLNT_ADRESS1" />
+          <ScalarProperty Name="CLNT_STATE" ColumnName="CLNT_STATE" />
+          <ScalarProperty Name="CLNT_CITY" ColumnName="CLNT_CITY" />
+          <ScalarProperty Name="CLNT_NAME" ColumnName="CLNT_NAME" />
+          <ScalarProperty Name="CLNT_CUSTOMER" ColumnName="CLNT_CUSTOMER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTS_BILL">
+      <EntityTypeMapping TypeName="N4MiddlewareModel.CLIENTS_BILL">
+        <MappingFragment StoreEntitySet="CLIENTS_BILL">
+          <ScalarProperty Name="CLNT_DIA_CREDITO" ColumnName="CLNT_DIA_CREDITO" />
+          <ScalarProperty Name="CODIGO_SAP" ColumnName="CODIGO_SAP" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+          <ScalarProperty Name="CLNT_CONT_CONSECUTIVO" ColumnName="CLNT_CONT_CONSECUTIVO" />
+          <ScalarProperty Name="CLNT_ACTIVE" ColumnName="CLNT_ACTIVE" />
+          <ScalarProperty Name="CLNT_RFC" ColumnName="CLNT_RFC" />
+          <ScalarProperty Name="CLNT_FAX_INVC" ColumnName="CLNT_FAX_INVC" />
+          <ScalarProperty Name="CLNT_EBILLING" ColumnName="CLNT_EBILLING" />
+          <ScalarProperty Name="CLNT_TYPE" ColumnName="CLNT_TYPE" />
+          <ScalarProperty Name="CLNT_EMAIL" ColumnName="CLNT_EMAIL" />
+          <ScalarProperty Name="CLNT_TRANSACTION_DATE" ColumnName="CLNT_TRANSACTION_DATE" />
+          <ScalarProperty Name="CLNT_ADRESS1" ColumnName="CLNT_ADRESS1" />
+          <ScalarProperty Name="CLNT_STATE" ColumnName="CLNT_STATE" />
+          <ScalarProperty Name="CLNT_CITY" ColumnName="CLNT_CITY" />
+          <ScalarProperty Name="CLNT_NAME" ColumnName="CLNT_NAME" />
+          <ScalarProperty Name="CLNT_CUSTOMER" ColumnName="CLNT_CUSTOMER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\WS_AISVJobs" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/HttpConector.dll" publishTime="01/22/2018 08:53:42" />
+    <file relUrl="bin/ProcesaUnits.pdb" publishTime="01/22/2018 08:54:09" />
+    <file relUrl="bin/ProcesaUnits.dll" publishTime="01/22/2018 08:54:09" />
+    <file relUrl="bin/csl_log.dll" publishTime="01/22/2018 08:53:54" />
+    <file relUrl="Web.config" publishTime="01/22/2018 08:54:09" />
+    <file relUrl="bin/csl_log.pdb" publishTime="01/22/2018 08:53:54" />
+    <file relUrl="mailservice.asmx" publishTime="07/03/2014 14:29:06" />
+    <file relUrl="bin/HttpConector.pdb" publishTime="01/22/2018 08:53:42" />
+  </publishProfile>
+</publishData>

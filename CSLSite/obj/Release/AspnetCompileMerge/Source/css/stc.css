@@ -1,0 +1,126 @@
+html,
+body {
+  height: 100%;/*
+  color: #4A4A46;*/
+}
+body {
+ /* display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;*/
+  padding-top: 20px;
+  padding-bottom: 0px;
+  background: url('../img/login-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img logo {
+display: flex;
+  align-items: center;
+}
+
+.text-black{color:#000000!important}
+
+/*
+.form-signin label {
+  color: #B4B4B4;
+}
+.form-signin a, .footer-login a  {
+  text-decoration: none;
+  color: #4A4A46;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin  .input-group-prepend,  .input-group-text, .eye-btn {
+  background: #F5F5F5 !important;
+  border: none;
+}
+
+.form-signin  input[type=text] {
+   background: #F5F5F5 !important;
+   border: none;
+}
+.form-signin input[type=password] {
+   background: #F5F5F5 !important;
+   border: none;
+}
+.form-signin input[type=button] {
+   background: #E23B1B !important;
+   border: none;
+}
+
+.form-signin .input-group-prepend button {
+  border-radius: 0 4px 4px 0;
+}
+.form-signin .input-group-prepend button:focus {
+  box-shadow: none;
+}
+.form-signin input[type=checkbox], .form-signin input[type=radio] {
+  background: #E23B1B;
+}
+.form-signin .form-control:focus {
+  box-shadow: none;
+  border: none;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.container-login {
+  background: #fff;
+  padding: 35px;
+  border-radius: 16px;
+  width: 450px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, .1);
+  text-align: center;
+}
+.container-login p {
+  font-size: 16px;
+}
+.sign-in h1 {
+  font-size: 24px;
+}
+.footer-login {
+  border-top: 2px solid #E23B1B;
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+}
+.footer-login div {
+  align-items: center;
+  height: 52px;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}*/

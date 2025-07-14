@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ecuapassModelStoreContainer" CdmEntityContainer="ecuapassEntities">
+    <EntitySetMapping Name="ECU_LIQUIDACION_SENAE">
+      <EntityTypeMapping TypeName="IsTypeOf(ecuapassModel.ECU_LIQUIDACION_SENAE)">
+        <MappingFragment StoreEntitySet="ECU_LIQUIDACION_SENAE">
+          <ScalarProperty Name="CODIGO_UNICO" ColumnName="CODIGO_UNICO" />
+          <ScalarProperty Name="TRAMITE" ColumnName="TRAMITE" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="NUMERO_FACTURA" ColumnName="NUMERO_FACTURA" />
+          <ScalarProperty Name="FECHA_LIQUIDACION" ColumnName="FECHA_LIQUIDACION" />
+          <ScalarProperty Name="FECHA_VIGENCIA" ColumnName="FECHA_VIGENCIA" />
+          <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+          <ScalarProperty Name="NUMERO_IDENTIFICACION" ColumnName="NUMERO_IDENTIFICACION" />
+          <ScalarProperty Name="SUBTOTAL_SINIVA" ColumnName="SUBTOTAL_SINIVA" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="MONTO_TOTAL" ColumnName="MONTO_TOTAL" />
+          <ScalarProperty Name="NUMERO_LIQUIDACION" ColumnName="NUMERO_LIQUIDACION" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="USUARIO_REGISTRO" ColumnName="USUARIO_REGISTRO" />
+          <ScalarProperty Name="ESTADO_PROCESO" ColumnName="ESTADO_PROCESO" />
+          <ScalarProperty Name="FECHA_PROCESO" ColumnName="FECHA_PROCESO" />
+          <ScalarProperty Name="USUARIO_PROCESO" ColumnName="USUARIO_PROCESO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="NUMERO_BOOKING" ColumnName="NUMERO_BOOKING" />
+          <ScalarProperty Name="ROL" ColumnName="ROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECU_LIQUIDACION_PAGO_SENAE">
+      <EntityTypeMapping TypeName="IsTypeOf(ecuapassModel.ECU_LIQUIDACION_PAGO_SENAE)">
+        <MappingFragment StoreEntitySet="ECU_LIQUIDACION_PAGO_SENAE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGO_FACTURA" ColumnName="CODIGO_FACTURA" />
+          <ScalarProperty Name="MONTO_RECAUDADO" ColumnName="MONTO_RECAUDADO" />
+          <ScalarProperty Name="CANAL_RECAUDO" ColumnName="CANAL_RECAUDO" />
+          <ScalarProperty Name="BANCO_PAGO" ColumnName="BANCO_PAGO" />
+          <ScalarProperty Name="FECHA_RECAUDACION" ColumnName="FECHA_RECAUDACION" />
+          <ScalarProperty Name="CODIGO_PAGO" ColumnName="CODIGO_PAGO" />
+          <ScalarProperty Name="CODIGO_ACEPTACION_PAGO" ColumnName="CODIGO_ACEPTACION_PAGO" />
+          <ScalarProperty Name="FECHA_CONTABLE" ColumnName="FECHA_CONTABLE" />
+          <ScalarProperty Name="NUMERO_LIQUIDACION" ColumnName="NUMERO_LIQUIDACION" />
+          <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+          <ScalarProperty Name="MOTIVO_PAGO" ColumnName="MOTIVO_PAGO" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="USUARIO_REGISTRO" ColumnName="USUARIO_REGISTRO" />
+          <ScalarProperty Name="CODIGO_FACTURA_ANTICIPO" ColumnName="CODIGO_FACTURA_ANTICIPO" />
+          <ScalarProperty Name="INVOICE" ColumnName="INVOICE" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="BANCO_SYSPRO" ColumnName="BANCO_SYSPRO" />
+          <ScalarProperty Name="SYSPRO" ColumnName="SYSPRO" />
+          <ScalarProperty Name="CODIGO_CLIENTE" ColumnName="CODIGO_CLIENTE" />
+          <ScalarProperty Name="SOCIEDAD_SAP" ColumnName="SOCIEDAD_SAP" />
+          <ScalarProperty Name="ESTADO_SAP" ColumnName="ESTADO_SAP" />
+          <ScalarProperty Name="MES_REGISTRO" ColumnName="MES_REGISTRO" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="NUMERO_ANTICIPO_SAP" ColumnName="NUMERO_ANTICIPO_SAP" />
+          <ScalarProperty Name="NUMERO_FACTURA_REFERENCIA" ColumnName="NUMERO_FACTURA_REFERENCIA" />
+          <ScalarProperty Name="MENSAJE_SAP" ColumnName="MENSAJE_SAP" />
+          <ScalarProperty Name="FECHA_ESTADO_SAP" ColumnName="FECHA_ESTADO_SAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECU_CONSULTAS_ESTADO_FACTURAS">
+      <EntityTypeMapping TypeName="IsTypeOf(ecuapassModel.ECU_CONSULTAS_ESTADO_FACTURA)">
+        <MappingFragment StoreEntitySet="ECU_CONSULTAS_ESTADO_FACTURAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NUMERO_LIQUIDACION" ColumnName="NUMERO_LIQUIDACION" />
+          <ScalarProperty Name="VALOR_FACTURA" ColumnName="VALOR_FACTURA" />
+          <ScalarProperty Name="VALOR_PAGADO" ColumnName="VALOR_PAGADO" />
+          <ScalarProperty Name="VALOR_PENDIENTE" ColumnName="VALOR_PENDIENTE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="FUE_OK" ColumnName="FUE_OK" />
+          <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECU_LIQUIDACION_ESTADO">
+      <EntityTypeMapping TypeName="IsTypeOf(ecuapassModel.ECU_LIQUIDACION_ESTADO)">
+        <MappingFragment StoreEntitySet="ECU_LIQUIDACION_ESTADO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CODIGO_UNICO" ColumnName="CODIGO_UNICO" />
+          <ScalarProperty Name="NUMERO_LIQUIDACION" ColumnName="NUMERO_LIQUIDACION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECU_LIQUIDACION_LOGS_WCF">
+      <EntityTypeMapping TypeName="IsTypeOf(ecuapassModel.ECU_LIQUIDACION_LOG_WCF)">
+        <MappingFragment StoreEntitySet="ECU_LIQUIDACION_LOGS_WCF">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+          <ScalarProperty Name="DETALLE" ColumnName="DETALLE" />
+          <ScalarProperty Name="ES_SERVICIO_ADUANA" ColumnName="ES_SERVICIO_ADUANA" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="IngresoPago" FunctionName="ecuapassModel.Store.ECU_INGRESO_PAGO" />
+    <EntitySetMapping Name="ECU_LIQUIDACION_BANCOS">
+      <EntityTypeMapping TypeName="ecuapassModel.ECU_LIQUIDACION_BANCOS">
+        <MappingFragment StoreEntitySet="ECU_LIQUIDACION_BANCOS">
+          <ScalarProperty Name="BANCO_BANRED" ColumnName="BANCO_BANRED" />
+          <ScalarProperty Name="SAP_GL_CODE" ColumnName="SAP_GL_CODE" />
+          <ScalarProperty Name="BANCO_SENAE" ColumnName="BANCO_SENAE" />
+          <ScalarProperty Name="BANCO_SYSPRO" ColumnName="BANCO_SYSPRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

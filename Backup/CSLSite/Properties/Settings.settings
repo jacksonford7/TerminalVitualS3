@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CSLSite.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CSLSite_GetFile_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.2.30:8080/WebServiceTransferFile/Service.asmx</Value>
+    </Setting>
+    <Setting Name="CSLSite_OnlyControl_OnlyControlService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.2.30:57575/OnlyControl/OnlyServiceWeb.asmx</Value>
+    </Setting>
+    <Setting Name="CSLSite_SI_Customer_Statement_NAVIS_CGSA_Ws_Sap_EstadoDeCuenta" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.2.30:57575/Ws_Sap_EstadoDeCuenta/Service.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,2 @@
+.center { width:80%; margin:0 auto;}
+.grid th{ width:100px; border:1px solid Black; background-color:#5D7B9D; font-weight:bold;}

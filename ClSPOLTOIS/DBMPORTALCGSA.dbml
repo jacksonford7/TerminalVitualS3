@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Portal_Cgsa" Class="DBMPORTALCGSADataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CGDES04;Initial Catalog=Portal_Cgsa;User ID=aisv" SettingsObjectName="ClSPOLTOIS.Properties.Settings" SettingsPropertyName="Portal_CgsaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VW_CSC_BL_CSL" Member="VW_CSC_BL_CSL">
+    <Type Name="VW_CSC_BL_CSL">
+      <Column Name="CNTR_CONSECUTIVO" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEM_ITEM" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="MNFT_VEPR_REFERENCE" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="CNTR_VEPR_REFERENCE_UNLOADED" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Contenedor" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="IdNave" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Nave" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Viaje" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TipoMovimiento" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="BL" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ManifiestoSec" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BL_HIJO" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="MRN" Type="System.String" DbType="VarChar(21)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="HSN" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="MNFT_CONSIG_DOCUMENT" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="ESTADO_CONTR" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VBS2_PlanOperacionIntervalo" Member="VBS2_PlanOperacionIntervalo">
+    <Type Name="VBS2_PlanOperacionIntervalo">
+      <Column Name="IdPlan" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Secuencia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Inicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IdReserva" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="VBS2_Reserva_VBS2_PlanOperacionIntervalo" Member="VBS2_Reserva" ThisKey="IdReserva" OtherKey="IdReserva" Type="VBS2_Reserva" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VBS2_Reserva" Member="VBS2_Reserva">
+    <Type Name="VBS2_Reserva">
+      <Column Name="IdReserva" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdPlan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contenedor" Type="System.String" DbType="Char(12) NOT NULL" CanBeNull="false" />
+      <Column Name="IdContenedor" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IdCliente" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaIngreso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioIngreso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FechaOperacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioOperacion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEntradaCamion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaSalidaCamion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="VBS2_Reserva_VBS2_PlanOperacionIntervalo" Member="VBS2_PlanOperacionIntervalo" ThisKey="IdReserva" OtherKey="IdReserva" Type="VBS2_PlanOperacionIntervalo" />
+    </Type>
+  </Table>
+  <Table Name="CSL.CSL_Catalogo" Member="CSL_Catalogo">
+    <Type Name="CSL_Catalogo">
+      <Column Name="IdTabla" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescAlterno" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Necesario" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Relacion1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTS" Member="CLIENTS">
+    <Type Name="CLIENTS">
+      <Column Name="CLNT_CUSTOMER" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_NAME" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="CLNT_CITY" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CLNT_STATE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLNT_ADRESS1" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="CLNT_TRANSACTION_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CLNT_EMAIL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CLNT_TYPE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CLNT_EBILLING" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_FAX_INVC" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="CLNT_RFC" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_ACTIVE" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLNT_CONT_CONSECUTIVO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="CSL.CSL_P_Cons_Turnos_Disponibles" Method="CSL_P_Cons_Turnos_Disponibles">
+    <Parameter Name="xmlDatos" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <ElementType Name="CSL_P_Cons_Turnos_DisponiblesResult">
+      <Column Name="Turno_Inicio" Type="System.String" DbType="VarChar(23)" CanBeNull="true" />
+      <Column Name="Turno_Fin" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

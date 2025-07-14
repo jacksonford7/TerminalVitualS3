@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Proyectos\\PortalS3TV\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{613BE1B1-A54D-4955-866B-05DB3B644E81}|CSLSite\\CSLSite.csproj|d:\\proyectos\\portals3tv\\cslsite\\aisv\\cslhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{613BE1B1-A54D-4955-866B-05DB3B644E81}|CSLSite\\CSLSite.csproj|solutionrelative:cslsite\\aisv\\cslhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CslHelper.cs",
+              "DocumentMoniker": "D:\\Proyectos\\PortalS3TV\\CSLSite\\aisv\\CslHelper.cs",
+              "RelativeDocumentMoniker": "CSLSite\\aisv\\CslHelper.cs",
+              "ToolTip": "D:\\Proyectos\\PortalS3TV\\CSLSite\\aisv\\CslHelper.cs",
+              "RelativeToolTip": "CSLSite\\aisv\\CslHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:30:16.393Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

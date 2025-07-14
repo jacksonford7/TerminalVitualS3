@@ -1,0 +1,21 @@
+﻿.tabRepeat { width:100%;text-align:center; }
+.tabRepeat th { border:1px solid  white;  background-color:#CCC; font-weight:bold;  font-size:0.8em;}
+.tabRepeat td {  border:1px solid #CCC; font-size:0.7em; }
+.tabRepeat  botonera { margin:0 auto; padding:0; text-align:center;  background-color:#CCC; }
+
+.tabRepeat td:first-child { width:80px; }
+
+.tabRepeat  botonera input{ margin:0; padding:0; display:inline; width:15px; height:15px;}
+.btimg { width:15px; height:15px; margin:0; padding:0;}
+.error { text-align:center; font-style:italic; color:red; background-color:#CCC;}
+.content { width:100%;  margin:0 auto;}
+.centrar { width:80%; margin:0 auto; text-align:center;}
+
+.tabRepeat .point:hover td { background-color:yellow; cursor:pointer; 
+                             background-image:url(../imgs/flecha.gif);
+                              background-position:left center; 
+                              background-repeat:no-repeat;
+                             
+                             }
+.pagedisplay{ width:30px!important;}
+.red { color: Red; font-weight:bold;}

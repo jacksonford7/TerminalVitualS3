@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="N4MiddlewareModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="N4MiddlewareModelStoreContainer">
+    <EntitySet Name="CLIENTS_BILL" EntityType="N4MiddlewareModel.Store.CLIENTS_BILL" store:Type="Views" store:Schema="dbo" store:Name="CLIENTS_BILL" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+      [CLIENTS_BILL].[CLNT_CUSTOMER] AS [CLNT_CUSTOMER], 
+      [CLIENTS_BILL].[CLNT_NAME] AS [CLNT_NAME], 
+      [CLIENTS_BILL].[CLNT_CITY] AS [CLNT_CITY], 
+      [CLIENTS_BILL].[CLNT_STATE] AS [CLNT_STATE], 
+      [CLIENTS_BILL].[CLNT_ADRESS1] AS [CLNT_ADRESS1], 
+      [CLIENTS_BILL].[CLNT_TRANSACTION_DATE] AS [CLNT_TRANSACTION_DATE], 
+      [CLIENTS_BILL].[CLNT_EMAIL] AS [CLNT_EMAIL], 
+      [CLIENTS_BILL].[CLNT_TYPE] AS [CLNT_TYPE], 
+      [CLIENTS_BILL].[CLNT_EBILLING] AS [CLNT_EBILLING], 
+      [CLIENTS_BILL].[CLNT_FAX_INVC] AS [CLNT_FAX_INVC], 
+      [CLIENTS_BILL].[CLNT_RFC] AS [CLNT_RFC], 
+      [CLIENTS_BILL].[CLNT_ACTIVE] AS [CLNT_ACTIVE], 
+      [CLIENTS_BILL].[CLNT_CONT_CONSECUTIVO] AS [CLNT_CONT_CONSECUTIVO], 
+      [CLIENTS_BILL].[ROLE] AS [ROLE], 
+      [CLIENTS_BILL].[CODIGO_SAP] AS [CODIGO_SAP], 
+      [CLIENTS_BILL].[CLNT_DIA_CREDITO] AS [CLNT_DIA_CREDITO]
+      FROM [dbo].[CLIENTS_BILL] AS [CLIENTS_BILL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CLIENTS_BILL_SAP" EntityType="N4MiddlewareModel.Store.CLIENTS_BILL_SAP" store:Type="Views" store:Schema="dbo" store:Name="CLIENTS_BILL_SAP" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+      [CLIENTS_BILL_SAP].[CLNT_CUSTOMER] AS [CLNT_CUSTOMER], 
+      [CLIENTS_BILL_SAP].[CLNT_NAME] AS [CLNT_NAME], 
+      [CLIENTS_BILL_SAP].[CLNT_CITY] AS [CLNT_CITY], 
+      [CLIENTS_BILL_SAP].[CLNT_STATE] AS [CLNT_STATE], 
+      [CLIENTS_BILL_SAP].[CLNT_ADRESS1] AS [CLNT_ADRESS1], 
+      [CLIENTS_BILL_SAP].[CLNT_TRANSACTION_DATE] AS [CLNT_TRANSACTION_DATE], 
+      [CLIENTS_BILL_SAP].[CLNT_EMAIL] AS [CLNT_EMAIL], 
+      [CLIENTS_BILL_SAP].[CLNT_TYPE] AS [CLNT_TYPE], 
+      [CLIENTS_BILL_SAP].[CLNT_EBILLING] AS [CLNT_EBILLING], 
+      [CLIENTS_BILL_SAP].[CLNT_FAX_INVC] AS [CLNT_FAX_INVC], 
+      [CLIENTS_BILL_SAP].[CLNT_RFC] AS [CLNT_RFC], 
+      [CLIENTS_BILL_SAP].[CLNT_ACTIVE] AS [CLNT_ACTIVE], 
+      [CLIENTS_BILL_SAP].[CLNT_CONT_CONSECUTIVO] AS [CLNT_CONT_CONSECUTIVO], 
+      [CLIENTS_BILL_SAP].[ROLE] AS [ROLE], 
+      [CLIENTS_BILL_SAP].[CODIGO_SAP] AS [CODIGO_SAP], 
+      [CLIENTS_BILL_SAP].[CLNT_DIA_CREDITO] AS [CLNT_DIA_CREDITO]
+      FROM [dbo].[CLIENTS_BILL_SAP] AS [CLIENTS_BILL_SAP]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'N4Middleware.dbo.CLIENTS_BILL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CLIENTS_BILL">
+    <Key>
+      <PropertyRef Name="CLNT_CUSTOMER" />
+      <PropertyRef Name="CLNT_EBILLING" />
+      <PropertyRef Name="CLNT_RFC" />
+      <PropertyRef Name="CLNT_ACTIVE" />
+      <PropertyRef Name="ROLE" />
+      <PropertyRef Name="CODIGO_SAP" />
+      <PropertyRef Name="CLNT_DIA_CREDITO" />
+    </Key>
+    <Property Name="CLNT_CUSTOMER" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CLNT_NAME" Type="nvarchar" MaxLength="80" />
+    <Property Name="CLNT_CITY" Type="nvarchar" MaxLength="30" />
+    <Property Name="CLNT_STATE" Type="int" />
+    <Property Name="CLNT_ADRESS1" Type="nvarchar" MaxLength="60" />
+    <Property Name="CLNT_TRANSACTION_DATE" Type="datetime" />
+    <Property Name="CLNT_EMAIL" Type="nvarchar" MaxLength="255" />
+    <Property Name="CLNT_TYPE" Type="varchar" MaxLength="4" />
+    <Property Name="CLNT_EBILLING" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="CLNT_FAX_INVC" Type="nvarchar" MaxLength="120" />
+    <Property Name="CLNT_RFC" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CLNT_ACTIVE" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="CLNT_CONT_CONSECUTIVO" Type="int" />
+    <Property Name="ROLE" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CODIGO_SAP" Type="nvarchar" Nullable="false" />
+    <Property Name="CLNT_DIA_CREDITO" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'N4Middleware.dbo.CLIENTS_BILL_SAP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CLIENTS_BILL_SAP">
+    <Key>
+      <PropertyRef Name="CLNT_CUSTOMER" />
+      <PropertyRef Name="CLNT_EBILLING" />
+      <PropertyRef Name="CLNT_RFC" />
+      <PropertyRef Name="CLNT_ACTIVE" />
+      <PropertyRef Name="ROLE" />
+      <PropertyRef Name="CLNT_DIA_CREDITO" />
+    </Key>
+    <Property Name="CLNT_CUSTOMER" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CLNT_NAME" Type="nvarchar" MaxLength="80" />
+    <Property Name="CLNT_CITY" Type="nvarchar" MaxLength="30" />
+    <Property Name="CLNT_STATE" Type="int" />
+    <Property Name="CLNT_ADRESS1" Type="nvarchar" MaxLength="60" />
+    <Property Name="CLNT_TRANSACTION_DATE" Type="datetime" />
+    <Property Name="CLNT_EMAIL" Type="nvarchar" MaxLength="255" />
+    <Property Name="CLNT_TYPE" Type="varchar" MaxLength="4" />
+    <Property Name="CLNT_EBILLING" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="CLNT_FAX_INVC" Type="nvarchar" MaxLength="120" />
+    <Property Name="CLNT_RFC" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CLNT_ACTIVE" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="CLNT_CONT_CONSECUTIVO" Type="int" />
+    <Property Name="ROLE" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CODIGO_SAP" Type="nvarchar" MaxLength="32" />
+    <Property Name="CLNT_DIA_CREDITO" Type="bigint" Nullable="false" />
+  </EntityType>
+</Schema>

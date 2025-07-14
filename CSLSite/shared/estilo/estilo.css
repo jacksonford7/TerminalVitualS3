@@ -1,0 +1,605 @@
+.titTabla
+{    
+	background:#f0f0f0 url(../Imagenes/layout/bg-tableth.jpg) repeat-x; 
+    color:#333333; 
+    font: bold 21px Arial, Helvetica, sans-serif; 
+    margin:3px 0 10px 0;
+	text-align: center;
+	height: 32px;
+}
+
+.subTitTabla
+{       
+    margin:3px 0 10px 0;
+    padding: 6px 8px;	
+    border-color:#E1E1E1;   
+    border-width: 1px 1px 0 0;  
+    border-style: solid;  
+    margin: 0; background:#f0f0f0 url(../data/images/layout/bg-tableth.jpg) repeat-x; 
+    font-weight: bolder; color: #000000; text-align:left;
+    
+}
+.subTitTabla2
+{   
+	font:Arial, Helvetica, sans-serif;  
+	FONT-SIZE: 12px;
+	font-weight: bolder;
+    margin:3px 0 10px 0;
+    padding: 6px 8px;	
+    border-color:#E1E1E1;   
+    border-width: 1px 1px 0 0;  
+    border-style: solid;  
+    margin: 0; background:#f0f0f0 url(../data/images/layout/bg-tableth.jpg) repeat-x;  
+    color: #000000; 
+    text-align:left;
+}
+.reqCampo
+{
+	FONT-SIZE: 10px;
+    padding: 4px; 
+    border-color:#E1E1E1;  
+    border-width: 1px 0 0 0;  
+    border-style: solid;  
+    margin: 0; 	
+    width: 10px;
+}
+
+.lblTabla
+{   
+    border-left: 0 solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 0 solid #E1E1E1;
+    padding: 2px 3px;
+    margin: 0;
+    background: #f0f0f0 url('../Imagenes/layout/bg-tableth.jpg') repeat-x;
+    font-weight: bold; 
+    color: #000000; 
+    text-align:left;
+    font-size: 12px;
+     vertical-align:middle;
+      text-align:right;
+      width:70px!important;
+}
+
+
+.lblTablaToTal
+{   
+    border-left: 0 solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 0 solid #E1E1E1;
+    padding: 2px 3px;
+    margin: 0;
+    background: #f0f0f0 url('../Imagenes/layout/bg-tableth.jpg') repeat-x;
+    font-weight: bold; 
+    color: #000000; 
+    text-align:left;
+    font-size: 12px;
+     vertical-align:middle;
+      text-align:right;
+      width:500px!important;
+}
+
+.GridPager a, .GridPager span
+    {
+        display: block;
+        height: 15px;
+        width: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
+    .GridPager a
+    {
+        background-color: #f5f5f5;
+        color: #969696;
+        border: 1px solid #969696;
+    }
+    .GridPager span
+    {
+        background-color: #A1DCF2;
+        color: #000;
+        border: 1px solid #3AC0F2;
+    }
+    
+    
+    .GridPager2{
+    background-color:#fff;
+   
+   padding:2px;
+   margin:2% auto;
+   
+   
+}
+
+.GridPager2 a{
+  margin:auto 1%;
+    border-radius:50%;
+      background-color:#444;
+      padding:5px 10px 5px 10px;
+      color:#fff;
+      text-decoration:none;
+      -o-box-shadow:1px 1px 1px #111;
+      -moz-box-shadow:1px 1px 1px #111;
+      -webkit-box-shadow:1px 1px 1px #111;
+      box-shadow:1px 1px 1px #111;
+     
+}
+.GridPager2 a:hover{
+    background-color:#1e8d12;
+    color:#fff;
+}
+
+.GridPager2 span{
+    /*background-color:#ae2676;*/
+    background-color:#284775;
+    color:#fff;
+     -o-box-shadow:1px 1px 1px #111;
+      -moz-box-shadow:1px 1px 1px #111;
+      -webkit-box-shadow:1px 1px 1px #111;
+      box-shadow:1px 1px 1px #111;
+
+    border-radius:50%;
+    padding:5px 10px 5px 10px;
+}
+
+.lblTabla2
+{   
+	font:Arial, Helvetica, sans-serif; 
+	margin: 0; 
+    padding: 4px 2px 4px 4px;
+    margin: 0; 
+    background:#f0f0f0; 
+    font-weight: bold; 
+    color: #000000; 
+    text-align:left;
+    width: 20%;
+    FONT-SIZE: 11px;
+}
+
+.txtCampos
+{
+    FONT-SIZE: 10px;
+    padding: 4px 8px; 
+    border-color:#E1E1E1;  
+    border-width: 1px 1px 0 0;  
+    border-style: solid;  
+    margin: 0; 
+    bgcolor="#ffffff";
+}
+.txtCampos2
+{
+    FONT-SIZE: 10px;
+    padding: 4px 8px; 
+    margin: 0; 
+    color:#333333;
+    font:Arial, Helvetica, sans-serif; 
+}
+
+
+.ultimaCelda
+{    
+    border-color:#E1E1E1;
+    border-bottom-width: 1px;
+}
+
+
+
+.BotonNavegacion
+{
+	padding:2px 2px;
+    BORDER-RIGHT: #cccccc 1px solid;
+    BORDER-TOP: #ccffff 1px solid;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #ccffff 1px solid;
+    CURSOR: pointer;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: #cccccc 1px solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #3E6A99;    
+    float: right;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+	}
+.BotonNavegacion2
+{
+	padding:4px 3px;
+    BORDER-RIGHT: #cccccc 1px solid;
+    BORDER-TOP: #ccffff 1px solid;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #ccffff 1px solid;
+    CURSOR: pointer;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: #cccccc 1px solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #3E6A99;
+	/*height: 27px;*/
+}
+
+
+.BarraNavegacion
+{
+	text-align: right;
+	background-color:#ffffff;	
+}
+
+.inputText
+{
+    border: 1px solid #ddd; /*color:#999999; */
+    color: #000000;
+    font-size: 10px!important;
+    font-weight: bold;
+    padding: 4px 0 4px 0;
+    text-transform:uppercase!important;
+}
+
+.inputTextdoc
+{
+    border: 1px solid #ddd; /*color:#999999; */
+    color: #000000;
+    font-size: 10px!important;
+    font-weight: bold;
+    padding: 4px 0 4px 0;
+    text-transform:uppercase!important;
+}
+
+.inputTextgv
+{
+    border: 1px solid #ddd; /*color:#999999; */
+    color: #000000;
+    font-weight: bold;
+    padding: 0px 0 0px 0;
+    Font-Size:xx-small!important;
+    text-transform:uppercase!important;
+    
+}
+
+.bordeFino
+{
+    BORDER-RIGHT: 1px;
+    BORDER-TOP: #ffffff 1px solid;
+    BORDER-LEFT: 1px;
+    BORDER-BOTTOM: 1px solid
+}
+
+/* */
+
+.dialogo
+{
+    BORDER-RIGHT: #999999 1px solid;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: #999999 1px solid;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: #999999 1px solid;
+    WIDTH: 450px;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #999999 1px solid
+}
+.headCampos
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #006699;
+    TEXT-ALIGN: center
+}
+.datos
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    WIDTH: 100%;
+    BORDER-BOTTOM: medium none
+}
+.titSeccion
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 24px;
+    PADDING-BOTTOM: 20px;
+    COLOR: #003366;
+    PADDING-TOP: 5px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.naranja
+{
+    COLOR: #ff6600
+}
+.rojo
+{
+    COLOR: #cc3300
+}
+.txtEventos
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Tahoma
+}
+.txtCamposColor
+{
+    BACKGROUND-POSITION: left 50%;
+    PADDING-LEFT: 6px;
+    FONT-SIZE: 10px;
+    VERTICAL-ALIGN: top;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #eeeeee;
+    TEXT-ALIGN: left
+}
+.fondoazul
+{
+    BORDER-RIGHT: #00ff00 thick solid;
+    BORDER-TOP: #00ff00 thick solid;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #00ff00 thick solid;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: #00ff00 thick solid;
+    BACKGROUND-COLOR: #006699
+}
+
+.fondoBotones
+{
+    BORDER-TOP: 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    BORDER-BOTTOM: 1px solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #eeeef5
+}
+.fecha
+{
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma
+}
+.titular_blanco
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma
+}
+.campoWp
+{
+    BORDER-RIGHT: #666666 1px solid;
+    BORDER-TOP: #666666 1px solid;
+    FONT-SIZE: 9px;
+    BORDER-LEFT: #666666 1px solid;
+    BORDER-BOTTOM: #666666 1px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.lblTablaWp
+{
+    PADDING-LEFT: 3px;
+    FONT-SIZE: 9px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #006699
+}
+.BotonNavegacionWp
+{
+    BORDER-RIGHT: #330033 1px solid;
+    BORDER-TOP: #ffffff 1px solid;
+    FONT-SIZE: 9px;
+    BORDER-LEFT: #ffffff 1px solid;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: #330033 1px solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #006699
+}
+.txtWP
+{
+    PADDING-LEFT: 10px
+}
+.titWP
+{
+    PADDING-LEFT: 5px
+}
+.txtTabla
+{
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: none;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #eeeeee
+}
+
+.estilo
+{
+     font-size: 11px;
+    font-family: Tahoma;
+    padding:0px,0px,0px,0px; 
+}
+.peq
+{
+    FONT-SIZE: 9px;
+    FONT-FAMILY: Tahoma
+}
+.med
+{
+    FONT-SIZE: 10px;
+    FONT-FAMILY: Tahoma
+}
+.blanco
+{
+    COLOR: #ffffff
+}
+.submenu
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Tahoma
+}
+.submenu_blanco
+{
+    COLOR: #ffffff
+}
+.titular
+{
+    FONT-SIZE: 13px;
+    FONT-FAMILY: Tahoma
+}
+.negro
+{
+    COLOR: #000000
+}
+.titdirectorio
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #b24808;
+    FONT-FAMILY: Tahoma, Verdana, sans-serif, helvetica
+}
+.titnoticia
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #116099;
+    PADDING-TOP: 8px;
+    FONT-FAMILY: Tahoma, Verdana, sans-serif, helvetica
+}
+.campo
+{
+    BORDER-RIGHT: #666666 1px solid;
+    BORDER-TOP: #666666 1px solid;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #666666 1px solid;
+    BORDER-BOTTOM: #666666 1px solid;
+    FONT-FAMILY: Tahoma, Verdana, sans-serif, helvetica
+}
+
+/*body { margin: 0px; padding: 10px; font:normal 13px/1.2em Arial, Helvetica, sans-serif; color:#333333; }*/
+
+
+.tablestyle
+{
+    font-family: arial;
+    font-size: small;
+    border: solid 1px #7f7f7f;
+    background-color: #F7F6F3;
+}
+
+.altrowstyle
+{
+    background-color: #E2DED6;
+    color: #333333;
+}
+
+.FooterStyle
+{
+    background-color: #284775;
+    color: White;
+    font-weight: bold;
+    border-color: #284775 #284775 #284775 #284775;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+}
+
+.headerstyle th 
+{
+    background:  #284775;
+    border-color: #284775 #284775 #284775 #284775;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: White;
+    padding: 4px 5px 4px 10px;
+    text-align: center;
+    vertical-align: bottom;
+}  
+
+.headerstyle th a
+{
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    color: White;
+    display: block;
+    padding-right: 10px;
+}    
+
+.rowstyle .sortaltrow, .altrowstyle .sortaltrow 
+{
+    background-color: #edf5ff;
+}
+
+.rowstyle .sortrow, .altrowstyle .sortrow 
+{
+    background-color: #dbeaff;
+}
+
+.rowstyle td, .altrowstyle td 
+{
+    padding: 4px 10px 4px 10px;
+    border-right: solid 1px #cbcbcb;
+}
+
+
+
+.rowstyle1 .sortaltrow1, .altrowstyle1 .sortaltrow1 
+{
+    background-color: #edf5ff;
+}
+
+.rowstyle1 .sortrow1, .altrowstyle1 .sortrow1 
+{
+    background-color: #dbeaff;
+}
+
+.rowstyle1 td, .altrowstyle1 td 
+{
+    padding: 4px 4px 4px 4px;
+    /*border-right: solid 0px #cbcbcb;*/
+    border-bottom: solid 1px #cbcbcb;
+    font-size:xx-small;
+    vertical-align:middle;
+    font-weight: bold;
+}
+
+.rowstyle1 td input[type=text], .altrowstyle1 td input[type=text]
+{
+     font-size:xx-small;
+    vertical-align:middle;
+}
+
+
+
+.headerstyle .sortascheader 
+{
+    background: url(img/sprite.png) repeat-x 0px -100px;
+}
+
+.headerstyle .sortascheader a 
+{
+    background: url(img/dt-arrow-up.png) no-repeat right 50%;
+} 
+
+.headerstyle .sortdescheader 
+{
+    background: url(img/sprite.png) repeat-x 0px -100px;
+}   
+
+.headerstyle .sortdescheader a 
+{
+    background: url(img/dt-arrow-dn.png) no-repeat right 50%;
+} 
+
+img.numerito{ width:20px; height:18px; border:0; padding:0;}
+
+.mitabla { width:100%;}
+td.fondo{ background-color:#CCCCCC; }
+td.aline{vertical-align:top;  text-align:center;}
+
+.esquinas {
+    -moz-border-radius: 10px 10px;
+    -webkit-border-radius: 10px 10px;
+    -khtml-border-radius: 10px 10px;
+     border-radius: 10px 10px;
+     border: 1px solid #CCC ;
+     padding:4px;
+}
+.radio-in { background-color:transparent!important; font-size:small; text-align:left; }
+
+.gv { width:100%; font-size:small;}
+.gv th { border:1px solid #CCC; height:20px; text-align:center; background-color:#284775; color:White;}
+.gv td { font-size:small; border-bottom:1px solid #CCC; text-align:center; background-color:White;}
+.gv td input[type=text] { width:150px!important;}
