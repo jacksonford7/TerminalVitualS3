@@ -6622,11 +6622,12 @@
     <Compile Include="zal\wbareportezal.aspx.cs">
       <DependentUpon>wbareportezal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="zal\wbareportezal.aspx.designer.cs">
-      <DependentUpon>wbareportezal.aspx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+  </Compile>
+  <Compile Include="zal\wbareportezal.aspx.designer.cs">
+    <DependentUpon>wbareportezal.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="Controllers\ContenedorController.cs" />
+</ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="lib\bootstrap-datepicker\css\CalendarExtender\App_Data\" />
