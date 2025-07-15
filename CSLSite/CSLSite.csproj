@@ -366,6 +366,7 @@
     <Content Include="contenedor\contenedorimportacionadicional.aspx" />
     <Content Include="cotizaciones\cotizacion_default02_preview.aspx" />
     <Content Include="cotizaciones\cotizacion_default02.aspx" />
+    <Content Include="contenedor\consultaajax.aspx" />
     <Content Include="cotizaciones\cotizacion_default01.aspx" />
     <Content Include="contenedor\cotizacioncontenedorimpo.aspx" />
     <Content Include="contenedor\facturaimportacion.aspx" />
@@ -3149,9 +3150,16 @@
       <DependentUpon>contenedorimportacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="contenedor\contenedorimportacion.aspx.designer.cs">
-      <DependentUpon>contenedorimportacion.aspx</DependentUpon>
-    </Compile>
+      <Compile Include="contenedor\contenedorimportacion.aspx.designer.cs">
+        <DependentUpon>contenedorimportacion.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="contenedor\consultaajax.aspx.cs">
+        <DependentUpon>consultaajax.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="contenedor\consultaajax.aspx.designer.cs">
+        <DependentUpon>consultaajax.aspx</DependentUpon>
+      </Compile>
     <Compile Include="contenedor\contenedorimportacionadicional.aspx.cs">
       <DependentUpon>contenedorimportacionadicional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
