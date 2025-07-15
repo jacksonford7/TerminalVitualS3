@@ -65,5 +65,8 @@
                 </Columns>
             </asp:GridView>
         </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="BtnBuscar" />
+        </Triggers>
     </asp:UpdatePanel>
 </asp:Content>
