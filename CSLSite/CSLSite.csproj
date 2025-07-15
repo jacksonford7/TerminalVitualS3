@@ -369,6 +369,7 @@
     <Content Include="contenedor\consultaajax.aspx" />
     <Content Include="cotizaciones\cotizacion_default01.aspx" />
     <Content Include="contenedor\cotizacioncontenedorimpo.aspx" />
+    <Content Include="contenedor\despachovehiculos.aspx" />
     <Content Include="contenedor\facturaimportacion.aspx" />
     <Content Include="contenedor\facturaimportacionadicional.aspx" />
     <Content Include="contenedor\proformacontenedorimpo.aspx" />
@@ -3159,6 +3160,13 @@
       </Compile>
       <Compile Include="contenedor\consultaajax.aspx.designer.cs">
         <DependentUpon>consultaajax.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="contenedor\despachovehiculos.aspx.cs">
+        <DependentUpon>despachovehiculos.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="contenedor\despachovehiculos.aspx.designer.cs">
+        <DependentUpon>despachovehiculos.aspx</DependentUpon>
       </Compile>
     <Compile Include="contenedor\contenedorimportacionadicional.aspx.cs">
       <DependentUpon>contenedorimportacionadicional.aspx</DependentUpon>
