@@ -373,6 +373,7 @@
     <Content Include="contenedor\proformacontenedorimpo.aspx" />
     <Content Include="contenedor\proformaimportacion.aspx" />
     <Content Include="contenedor\proformaimportacionadicional.aspx" />
+    <Content Include="despachovehiculos\DespachoVehiculos.aspx" />
     <Content Include="cotizaciones\cotizacion_default01_preview.aspx" />
     <Content Include="cotizaciones\print_proforma_preview.aspx" />
     <Content Include="cotizaciones\menu_cotizaciones.aspx" />
@@ -3221,6 +3222,13 @@
     </Compile>
     <Compile Include="contenedor\proformaimportacionadicional.aspx.designer.cs">
       <DependentUpon>proformaimportacionadicional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="despachovehiculos\DespachoVehiculos.aspx.cs">
+      <DependentUpon>DespachoVehiculos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="despachovehiculos\DespachoVehiculos.aspx.designer.cs">
+      <DependentUpon>DespachoVehiculos.aspx</DependentUpon>
     </Compile>
     <Compile Include="cotizaciones\cotizacion_default01_preview.aspx.cs">
       <DependentUpon>cotizacion_default01_preview.aspx</DependentUpon>
