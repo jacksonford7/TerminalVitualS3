@@ -123,7 +123,7 @@ namespace Configuraciones
         //Obtiene una configuracion.
         public ap_configuracion ObtenerConfiguracion(string _nombre)
         {
-            if (!ExistenConfiguraciones){ return null;}
+           if (!ExistenConfiguraciones){ return null;}
             _nombre = _nombre?.Trim().ToLower();
             return this.Configuraciones.Where(t => t.nombre.ToLower() == _nombre)?.FirstOrDefault();
         }

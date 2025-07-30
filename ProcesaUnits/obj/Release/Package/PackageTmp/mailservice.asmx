@@ -1,1 +1,0 @@
-﻿<%@ WebService Language="C#" CodeBehind="mailservice.asmx.cs" Class="ProcesaUnits.mailservice" %>

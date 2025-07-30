@@ -64,7 +64,7 @@ namespace Aduana.Importacion
 
             var bcon = this.Accesorio.ObtenerConfiguracion("ECUAPASS")?.valor;
 
-            var rp = BDOpe.ComandoSelectALista<ecu_validacion_cntr>(bcon, "[Bill].[validacion_cntr_impo_mrn]", this.Parametros);
+            var rp = BDOpe.ComandoSelectALista<ecu_validacion_cntr>(bcon, "[Bill].[validacion_cntr_impo_mrn_disponibles]", this.Parametros);
             return rp.Exitoso ? ResultadoOperacion<List<ecu_validacion_cntr>>.CrearResultadoExitoso(rp.Resultado) : ResultadoOperacion<List<ecu_validacion_cntr>>.CrearFalla(rp.MensajeProblema);
         }
 

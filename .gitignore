@@ -1,0 +1,39 @@
+# Archivos de usuario de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de configuración de Xamarin y Visual Studio
+*.vscode/
+.vs/
+.vscode/
+
+# Archivos temporales y de compilación
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+*.tmp
+
+# Archivos generados automáticamente por el sistema
+*.pidb
+*.pdb
+*.apk
+*.keystore
+
+# Archivos de paquetes y dependencias
+*.nupkg
+packages/
+*.dll
+*.exe
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Archivos de publicación
+publish/

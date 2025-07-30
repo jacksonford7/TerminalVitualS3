@@ -29,6 +29,9 @@ namespace PasePuerta
             this.TIPO_CARGA = "CNTR";
         }
         public decimal ID_PASE { get; set; } //secuencil
+
+        public int DetalleTarjaID { get; set; }
+
         public decimal? ID_CARGA { get; set; } //gkey
         public string ESTADO { get; set; } //nuevo->GN
         public DateTime? FECHA_EXPIRACION { get; set; } // *
@@ -69,6 +72,10 @@ namespace PasePuerta
         //Insertar pase a puerta
         public ResultadoOperacion<Int64> Insertar(Int64 ID_PLAN, Int64 ID_SECUENCIA, string CONTENEDOR, string HORA_TURNO, DateTime FECHA_CAS, bool IsDD=false)
         {
+
+            var bcon2 = this.Accesorio.ObtenerConfiguracion("N4Middleware")?.valor;
+
+
             this.actualMetodo = MethodBase.GetCurrentMethod().Name;
             string pv = string.Empty;
             if (!this.Accesorio.Inicializar(out pv))
@@ -95,10 +102,10 @@ namespace PasePuerta
             //{
             //    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(NUMERO_PASE_N4)));
             //}
-            if (!ID_CARGA.HasValue)
-            {
-                return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(ID_CARGA)));
-            }
+            //if (!ID_CARGA.HasValue)
+            //{
+            //    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(ID_CARGA)));
+            //}
       
             if (string.IsNullOrEmpty(this.ID_EMPRESA))
             {
@@ -120,44 +127,44 @@ namespace PasePuerta
             //}
 
             //si no es DD, debe validar todo esto.
-            if (!IsDD)
-            {
-                //@HORA_TURNO
-                if (string.IsNullOrEmpty(HORA_TURNO))
-                {
-                    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(HORA_TURNO)));
-                }
-                if (!this.TINICIA.HasValue)
-                {
-                    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TINICIA)));
-                }
-                if (!this.TFIN.HasValue)
-                {
-                    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TFIN)));
-                }
-                if (!TID.HasValue)
-                {
-                    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TID)));
-                }
-                tt = SetMessage("RANGO_INVALIDO", actualMetodo, USUARIO_REGISTRO);
-                if (this.TINICIA >= TFIN)
-                {
-                    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TINICIA), nameof(TFIN)));
-                }
-                tt = SetMessage("NO_CERO", actualMetodo, USUARIO_REGISTRO);
-                if (ID_PLAN <= 0)
-                {
-                    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(ID_PLAN)));
-                }
-                if (ID_SECUENCIA <= 0)
-                {
-                    return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(ID_SECUENCIA)));
-                }
-            }
-            else
-            {
-                this.LogEvent(USUARIO_REGISTRO, actualMetodo, string.Format("PP es DD {0}/{1}", CONTENEDOR, FECHA_EXPIRACION));
-            }
+            //if (!IsDD)
+            //{
+            //    //@HORA_TURNO
+            //    if (string.IsNullOrEmpty(HORA_TURNO))
+            //    {
+            //        return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(HORA_TURNO)));
+            //    }
+            //    if (!this.TINICIA.HasValue)
+            //    {
+            //        return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TINICIA)));
+            //    }
+            //    if (!this.TFIN.HasValue)
+            //    {
+            //        return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TFIN)));
+            //    }
+            //    if (!TID.HasValue)
+            //    {
+            //        return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TID)));
+            //    }
+            //    tt = SetMessage("RANGO_INVALIDO", actualMetodo, USUARIO_REGISTRO);
+            //    if (this.TINICIA >= TFIN)
+            //    {
+            //        return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(TINICIA), nameof(TFIN)));
+            //    }
+            //    tt = SetMessage("NO_CERO", actualMetodo, USUARIO_REGISTRO);
+            //    if (ID_PLAN <= 0)
+            //    {
+            //        return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(ID_PLAN)));
+            //    }
+            //    if (ID_SECUENCIA <= 0)
+            //    {
+            //        return Respuesta.ResultadoOperacion<Int64>.CrearFalla(string.Format(tt.Item1, nameof(ID_SECUENCIA)));
+            //    }
+            //}
+            //else
+            //{
+            //    this.LogEvent(USUARIO_REGISTRO, actualMetodo, string.Format("PP es DD {0}/{1}", CONTENEDOR, FECHA_EXPIRACION));
+            //}
             //AQUI OTRAS REGLAS DE VALIDACIÓN AL NUEVO!!
                 //inicializa
                      
@@ -215,6 +222,7 @@ namespace PasePuerta
 
              this.Parametros.Add(nameof(TRANSPORTISTA_DESC), TRANSPORTISTA_DESC);
             this.Parametros.Add(nameof(CHOFER_DESC), CHOFER_DESC);
+            this.Parametros.Add(nameof(DetalleTarjaID), DetalleTarjaID);
 
             var bcon = this.Accesorio.ObtenerConfiguracion("N4Middleware")?.valor;
              var result =  BDOpe.ComandoInsertUpdateDeleteID(bcon, "[Bill].[nuevo_pase_puerta_v1]",this.Parametros);

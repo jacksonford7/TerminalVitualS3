@@ -220,6 +220,10 @@
     <Content Include="btsagencia\listadofacturasexportador.aspx" />
     <Content Include="btsagencia\listadofacturasagencia.aspx" />
     <Content Include="btsagencia\listadodraftagencia.aspx" />
+    <Content Include="exportables\inventario_cedi.aspx" />
+    <Content Include="exportables\inventario_vhs.aspx" />
+    <Content Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx" />
+    <Content Include="pasepuertacontenedor\ordenpuerta.aspx" />
     <Content Include="sav\turnosSavZAL.aspx" />
     <Content Include="sellos_imagenes\certificado_sellos_impo.aspx" />
     <Content Include="sellos_imagenes\consulta_certificado_sellos.aspx" />
@@ -2210,8 +2214,36 @@
     <Compile Include="btsagencia\listadodraftagencia.aspx.designer.cs">
       <DependentUpon>listadodraftagencia.aspx</DependentUpon>
     </Compile>
+    <Compile Include="exportables\inventario_cedi.aspx.cs">
+      <DependentUpon>inventario_cedi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exportables\inventario_cedi.aspx.designer.cs">
+      <DependentUpon>inventario_cedi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exportables\inventario_vhs.aspx.cs">
+      <DependentUpon>inventario_vhs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exportables\inventario_vhs.aspx.designer.cs">
+      <DependentUpon>inventario_vhs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="handler\certificadosellosimpo.ashx.cs">
       <DependentUpon>certificadosellosimpo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx.cs">
+      <DependentUpon>imprimirpasecontenedordespacho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx.designer.cs">
+      <DependentUpon>imprimirpasecontenedordespacho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\ordenpuerta.aspx.cs">
+      <DependentUpon>ordenpuerta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\ordenpuerta.aspx.designer.cs">
+      <DependentUpon>ordenpuerta.aspx</DependentUpon>
     </Compile>
     <Compile Include="sav\turnosSavZAL.aspx.cs">
       <DependentUpon>turnosSavZAL.aspx</DependentUpon>

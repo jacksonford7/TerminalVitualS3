@@ -1,5 +1,0 @@
-D:\Proyect\PortalS3\SQlHandler\bin\x64\Debug\SQlHandler.dll
-D:\Proyect\PortalS3\SQlHandler\bin\x64\Debug\SQlHandler.pdb
-D:\Proyect\PortalS3\SQlHandler\obj\x64\Debug\SQLHandler.csproj.CoreCompileInputs.cache
-D:\Proyect\PortalS3\SQlHandler\obj\x64\Debug\SQlHandler.dll
-D:\Proyect\PortalS3\SQlHandler\obj\x64\Debug\SQlHandler.pdb

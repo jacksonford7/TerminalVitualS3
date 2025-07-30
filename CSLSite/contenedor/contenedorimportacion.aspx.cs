@@ -4974,51 +4974,7 @@ namespace CSLSite
                         /***********************************************************************************************************************************************
                         *validacion de dias libres
                         **********************************************************************************************************************************************/
-                        //si no existen servicios a facturar
-                        if (objFactura.DetalleServicios.Count == 0)
-                        {
-
-                            //30-01-2020
-                            //recorre todos los contenedores seleccionados para verificar fecha y que no tengan servicios
-                            cMensajes = string.Empty;
-                            string cMensajeActualizados = string.Empty;
-                            foreach (var Det in objFactura.Detalle.Where(p => !p.IV_TIENE_SERVICIOS))
-                            {
-
-                                //si la fecha de salida es menor a la fecha tope con los dias libres incluidos, y si no es la primera facturacion
-                                if ((Det.IV_FECHA_HASTA.Value <= Det.IV_FECHA_TOPE_DLIBRE.Value) && Det.IV_FECHA_ULTIMA.HasValue)
-                                {
-                                    /*grabar transaccion de factura*/
-                                    objActualiza_Pase = new Cls_Bil_Invoice_Actualiza_Pase();
-                                    objActualiza_Pase.IV_ID = Det.IV_ID;
-                                    objActualiza_Pase.IV_GKEY = Det.IV_GKEY;
-                                    objActualiza_Pase.IV_MRN = Det.IV_MRN;
-                                    objActualiza_Pase.IV_MSN = Det.IV_MSN;
-                                    objActualiza_Pase.IV_HSN = Det.IV_HSN;
-                                    objActualiza_Pase.IV_CONTENEDOR = Det.IV_CONTENEDOR;
-                                    objActualiza_Pase.IV_FECHA_ULTIMA = Det.IV_FECHA_ULTIMA;
-                                    objActualiza_Pase.IV_FECHA_HASTA = Det.IV_FECHA_HASTA;
-                                    objActualiza_Pase.IV_MODULO = Det.IV_MODULO;
-                                    objActualiza_Pase.IV_USUARIO_CREA = LoginName;
-
-                                    var nIdRegistro = objActualiza_Pase.SaveTransaction_Update(out cMensajes);
-                                    if (!nIdRegistro.HasValue || nIdRegistro.Value <= 0)
-                                    {
-
-                                        this.Mostrar_Mensaje(2, string.Format("<b>Error! No se pudo actualizar datos de la factura para el contenedor {0}, {1}</b>", Det.IV_CONTENEDOR, cMensajes));
-                                        return;
-                                    }
-                                    else
-                                    {
-                                        cMensajeActualizados = cMensajeActualizados + string.Format("Se procedió con la actualización de la fecha de salida del contendor {0}, el mismo cuenta con días libres y podrá generar pases de puerta hasta: {1} <br/>", Det.IV_CONTENEDOR, Det.IV_FECHA_HASTA.Value.ToString("dd/MM/yyyy"));
-                                    }
-                                }
-                            }
-
-                            this.Mostrar_Mensaje(2, string.Format("<i class='fa fa-warning'></i><b> Informativo! No existen servicios pendientes para facturar.</br> {0} ", cMensajeActualizados));
-                            return;
-
-                        }
+                       
 
                         //this.Ocultar_Mensaje();
                         string cId = securetext(this.hf_BrowserWindowName.Value);

@@ -70,7 +70,19 @@ namespace BillionEntidades
         private string _ORDENAMIENTO = string.Empty;
         private string _TIPO_CONSULTA = string.Empty;
         #endregion
-
+        public int? ID { get; set; }
+        public int? BloqueID { get; set; }
+        public int? NumeroBloque { get; set; }
+        public string NumeroContenedor { get; set; }
+        public string Manifiesto { get; set; }
+        public string BL { get; set; }
+        public string EstadoContenedor { get; set; }
+        public string NumeroOrden { get; set; }
+        public DateTime? FechaOrdenTrabajo { get; set; }
+        public int? TarjaID { get; set; }
+        public DateTime? FechaTarja { get; set; }
+        public string ruc_importador { get; set; }
+        public string vin { get; set; }
 
         #region "Variables Modifica Pase Puerta"
 

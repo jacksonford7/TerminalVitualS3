@@ -80,6 +80,24 @@ namespace BillionEntidades
 
         #region "Propiedades"
 
+        public int ClienteID { get; set; }
+        public int? OrdenTrabajoID { get; set; }
+        public string Vehiculo { get; set; }
+        public string Estado { get; set; }
+        public string nombre_importador { get; set; }
+        public string ruc_importador { get; set; }
+        public bool RIDT { get; set; }
+        public string bl { get; set; }
+        public string buque { get; set; }
+        public string ImportadorID { get; set; }
+
+        public string ImportadorNombre
+        {
+            get => nombre_importador;
+            set => nombre_importador = value;
+        }
+
+
         public Int64 ID { get => _ID; set => _ID = value; }
         public Int64 GKEY { get => _GKEY; set => _GKEY = value; }
         public string MRN { get => _MRN; set => _MRN = value; }
@@ -142,6 +160,7 @@ namespace BillionEntidades
 
         public bool CERTIFICADO { get => _CERTIFICADO; set => _CERTIFICADO = value; }
         public string TIENE_CERTIFICADO { get => _TIENE_CERTIFICADO; set => _TIENE_CERTIFICADO = value; }
+        public string UUID { get; set; }
 
         public string TIME_IN { get => _TIME_IN; set => _TIME_IN = value; }
         public double? VOLUMEN { get => _VOLUMEN; set => _VOLUMEN = value; }

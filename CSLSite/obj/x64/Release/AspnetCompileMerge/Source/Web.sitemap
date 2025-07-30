@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="" title=""  description="">
-        <siteMapNode url="~/csl/aisv/container" title="AISV Contenedores"  description="AISV contenedor lleno" />
-        <siteMapNode url="~/csl/aisv/general" title="AISV Carga Suelta"  description="AISV carga suelta" />
-        <siteMapNode url="~/csl/aisv/consolidar" title="AISV Contenedores"  description="AISV contenedor lleno" />
-    </siteMapNode>
-</siteMap>
