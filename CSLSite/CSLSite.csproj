@@ -911,6 +911,7 @@
     <Content Include="pasepuertacontenedor\cancelacionpasecontenedor.aspx" />
     <Content Include="pasepuertacontenedor\emisionpasecontenedor.aspx" />
     <Content Include="pasepuertacontenedor\imprimirpasecontenedor.aspx" />
+    <Content Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx" />
     <Content Include="pasepuertacontenedor\listadopasescontenedor.aspx" />
     <Content Include="portal\proforma_cn.aspx" />
     <Content Include="reportesexpo\factura_preview.aspx" />
@@ -3917,6 +3918,13 @@
     </Compile>
     <Compile Include="pasepuertacontenedor\imprimirpasecontenedor.aspx.designer.cs">
       <DependentUpon>imprimirpasecontenedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx.cs">
+      <DependentUpon>imprimirpasecontenedordespacho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx.designer.cs">
+      <DependentUpon>imprimirpasecontenedordespacho.aspx</DependentUpon>
     </Compile>
     <Compile Include="pasepuertacontenedor\listadopasescontenedor.aspx.cs">
       <DependentUpon>listadopasescontenedor.aspx</DependentUpon>
