@@ -54,6 +54,20 @@
             /*font-weight: bold;*/
             margin-bottom: 5px;
         }
+        .form-title
+        {
+            color: #d14124 !important;
+        }
+        .section-title
+        {
+            color: #d14124;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+            border-bottom: 1px solid rgba(74, 74, 70, 0.1);
+            padding-bottom: 14px;
+            margin: 50px 0 25px 0;
+        }
     </style>
 
     <script type="text/javascript">
@@ -95,6 +109,8 @@
             </Triggers>
         </asp:UpdatePanel>
 
+        <div class="section-title">DATOS DE LA CARGA</div>
+
         <asp:UpdatePanel ID="UPBUSCAR" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <div class="form-row">
@@ -110,8 +126,12 @@
             </Triggers>
         </asp:UpdatePanel>
 
+        <div class="section-title">DATOS DE LA FACTURA</div>
+
         <asp:UpdatePanel ID="UPDETALLE" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
+                <div class="section-title">DETALLE DE LA CARGA</div>
+
                 <asp:GridView ID="gvContenedores" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered invoice" GridLines="None">
                     <RowStyle BackColor="#F0F0F0" />
                     <AlternatingRowStyle BackColor="#FFFFFF" />
@@ -142,9 +162,8 @@
                         <asp:TemplateField Visible="false"><ItemTemplate><asp:Label ID="lblBuque" runat="server" Text='<%# Bind("CNTR_VEPR_VOYAGE") %>' /></ItemTemplate></asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-
                 <asp:Panel ID="panelContenedoresVHS" runat="server" Visible="false">
-                    <h4 class="mt-4">Contenedores Asignados</h4>
+                    <div class="section-title">DETALLE DE CONTENEDORES</div>
 
                     <asp:GridView ID="gvContenedoresVHS" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered invoice" GridLines="None"
                         OnRowCommand="gvContenedoresVHS_RowCommand">
