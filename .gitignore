@@ -37,3 +37,4 @@ desktop.ini
 
 # Archivos de publicación
 publish/
+*.designer.cs
