@@ -68,6 +68,13 @@
             padding-bottom: 14px;
             margin: 50px 0 25px 0;
         }
+
+        .btn-buscar
+        {
+            background-color: #EF6C00;
+            border-color: #EF6C00;
+            color: #fff;
+        }
     </style>
 
     <script type="text/javascript">
@@ -114,10 +121,24 @@
         <asp:UpdatePanel ID="UPBUSCAR" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <div class="form-row">
-                    <div class="form-group col-md-2"><asp:TextBox ID="TXTMRN" runat="server" CssClass="form-control" placeholder="MRN" /></div>
-                    <div class="form-group col-md-2"><asp:TextBox ID="TXTMSN" runat="server" CssClass="form-control" placeholder="MSN" /></div>
-                    <div class="form-group col-md-2"><asp:TextBox ID="TXTHSN" runat="server" CssClass="form-control" placeholder="HSN" /></div>
-                    <div class="form-group col-md-2"><asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-primary" Text="BUSCAR" OnClick="BtnBuscar_Click" /></div>
+                    <div class="form-group col-md-4">
+                        <label for="TXTMRN">MRN<span style="color: #FF0000; font-weight: bold;">*</span></label>
+                        <asp:TextBox ID="TXTMRN" runat="server" CssClass="form-control" placeholder="MRN" />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="TXTMSN">MSN<span style="color: #FF0000; font-weight: bold;">*</span></label>
+                        <asp:TextBox ID="TXTMSN" runat="server" CssClass="form-control" placeholder="MSN" />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="TXTHSN">HSN<span style="color: #FF0000; font-weight: bold;">*</span></label>
+                        <asp:TextBox ID="TXTHSN" runat="server" CssClass="form-control" placeholder="HSN" />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="BtnBuscar">&nbsp;</label>
+                        <div class="d-flex justify-content-end">
+                            <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-buscar" Text="BUSCAR" OnClick="BtnBuscar_Click" />
+                        </div>
+                    </div>
                 </div>
                 <br />
             </ContentTemplate>
