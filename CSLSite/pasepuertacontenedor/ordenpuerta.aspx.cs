@@ -281,6 +281,7 @@ namespace CSLSite
                 }
 
                 // Generar el e-Pass para cada contenedor seleccionado
+                long idPaseGenerado = 0;
                 foreach (var det in ContenedoresSeleccionados)
                 {
                     //Console.WriteLine($"Debug: NumeroContenedor = {det.NumeroContenedor}"); // Depuración
@@ -329,11 +330,13 @@ namespace CSLSite
                         Mostrar_Mensaje(r.MensajeProblema);
                         return;
                     }
+                    idPaseGenerado = r.Resultado;
                 }
                 string id_carga = Server.UrlEncode($"{ContenedoresSeleccionados.First().MRN}-{ContenedoresSeleccionados.First().MSN}-{ContenedoresSeleccionados.First().HSN}");
                 string link = $"<a href='../pasepuertacontenedor/imprimirpasecontenedordespacho.aspx?id_carga={id_carga}' target='_blank'>Imprimir Pase Puerta Despacho</a>";
+                string linkPreview = idPaseGenerado > 0 ? $"<a href='../pasepuertacontenedor/pase_puerta_orden_preview.aspx?id_pase={idPaseGenerado}' target='_blank'>Vista previa Pase Puerta</a>" : string.Empty;
 
-                Mostrar_Mensaje($"<b>Informativo! El pase fue generado con éxito. Para imprimirlo, haga clic en el siguiente enlace: {link}</b>");
+                Mostrar_Mensaje($"<b>Informativo! El pase fue generado con éxito. Para imprimirlo, haga clic en el siguiente enlace: {link} {linkPreview}</b>");
 
                 ContenedoresSeleccionados.Clear();
                 gvSeleccionados.DataSource = ContenedoresSeleccionados;
