@@ -224,6 +224,7 @@
     <Content Include="exportables\inventario_vhs.aspx" />
     <Content Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx" />
     <Content Include="pasepuertacontenedor\ordenpuerta.aspx" />
+    <Content Include="pasepuertacontenedor\pase_puerta_orden_preview.aspx" />
     <Content Include="sav\turnosSavZAL.aspx" />
     <Content Include="sellos_imagenes\certificado_sellos_impo.aspx" />
     <Content Include="sellos_imagenes\consulta_certificado_sellos.aspx" />
@@ -2245,6 +2246,13 @@
     <Compile Include="pasepuertacontenedor\ordenpuerta.aspx.designer.cs">
       <DependentUpon>ordenpuerta.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pasepuertacontenedor\pase_puerta_orden_preview.aspx.cs">
+      <DependentUpon>pase_puerta_orden_preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\pase_puerta_orden_preview.aspx.designer.cs">
+      <DependentUpon>pase_puerta_orden_preview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sav\turnosSavZAL.aspx.cs">
       <DependentUpon>turnosSavZAL.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3924,6 +3932,13 @@
     </Compile>
     <Compile Include="pasepuertacontenedor\imprimirpasecontenedordespacho.aspx.designer.cs">
       <DependentUpon>imprimirpasecontenedordespacho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\pase_puerta_orden_preview.aspx.cs">
+      <DependentUpon>pase_puerta_orden_preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasepuertacontenedor\pase_puerta_orden_preview.aspx.designer.cs">
+      <DependentUpon>pase_puerta_orden_preview.aspx</DependentUpon>
     </Compile>
     <Compile Include="pasepuertacontenedor\listadopasescontenedor.aspx.cs">
       <DependentUpon>listadopasescontenedor.aspx</DependentUpon>
