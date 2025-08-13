@@ -152,6 +152,12 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="QrUrl">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+    </ReportParameter>
+  </ReportParameters>
   <Body>
     <ReportItems>
       <Tablix Name="Tablix1">
@@ -1692,6 +1698,22 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                           <Height>1.29674cm</Height>
                           <Width>3.70008cm</Width>
                           <ZIndex>3</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
+                        <Image Name="QrImage">
+                          <Source>External</Source>
+                          <Value>=Parameters!QrUrl.Value</Value>
+                          <MIMEType>image/png</MIMEType>
+                          <Sizing>Fit</Sizing>
+                          <Top>0cm</Top>
+                          <Left>11cm</Left>
+                          <Height>2cm</Height>
+                          <Width>2cm</Width>
+                          <ZIndex>4</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>

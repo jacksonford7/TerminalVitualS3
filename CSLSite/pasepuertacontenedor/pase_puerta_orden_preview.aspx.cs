@@ -98,8 +98,33 @@ namespace CSLSite
                     return;
                 }
 
-                ReportDataSource wdatasourc = new ReportDataSource("dsPasePuerta", wdataset.Tables[0]);
+                DataTable table = wdataset.Tables[0];
+                DataRow row = table.Rows[0];
+
+                object payload = null;
+                if (row.Table.Columns.Contains("CERTIFICADO_CODBARRA"))
+                {
+                    payload = row["CERTIFICADO_CODBARRA"];
+                }
+                else if (row.Table.Columns.Contains("NUMERO_PASE_N4"))
+                {
+                    payload = row["NUMERO_PASE_N4"];
+                }
+                else if (row.Table.Columns.Contains("PASE"))
+                {
+                    payload = row["PASE"];
+                }
+                else
+                {
+                    payload = id_pase.ToString();
+                }
+
+                string relQr = string.Format("~/barcode/handler/qr.ashx?data={0}", HttpUtility.UrlEncode(Convert.ToString(payload)));
+                string absQr = new Uri(Request.Url, ResolveUrl(relQr)).ToString();
+
+                ReportDataSource wdatasourc = new ReportDataSource("dsPasePuerta", table);
                 AñadeDatasorurce(wdatasourc);
+                rwReporte.LocalReport.SetParameters(new ReportParameter("QrUrl", absQr));
                 rwReporte.LocalReport.Refresh();
                 this.rwReporte.Visible = true;
                 rwReporte.DataBind();
