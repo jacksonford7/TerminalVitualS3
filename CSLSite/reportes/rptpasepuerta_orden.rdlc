@@ -140,6 +140,10 @@
           <DataField>SN</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="QR_URL">
+          <DataField>QR_URL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>DummyDataSource</DataSourceName>
@@ -1712,7 +1716,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                         </Image>
                         <Image Name="QrImage">
                           <Source>External</Source>
-                          <Value>=IIF(IsNothing(Parameters!QrUrl.Value) OR Parameters!QrUrl.Value = "", "about:blank", Parameters!QrUrl.Value)</Value>
+                          <Value>=Fields!QR_URL.Value</Value>
                           <MIMEType>image/png</MIMEType>
                           <Sizing>Fit</Sizing>
                           <Top>0cm</Top>
