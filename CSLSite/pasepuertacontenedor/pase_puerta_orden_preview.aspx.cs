@@ -75,7 +75,7 @@ namespace CSLSite
             {
                 DataSet wdataset = new DataSet();
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["midle"].ConnectionString))
-                using (SqlCommand cmd = new SqlCommand("[dbo].[lista_pase_despacho_por_idpase]", conn))
+                using (SqlCommand cmd = new SqlCommand("[dbo].[lista_pase_despacho_por_idpase_orden]", conn))
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -100,11 +100,9 @@ namespace CSLSite
                 var table = wdataset.Tables[0];
                 var row = table.Rows[0];
 
-                object payload = table.Columns.Contains("CERTIFICADO_CODBARRA")
-                    ? row["CERTIFICADO_CODBARRA"]
-                    : (table.Columns.Contains("NUMERO_PASE_N4")
-                        ? row["NUMERO_PASE_N4"]
-                        : (object)id_pase.ToString());
+                object payload = table.Columns.Contains("NUMERO_PASE_N4")
+                    ? row["NUMERO_PASE_N4"]
+                    : (object)id_pase.ToString();
 
                 string relQr = $"~/barcode/handler/qr.ashx?data={HttpUtility.UrlEncode(Convert.ToString(payload))}";
                 string absQr = new Uri(Request.Url, ResolveUrl(relQr)).ToString();
