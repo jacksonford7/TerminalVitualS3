@@ -101,6 +101,9 @@
     <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Gma.QrCodeNet.0.4.1.2\lib\net40\Gma.QrCodeNet.Encoding.dll</HintPath>
     </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net47\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\HtmlAgilityPack.dll</HintPath>
@@ -5603,6 +5606,9 @@
     <Compile Include="handler\barcode.ashx.cs">
       <DependentUpon>barcode.ashx</DependentUpon>
     </Compile>
+    <Compile Include="barcode\handler\qr.ashx.cs">
+      <DependentUpon>qr.ashx</DependentUpon>
+    </Compile>
     <Compile Include="cuenta\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6699,6 +6705,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="handler\barcode.ashx" />
+    <Content Include="barcode\handler\qr.ashx" />
     <Content Include="handler\Fuentes\FRE3OF9X.TTF" />
     <Content Include="handler\Fuentes\FREE3OF9.TTF" />
     <None Include="Catalogos.xsc">
