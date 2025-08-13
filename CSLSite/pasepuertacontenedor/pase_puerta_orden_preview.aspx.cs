@@ -75,7 +75,7 @@ namespace CSLSite
             {
                 DataSet wdataset = new DataSet();
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["midle"].ConnectionString))
-                using (SqlCommand cmd = new SqlCommand("[dbo].[lista_pase_despacho_por_idpase_orden]", conn))
+                using (SqlCommand cmd = new SqlCommand("[dbo].[lista_pase_despacho_por_idpase]", conn))
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
