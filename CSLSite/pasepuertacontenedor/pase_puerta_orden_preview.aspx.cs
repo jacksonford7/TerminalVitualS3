@@ -91,40 +91,30 @@ namespace CSLSite
 
                 ServicePointManager.ServerCertificateValidationCallback += AcceptAllCertifications;
 
-                string Reporte = "rptpasepuerta.rdlc";
-                Reporte = this.Server.MapPath(@"..\\reportes\\" + Reporte);
+                string Reporte = Server.MapPath(@"..\\reportes\\rptpasepuerta_orden.rdlc");
                 if (inicializaReporte(Reporte) != true)
                 {
                     return;
                 }
 
-                DataTable table = wdataset.Tables[0];
-                DataRow row = table.Rows[0];
+                var table = wdataset.Tables[0];
+                var row = table.Rows[0];
 
-                object payload = null;
-                if (row.Table.Columns.Contains("CERTIFICADO_CODBARRA"))
-                {
-                    payload = row["CERTIFICADO_CODBARRA"];
-                }
-                else if (row.Table.Columns.Contains("NUMERO_PASE_N4"))
-                {
-                    payload = row["NUMERO_PASE_N4"];
-                }
-                else if (row.Table.Columns.Contains("PASE"))
-                {
-                    payload = row["PASE"];
-                }
-                else
-                {
-                    payload = id_pase.ToString();
-                }
+                object payload = table.Columns.Contains("CERTIFICADO_CODBARRA")
+                    ? row["CERTIFICADO_CODBARRA"]
+                    : (table.Columns.Contains("NUMERO_PASE_N4")
+                        ? row["NUMERO_PASE_N4"]
+                        : (object)id_pase.ToString());
 
-                string relQr = string.Format("~/barcode/handler/qr.ashx?data={0}", HttpUtility.UrlEncode(Convert.ToString(payload)));
+                string relQr = $"~/barcode/handler/qr.ashx?data={HttpUtility.UrlEncode(Convert.ToString(payload))}";
                 string absQr = new Uri(Request.Url, ResolveUrl(relQr)).ToString();
 
-                ReportDataSource wdatasourc = new ReportDataSource("dsPasePuerta", table);
-                AñadeDatasorurce(wdatasourc);
-                rwReporte.LocalReport.SetParameters(new ReportParameter("QrUrl", absQr));
+                var ds = new ReportDataSource("dsPasePuerta", table);
+                AñadeDatasorurce(ds);
+
+                var prmQr = new ReportParameter("QrUrl", string.IsNullOrWhiteSpace(absQr) ? string.Empty : absQr);
+                rwReporte.LocalReport.SetParameters(new[] { prmQr });
+
                 rwReporte.LocalReport.Refresh();
                 this.rwReporte.Visible = true;
                 rwReporte.DataBind();
