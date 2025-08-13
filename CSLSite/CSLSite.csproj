@@ -1328,6 +1328,7 @@
     <Content Include="lib\jquery\jquery.min.js-anterior 2" />
     <Content Include="lib\jquery\jquery.min.js-original" />
     <Content Include="reportes\rptpasepuerta.rdlc" />
+    <Content Include="reportes\rptpasepuerta_orden.rdlc" />
     <Content Include="reportes\rptpasepuertacfs.rdlc" />
     <Content Include="reportesexpo\dsContenedorExpo.xsc">
       <DependentUpon>dsContenedorExpo.xsd</DependentUpon>
