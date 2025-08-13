@@ -28,10 +28,7 @@ namespace CSLSite
                 return false;
             }
 
-            rwReporte.ProcessingMode = ProcessingMode.Local;
             rwReporte.LocalReport.ReportPath = Reporte;
-            rwReporte.LocalReport.EnableExternalImages = true;
-            rwReporte.LocalReport.Refresh();
             rwReporte.Visible = true;
 
             return true;
@@ -39,7 +36,6 @@ namespace CSLSite
 
         public void AñadeDatasorurce(ReportDataSource wdatasourc)
         {
-            rwReporte.LocalReport.DataSources.Clear();
             rwReporte.LocalReport.DataSources.Add(wdatasourc);
         }
 
@@ -97,24 +93,23 @@ namespace CSLSite
                 if (!table.Columns.Contains("QR_URL"))
                     table.Columns.Add("QR_URL", typeof(string));
 
-                var row0 = table.Rows[0];
-                object payload = table.Columns.Contains("NUMERO_PASE_N4")
-                    ? row0["NUMERO_PASE_N4"]
-                    : (table.Columns.Contains("ID_PASE") ? row0["ID_PASE"] : (object)id_pase.ToString());
-
-                string relQr = $"~/barcode/handler/qr.ashx?data={HttpUtility.UrlEncode(Convert.ToString(payload))}";
-                string absQr = new Uri(Request.Url, ResolveUrl(relQr)).ToString();
-
                 foreach (DataRow r in table.Rows)
-                    r["QR_URL"] = absQr;
+                {
+                    var v = Convert.ToString(r["QR_URL"]);
+                    if (!string.IsNullOrWhiteSpace(v) && Uri.IsWellFormedUriString(v, UriKind.Relative))
+                        r["QR_URL"] = new Uri(Request.Url, ResolveUrl(v)).ToString();
+                }
 
                 // Inicializar ReportViewer con el RDLC clonado
                 string Reporte = Server.MapPath(@"..\reportes\rptpasepuerta_orden.rdlc");
                 if (!inicializaReporte(Reporte)) return;
 
                 // Cargar DataSource y refrescar (SIN parámetros)
+                rwReporte.LocalReport.DataSources.Clear();
                 var ds = new Microsoft.Reporting.WebForms.ReportDataSource("dsPasePuerta", table);
                 AñadeDatasorurce(ds);
+                rwReporte.LocalReport.EnableExternalImages = true;
+                rwReporte.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
                 rwReporte.LocalReport.Refresh();
 
                 rwReporte.Visible = true;
