@@ -243,7 +243,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!SN.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!SN.Value), "", Fields!SN.Value)</Value>
                                                 <Style>
                                                   <FontSize>7pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -277,7 +277,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!SN.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!SN.Value), "", Fields!SN.Value)</Value>
                                                 <Style>
                                                   <FontSize>7pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -717,7 +717,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!CONTAINER.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!CONTAINER.Value), "", Fields!CONTAINER.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -786,7 +786,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!SELLO1.Value &amp; " - " &amp; Fields!SELLO2.Value &amp; " - " &amp; Fields!SELLO3.Value &amp; " - " &amp; Fields!SELLO4.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!SELLO1.Value), "", Fields!SELLO1.Value) &amp; " - " &amp; IIF(IsNothing(Fields!SELLO2.Value), "", Fields!SELLO2.Value) &amp; " - " &amp; IIF(IsNothing(Fields!SELLO3.Value), "", Fields!SELLO3.Value) &amp; " - " &amp; IIF(IsNothing(Fields!SELLO4.Value), "", Fields!SELLO4.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -855,7 +855,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!SELLOCGSA.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!SELLOCGSA.Value), "", Fields!SELLOCGSA.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -924,7 +924,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!ISO.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!ISO.Value), "", Fields!ISO.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -993,7 +993,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!IMPORTADOR.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!IMPORTADOR.Value), "", Fields!IMPORTADOR.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1062,7 +1062,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!RUC.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!RUC.Value), "", Fields!RUC.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1131,7 +1131,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!EMPRESA.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!EMPRESA.Value), "", Fields!EMPRESA.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1200,7 +1200,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!PLACA.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!PLACA.Value), "", Fields!PLACA.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1269,7 +1269,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!LICENCIA.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!LICENCIA.Value), "", Fields!LICENCIA.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1338,7 +1338,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!CONDUCTOR.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!CONDUCTOR.Value), "", Fields!CONDUCTOR.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1407,7 +1407,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!MRN.Value &amp; "-" &amp; Fields!MSN.Value &amp; "-" &amp; Fields!HSN.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!MRN.Value), "", Fields!MRN.Value) &amp; "-" &amp; IIF(IsNothing(Fields!MSN.Value), "", Fields!MSN.Value) &amp; "-" &amp; IIF(IsNothing(Fields!HSN.Value), "", Fields!HSN.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1476,7 +1476,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!DOCUMENTO.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!DOCUMENTO.Value), "", Fields!DOCUMENTO.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1545,7 +1545,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!PASE.Value</Value>
+                                                <Value>=IIF(IsNothing(Fields!PASE.Value), "", Fields!PASE.Value)</Value>
                                                 <Style>
                                                   <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -1767,7 +1767,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!CONTAINER.Value</Value>
+                  <Value>=IIF(IsNothing(Fields!CONTAINER.Value), "", Fields!CONTAINER.Value)</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
