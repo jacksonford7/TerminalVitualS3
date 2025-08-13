@@ -201,30 +201,32 @@
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
-                                      <Image Name="BarCode">
-                                        <Source>External</Source>
-                                        <Value>=code.VehicleImage(Fields!SN.Value,1)</Value>
-                                        <Sizing>Fit</Sizing>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                        </Style>
-                                      </Image>
+                        <Image Name="BarCode">
+                          <Source>External</Source>
+                          <Value>=IIF(IsNothing(code.VehicleImage(Fields!SN.Value,1)) OR code.VehicleImage(Fields!SN.Value,1) = "", Nothing, code.VehicleImage(Fields!SN.Value,1))</Value>
+                          <MIMEType>image/png</MIMEType>
+                          <Sizing>Fit</Sizing>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell>
                                     <CellContents>
-                                      <Image Name="BarCode2">
-                                        <Source>External</Source>
-                                        <Value>=code.VehicleImage(Fields!SN.Value,2)</Value>
-                                        <Sizing>Fit</Sizing>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                        </Style>
-                                      </Image>
+                        <Image Name="BarCode2">
+                          <Source>External</Source>
+                          <Value>=IIF(IsNothing(code.VehicleImage(Fields!SN.Value,2)) OR code.VehicleImage(Fields!SN.Value,2) = "", Nothing, code.VehicleImage(Fields!SN.Value,2))</Value>
+                          <MIMEType>image/png</MIMEType>
+                          <Sizing>Fit</Sizing>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
                                     </CellContents>
                                   </TablixCell>
                                 </TablixCells>
@@ -1716,7 +1718,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                         </Image>
                         <Image Name="QrImage">
                           <Source>External</Source>
-                          <Value>=Fields!QR_URL.Value</Value>
+                          <Value>=IIF(IsNothing(Fields!QR_URL.Value) OR Fields!QR_URL.Value = "", Nothing, Fields!QR_URL.Value)</Value>
                           <MIMEType>image/png</MIMEType>
                           <Sizing>Fit</Sizing>
                           <Top>0cm</Top>
