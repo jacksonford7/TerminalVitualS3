@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Net;
 using System.Net.Security;
 using System.Web;
+using System.Linq;
 using BillionEntidades;
 using Microsoft.Reporting.WebForms;
 
@@ -91,33 +92,61 @@ namespace CSLSite
 
                 ServicePointManager.ServerCertificateValidationCallback += AcceptAllCertifications;
 
+                // 1) RDLC clonado
                 string Reporte = Server.MapPath(@"..\\reportes\\rptpasepuerta_orden.rdlc");
-                if (inicializaReporte(Reporte) != true)
-                {
-                    return;
-                }
+                if (!inicializaReporte(Reporte)) return;
 
+                // 2) Tabla del reporte
                 var table = wdataset.Tables[0];
                 var row = table.Rows[0];
 
+                // 3) Payload = NUMERO_PASE_N4 (fallback a id_pase)
                 object payload = table.Columns.Contains("NUMERO_PASE_N4")
                     ? row["NUMERO_PASE_N4"]
                     : (object)id_pase.ToString();
 
+                // 4) URL ABSOLUTA al handler
                 string relQr = $"~/barcode/handler/qr.ashx?data={HttpUtility.UrlEncode(Convert.ToString(payload))}";
                 string absQr = new Uri(Request.Url, ResolveUrl(relQr)).ToString();
 
+                // 5) DataSource
                 var ds = new ReportDataSource("dsPasePuerta", table);
                 AñadeDatasorurce(ds);
 
-                var prmQr = new ReportParameter("QrUrl", string.IsNullOrWhiteSpace(absQr) ? string.Empty : absQr);
-                rwReporte.LocalReport.SetParameters(new[] { prmQr });
+                // 6) Pasar TODOS los parámetros que el RDLC declara
+                var finalParams = new List<ReportParameter>();
+                var rdlParams = rwReporte.LocalReport.GetParameters();
 
+                string Def(ReportParameterInfo p) =>
+                    p.DataType == ParameterDataType.Boolean ? "False" :
+                    p.DataType == ParameterDataType.Integer ? "0" :
+                    p.DataType == ParameterDataType.Float ? "0" :
+                    p.DataType == ParameterDataType.DateTime ? DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss") :
+                    string.Empty;
+
+                foreach (var pinfo in rdlParams)
+                {
+                    if (pinfo.Name.Equals("QrUrl", StringComparison.OrdinalIgnoreCase))
+                    {
+                        finalParams.Add(new ReportParameter("QrUrl", string.IsNullOrWhiteSpace(absQr) ? string.Empty : absQr));
+                    }
+                    else if (pinfo.Values != null && pinfo.Values.Count > 0)
+                    {
+                        finalParams.Add(new ReportParameter(pinfo.Name, pinfo.Values.ToArray()));
+                    }
+                    else
+                    {
+                        finalParams.Add(new ReportParameter(pinfo.Name, new[] { Def(pinfo) }));
+                    }
+                }
+
+                rwReporte.LocalReport.SetParameters(finalParams);
                 rwReporte.LocalReport.Refresh();
-                this.rwReporte.Visible = true;
+
+                rwReporte.Visible = true;
                 rwReporte.DataBind();
-                this.imagen.Visible = false;
-                this.Ocultar_Mensaje();
+                imagen.Visible = false;
+                Ocultar_Mensaje();
             }
             catch (Exception ex)
             {

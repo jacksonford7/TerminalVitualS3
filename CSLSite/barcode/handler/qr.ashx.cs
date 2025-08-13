@@ -27,13 +27,25 @@ namespace Barcode.handler
             else if (ecc == "Q") level = QRCodeGenerator.ECCLevel.Q;
             else if (ecc == "H") level = QRCodeGenerator.ECCLevel.H;
 
-            using (var generator = new QRCodeGenerator())
-            using (var dataQr = generator.CreateQrCode(data, level))
+            int ppm = Math.Max(4, size / 64);
+
+            using (var gen = new QRCodeGenerator())
+            using (var dataQr = gen.CreateQrCode(data, level))
             using (var qr = new QRCode(dataQr))
-            using (var bmp = qr.GetGraphic(Math.Max(4, size / 64), Color.Black, Color.White, true, margin))
+            using (var rawBmp = qr.GetGraphic(ppm, Color.Black, Color.White, true))
             {
-                ctx.Response.ContentType = "image/png";
-                bmp.Save(ctx.Response.OutputStream, ImageFormat.Png);
+                int newW = rawBmp.Width + (margin * 2);
+                int newH = rawBmp.Height + (margin * 2);
+
+                using (var finalBmp = new Bitmap(newW, newH))
+                using (var g = Graphics.FromImage(finalBmp))
+                {
+                    g.Clear(Color.White);
+                    g.DrawImage(rawBmp, margin, margin);
+
+                    ctx.Response.ContentType = "image/png";
+                    finalBmp.Save(ctx.Response.OutputStream, ImageFormat.Png);
+                }
             }
         }
 
