@@ -99,15 +99,30 @@ namespace CSLSite
 
                 // 4) Construir QR_URL absoluta
                 if (!table.Columns.Contains("QR_URL")) table.Columns.Add("QR_URL", typeof(string));
+
                 string baseQr(object payload)
+
                 {
                     var rel = $"~/barcode/handler/qr.ashx?data={HttpUtility.UrlEncode(Convert.ToString(payload ?? ""))}";
                     return new Uri(Request.Url, ResolveUrl(rel)).ToString();
                 }
                 foreach (DataRow r in table.Rows)
                 {
-                    var payload = table.Columns.Contains("NUMERO_PASE_N4") && r["NUMERO_PASE_N4"] != DBNull.Value
-                        ? r["NUMERO_PASE_N4"] : (object)idPase;
+                    object payload;
+
+                    if (idPase != null) // si es int?, validamos que tenga valor
+                    {
+                        payload = idPase;
+                    }
+                    else if (table.Columns.Contains("NUMERO_PASE_N4") && r["NUMERO_PASE_N4"] != DBNull.Value)
+                    {
+                        payload = r["NUMERO_PASE_N4"];
+                    }
+                    else
+                    {
+                        payload = null;
+                    }
+
                     r["QR_URL"] = baseQr(payload);
                 }
 

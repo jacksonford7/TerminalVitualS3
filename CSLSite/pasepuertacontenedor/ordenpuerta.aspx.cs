@@ -333,10 +333,13 @@ namespace CSLSite
                     idPaseGenerado = r.Resultado;
                 }
                 string id_carga = Server.UrlEncode($"{ContenedoresSeleccionados.First().MRN}-{ContenedoresSeleccionados.First().MSN}-{ContenedoresSeleccionados.First().HSN}");
-                string link = $"<a href='../pasepuertacontenedor/imprimirpasecontenedordespacho.aspx?id_carga={id_carga}' target='_blank'>Imprimir Pase Puerta Despacho</a>";
-                string linkPreview = idPaseGenerado > 0 ? $"<a href='../pasepuertacontenedor/pase_puerta_orden_preview.aspx?id_pase={idPaseGenerado}' target='_blank'>Vista previa Pase Puerta</a>" : string.Empty;
+                //string link = $"<a href='../pasepuertacontenedor/imprimirpasecontenedordespacho.aspx?id_carga={id_carga}' target='_blank'>Imprimir Pase Puerta Despacho</a>";
+                string linkPreview = idPaseGenerado > 0
+     ? $"<a href='../pasepuertacontenedor/pase_puerta_orden_preview.aspx?id_pase={idPaseGenerado}' target='_blank'>Vista previa Pase Puerta</a>"
+     : string.Empty;
 
-                Mostrar_Mensaje($"<b>Informativo! El pase fue generado con éxito. Para imprimirlo, haga clic en el siguiente enlace: {link} {linkPreview}</b>");
+                Mostrar_Mensaje($"<b>Informativo! El pase fue generado con éxito. Para imprimirlo, haga clic en el siguiente enlace: {linkPreview}</b>");
+
 
                 ContenedoresSeleccionados.Clear();
                 gvSeleccionados.DataSource = ContenedoresSeleccionados;
