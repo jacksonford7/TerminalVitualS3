@@ -1716,15 +1716,15 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                             </Border>
                           </Style>
                         </Image>
-                        <Image Name="QrImage">
+                        <Image Name="imgQRCode">
                           <Source>External</Source>
-                          <Value>=IIF(IsNothing(Fields!QR_URL.Value) OR Fields!QR_URL.Value = "", Nothing, Fields!QR_URL.Value)</Value>
+                          <Value>=IIF(IsNothing(Fields!NumeroPase.Value) OR Fields!NumeroPase.Value = "", Nothing, "https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=" & Fields!NumeroPase.Value)</Value>
                           <MIMEType>image/png</MIMEType>
-                          <Sizing>Fit</Sizing>
-                          <Top>0cm</Top>
-                          <Left>11cm</Left>
-                          <Height>2cm</Height>
-                          <Width>2cm</Width>
+                          <Sizing>FitProportional</Sizing>
+                          <Top>0.2in</Top>
+                          <Left>6.0in</Left>
+                          <Height>1.5in</Height>
+                          <Width>1.5in</Width>
                           <ZIndex>4</ZIndex>
                           <Style>
                             <Border>
