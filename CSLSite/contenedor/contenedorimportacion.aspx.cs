@@ -199,6 +199,34 @@ namespace CSLSite
             return QuerySegura.EncryptQueryString(number.ToString());
         }
 
+        private void RedirectSafe(string url, string cId = null)
+        {
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                return;
+            }
+
+            if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
+            {
+                return;
+            }
+
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(cId))
+                {
+                    SqlConexion.Cls_Conexion.LogEvent<Exception>(Page.User.Identity.Name, nameof(RedirectSafe), url, true, cId, null, null, null);
+                }
+            }
+            catch
+            {
+            }
+
+            Response.Clear();
+            Response.Redirect(url, false);
+            Context.ApplicationInstance.CompleteRequest();
+        }
+
         private void Mostrar_Mensaje(int Tipo, string Mensaje)
         {
             if (Tipo == 1)//cabecera
@@ -387,7 +415,7 @@ namespace CSLSite
 
                 if (!Request.IsAuthenticated)
                 {
-                    Response.Redirect("../login.aspx", false);
+                    RedirectSafe("../login.aspx");
 
                     return;
                 }
@@ -2282,7 +2310,7 @@ namespace CSLSite
             try
             {
 
-                Response.Redirect("~/contenedor/contenedorimportacion.aspx", false);
+                RedirectSafe("~/contenedor/contenedorimportacion.aspx");
 
 
 
@@ -2852,7 +2880,8 @@ namespace CSLSite
 
                         this.Ocultar_Mensaje();
                         string cId = securetext(nIdRegistro.Value.ToString());
-                        Response.Redirect("~/contenedor/proformaimportacion.aspx?id_proforma=" + cId.Trim() + "", false);
+                        string urlProforma = string.Concat("~/contenedor/proformaimportacion.aspx?id_proforma=", HttpUtility.UrlEncode(cId.Trim()));
+                        RedirectSafe(urlProforma, cId);
 
                     }
 
@@ -4977,8 +5006,15 @@ namespace CSLSite
                        
 
                         //this.Ocultar_Mensaje();
+                        if (string.IsNullOrWhiteSpace(this.hf_BrowserWindowName.Value))
+                        {
+                            this.Mostrar_Mensaje(2, string.Format("<i class='fa fa-warning'></i><b> Error! Identificador de sesión no válido</b>"));
+                            return;
+                        }
+
                         string cId = securetext(this.hf_BrowserWindowName.Value);
-                        Response.Redirect("~/contenedor/facturaimportacion.aspx?id=" + cId.Trim() + "", false);
+                        string urlFactura = string.Concat("~/contenedor/facturaimportacion.aspx?id=", HttpUtility.UrlEncode(cId.Trim()));
+                        RedirectSafe(urlFactura, cId);
 
                     }
 
