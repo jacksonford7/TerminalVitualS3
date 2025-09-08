@@ -156,30 +156,18 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="QrUrl">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value />
-        </Values>
-      </DefaultValue>
-    </ReportParameter>
-  </ReportParameters>
   <Body>
     <ReportItems>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.55348in</Width>
+              <Width>7.5in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>5.95485in</Height>
+              <Height>6.19114in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -201,32 +189,37 @@
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
-                        <Image Name="BarCode">
-                          <Source>External</Source>
-                          <Value>=IIF(IsNothing(code.VehicleImage(Fields!SN.Value,1)) OR code.VehicleImage(Fields!SN.Value,1) = "", Nothing, code.VehicleImage(Fields!SN.Value,1))</Value>
-                          <MIMEType>image/png</MIMEType>
-                          <Sizing>Fit</Sizing>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                          </Style>
-                        </Image>
+                                      <Image Name="BarCode">
+                                        <Source>External</Source>
+                                        <Value>=IIF(
+    IsNothing(Code.VehicleImage(Fields!PASE.Value, "1")) 
+    OR Code.VehicleImage(Fields!PASE.Value, "1") = "",
+    Nothing,
+    Code.VehicleImage(Fields!PASE.Value, "1")
+)</Value>
+                                        <MIMEType>image/png</MIMEType>
+                                        <Sizing>Fit</Sizing>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                        </Style>
+                                      </Image>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell>
                                     <CellContents>
-                        <Image Name="BarCode2">
-                          <Source>External</Source>
-                          <Value>=IIF(IsNothing(code.VehicleImage(Fields!SN.Value,2)) OR code.VehicleImage(Fields!SN.Value,2) = "", Nothing, code.VehicleImage(Fields!SN.Value,2))</Value>
-                          <MIMEType>image/png</MIMEType>
-                          <Sizing>Fit</Sizing>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                          </Style>
-                        </Image>
+                                      <Image Name="BarCode2">
+                                        <Source>External</Source>
+                                        <Value>=IIf(IsNothing(Fields!PASE.Value) OR Trim(Fields!PASE.Value) = "", Nothing, "http://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=" &amp; Trim(Fields!PASE.Value))</Value>
+                                        <MIMEType>image/png</MIMEType>
+                                        <Sizing>Fit</Sizing>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                        </Style>
+                                      </Image>
                                     </CellContents>
                                   </TablixCell>
                                 </TablixCells>
@@ -277,7 +270,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=IIF(IsNothing(Fields!SN.Value), "", Fields!SN.Value)</Value>
+                                                <Value>=IIF(IsNothing(Fields!PASE.Value), "", Fields!PASE.Value)</Value>
                                                 <Style>
                                                   <FontSize>7pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -326,340 +319,6 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
-                          </Style>
-                        </Tablix>
-                        <Tablix Name="Tablix21">
-                          <TablixBody>
-                            <TablixColumns>
-                              <TablixColumn>
-                                <Width>0.92175in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.98542in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.20438in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.40625in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.45833in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.43218in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.40117in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.46526in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.57084in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.57336in</Width>
-                              </TablixColumn>
-                            </TablixColumns>
-                            <TablixRows>
-                              <TablixRow>
-                                <Height>0.18205in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox58">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>INFORMACION DE TURNO </Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox58</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <BottomBorder>
-                                            <Style>Solid</Style>
-                                          </BottomBorder>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                      <ColSpan>10</ColSpan>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.18205in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="TTURNO">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=iif(IsNothing(Fields!TTURNO.Value )=true,"",
-iif(left(Fields!TTURNO.Value,7)="2021/02","Turno seleccionado " &amp; Fields!TINICIO.Value &amp; " Fecha ","SU TURNO  DE LLEGADA ES ") &amp; " " &amp; Fields!TTURNO.Value)</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>TTURNO</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                      <ColSpan>10</ColSpan>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.18205in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="TINICIO">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=iif(String.IsNullOrEmpty(Fields!TTURNO.Value)=True,"",
-iif(left(Fields!TTURNO.Value,7)="2021/02","Ingreso permitido desde " &amp; Fields!TINICIO.Value &amp; " hasta " &amp; Fields!TFIN.Value,
-"USTED PUEDE INGRESA A LA TERMINAL DESDE LAS " &amp; Fields!TINICIO.Value))</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>TINICIO</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                      <ColSpan>10</ColSpan>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.18205in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="TFIN">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=iif(IsNothing(Fields!TTURNO.Value)=true,"", 
-iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE H ES " &amp; Fields!TFIN.Value))</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>TFIN</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                      <ColSpan>10</ColSpan>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.18205in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox65">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>INFORMACION DE CONTENEDOR</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox65</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>Solid</Style>
-                                          </Border>
-                                          <TopBorder>
-                                            <Style>None</Style>
-                                          </TopBorder>
-                                          <LeftBorder>
-                                            <Style>None</Style>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Style>None</Style>
-                                          </RightBorder>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                      <ColSpan>10</ColSpan>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
-                                </TablixCells>
-                              </TablixRow>
-                            </TablixRows>
-                          </TablixBody>
-                          <TablixColumnHierarchy>
-                            <TablixMembers>
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                            </TablixMembers>
-                          </TablixColumnHierarchy>
-                          <TablixRowHierarchy>
-                            <TablixMembers>
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
-                            </TablixMembers>
-                          </TablixRowHierarchy>
-                          <DataSetName>dsPasePuerta</DataSetName>
-                          <Top>2.3198cm</Top>
-                          <Left>0.1282cm</Left>
-                          <Height>2.31204cm</Height>
-                          <Width>13.76411cm</Width>
-                          <ZIndex>1</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <FontSize>7pt</FontSize>
                           </Style>
                         </Tablix>
                         <Tablix Name="Tablix6">
@@ -728,213 +387,6 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>CONTAINER</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.19132in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox88">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>SELLO:</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox88</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="SELLO1">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=IIF(IsNothing(Fields!SELLO1.Value), "", Fields!SELLO1.Value) &amp; " - " &amp; IIF(IsNothing(Fields!SELLO2.Value), "", Fields!SELLO2.Value) &amp; " - " &amp; IIF(IsNothing(Fields!SELLO3.Value), "", Fields!SELLO3.Value) &amp; " - " &amp; IIF(IsNothing(Fields!SELLO4.Value), "", Fields!SELLO4.Value)</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>SELLO1</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.19132in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox86">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>SELLO GEO:</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox86</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="SELLOCGSA">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=IIF(IsNothing(Fields!SELLOCGSA.Value), "", Fields!SELLOCGSA.Value)</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>SELLOCGSA</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.19132in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox84">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>TIPO/ISO:</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox84</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="ISO">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=IIF(IsNothing(Fields!ISO.Value), "", Fields!ISO.Value)</Value>
-                                                <Style>
-                                                  <FontSize>8pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>ISO</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>None</Style>
@@ -1571,6 +1023,75 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
+                                <Height>0.23622in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox5">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>VIN:</Value>
+                                                <Style>
+                                                  <FontSize>8pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox3</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="PASE2">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=IIF(IsNothing(Fields!BL.Value), "", Fields!BL.Value)</Value>
+                                                <Style>
+                                                  <FontSize>8pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>PASE</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
                                 <Height>0.19132in</Height>
                                 <TablixCells>
                                   <TablixCell>
@@ -1687,16 +1208,14 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
-                              <TablixMember />
-                              <TablixMember />
                             </TablixMembers>
                           </TablixRowHierarchy>
                           <DataSetName>dsPasePuerta</DataSetName>
-                          <Top>4.70245cm</Top>
-                          <Left>0.1282cm</Left>
-                          <Height>10.42304cm</Height>
+                          <Top>2.86014cm</Top>
+                          <Left>0.2712cm</Left>
+                          <Height>9.56518cm</Height>
                           <Width>13.7288cm</Width>
-                          <ZIndex>2</ZIndex>
+                          <ZIndex>1</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1709,23 +1228,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
                           <Sizing>Fit</Sizing>
                           <Height>1.29674cm</Height>
                           <Width>3.70008cm</Width>
-                          <ZIndex>3</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                          </Style>
-                        </Image>
-                        <Image Name="imgQRCode">
-                          <Source>External</Source>
-                          <Value>IIf(IsNothing(Fields!NumeroPase.Value) OR Fields!NumeroPase.Value = "", Nothing, "https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=" &amp; Fields!NumeroPase.Value)</Value>
-                          <MIMEType>image/png</MIMEType>
-                          <Sizing>FitProportional</Sizing>
-                          <Top>0.2in</Top>
-                          <Left>6.0in</Left>
-                          <Height>1.5in</Height>
-                          <Width>1.5in</Width>
-                          <ZIndex>4</ZIndex>
+                          <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1784,8 +1287,8 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
         <DataSetName>dsPasePuerta</DataSetName>
         <Top>0.53827cm</Top>
         <Left>0.13265cm</Left>
-        <Height>15.12532cm</Height>
-        <Width>14.10584cm</Width>
+        <Height>15.72549cm</Height>
+        <Width>19.05cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1840,14 +1343,28 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>15.66359cm</Height>
+    <Height>16.26376cm</Height>
     <Style />
   </Body>
+  <ReportParameters>
+    <ReportParameter Name="QrUrl">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+    </ReportParameter>
+  </ReportParameters>
   <Code>Public Function VehicleImage(ByVal valor As String, ByVal value As String) As String
      Dim RestURL As String
 
      If value = "1" then
      RestURL = "http://cgdes19:8080/barcode/handler/barcode.ashx?code="+valor+"&amp;format=E9&amp;width=300&amp;height=100&amp;size=70"
+
+     RestURL = "http://localhost:59429/handler/barcode.ashx?code="+valor+"&amp;format=E9&amp;width=300&amp;height=100&amp;size=70"
      End If
 
      If value = "2" then
@@ -1857,7 +1374,7 @@ iif(left(Fields!TTURNO.Value,7)="2021/02","","SU HORA MAXIMA DE LLEGADA A CALLE 
      Return RestURL
      End Function
 </Code>
-  <Width>14.23849cm</Width>
+  <Width>19.18265cm</Width>
   <Page>
     <PageHeader>
       <Height>0.02646cm</Height>
