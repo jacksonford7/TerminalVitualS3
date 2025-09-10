@@ -383,6 +383,7 @@
     <Content Include="contenedor\proformaimportacion.aspx" />
     <Content Include="contenedor\proformaimportacionadicional.aspx" />
     <Content Include="despachovehiculos\DespachoVehiculos.aspx" />
+    <Content Include="cedi\CediDespacho.aspx" />
     <Content Include="cotizaciones\cotizacion_default01_preview.aspx" />
     <Content Include="cotizaciones\print_proforma_preview.aspx" />
     <Content Include="cotizaciones\menu_cotizaciones.aspx" />
@@ -3275,6 +3276,18 @@
     <Compile Include="despachovehiculos\DespachoVehiculos.aspx.designer.cs">
       <DependentUpon>DespachoVehiculos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cedi\CediDespacho.aspx.cs">
+      <DependentUpon>CediDespacho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cedi\CediDespacho.aspx.designer.cs">
+      <DependentUpon>CediDespacho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="..\Core\Cedi\ICediDespachoService.cs" />
+    <Compile Include="..\Core\Cedi\CediDespachoService.cs" />
+    <Compile Include="..\Core\Cedi\Models\CediDespachoFiltro.cs" />
+    <Compile Include="..\Core\Cedi\Models\CediDespachoItem.cs" />
+    <Compile Include="..\Infra\Cedi\CediDespachoRepository.cs" />
     <Compile Include="cotizaciones\cotizacion_default01_preview.aspx.cs">
       <DependentUpon>cotizacion_default01_preview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
